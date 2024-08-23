@@ -1,0 +1,92 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="" name="keywords"/>
+  <meta content="" name="description"/>
+  <title>
+   欢聚宝 - YY官方充值平台
+  </title>
+  <link href="https://res.duowan.com/pay/css/core.css" rel="stylesheet" type="text/css"/>
+  <link href="https://res.duowan.com/pay/css/style2.css" rel="stylesheet" type="text/css"/>
+  <style>
+   .payTip{font-size:14px;margin-top:80px;}
+		.tipText{font-size:14px;}
+		.service {width:600px;margin-top:60px}
+		.service p{padding-left:100px; font-size: 14px;}
+		.service .btn1{display:inline-block;}
+		#demoPic{display:none;}
+  </style>
+  <script>
+   function togglePic(btn){
+			var pic = document.getElementById('demoPic');
+			if(btn.toggleVal == "1"){
+				pic.style.display = 'none';
+				btn.innerHTML = "查看示意图";
+				btn.toggleVal = "0";
+			}else{
+				pic.style.display = 'block';
+				btn.innerHTML = "隐藏示意图";
+				btn.toggleVal = "1";
+			}
+			return false;
+		}
+		setInterval(timeChange,1000);
+		var i = 10;
+		function timeChange() {
+			i = i - 1;
+			if (i == 0) {
+				window.location.href = "https://pay.yy.com/userDepositDWAction.action";
+			} else {
+				document.getElementById("time").innerHTML = i;
+			}
+		}
+  </script>
+ </head>
+ <body>
+  <div class="page">
+   <div class="phd cs-clear">
+   </div>
+   <div class="pbd">
+    <div class="service">
+     <p>
+      <b>
+       即日起，YY官方将启用pay.yy.com为充值平台。
+       <span id="time" style="color:red;">
+        10
+       </span>
+       秒后自动调整到充值入口。
+      </b>
+     </p>
+     <p>
+      &nbsp;
+     </p>
+     <p>
+      &nbsp;
+     </p>
+     <div class="payTip">
+      如您需要继续充值需求，您可以选择：
+     </div>
+     <div class="tipText">
+      1. 如没有自动跳转到
+      <a href="https://pay.yy.com/userDepositDWAction.action">
+       【YY充值中心】
+      </a>
+      。点击
+      <a class="btn1" href="https://pay.yy.com/userDepositDWAction.action">
+       立即前往
+      </a>
+     </div>
+     <div class="tipText">
+      2. 打开YY客户端，依次选择 【系统菜单】--&gt;【所有服务】--&gt;【YY充值】--&gt;【充Y币】，完成充值。
+      <a class="btn1" href="javascript:;" onclick="togglePic(this)">
+       查看示意图
+      </a>
+     </div>
+     <div>
+      <img id="demoPic" src="https://res.duowan.com/pay/images/clientPay.png"/>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

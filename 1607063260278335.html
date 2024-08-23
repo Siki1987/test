@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-cf0be6a22b8797f043b",applicationID:"27753707"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);
+  </script>
+  <link href="https://gmpg.org/xfn/11" rel="profile"/>
+  <!-- This site is optimized with the Yoast SEO Premium plugin v15.3 - https://yoast.com/wordpress/plugins/seo/ -->
+  <title>
+   Remove image background - 100% automatically and free on JumpStory
+  </title>
+  <link data-minify="1" href="https://dr2oyl37gq1l2.cloudfront.net/wp-content/cache/min/1/c1bb441a0fe8bce2188d893177f22dd8.css" media="all" rel="stylesheet"/>
+  <meta content="Remove image backgrounds absolutely free using JumpStory. Everything is done automatically using AI, and it doesn't cost anything." name="description"/>
+  <meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
+  <link href="https://jumpstory.com/images/remove-background/" rel="canonical"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="article" property="og:type"/>
+  <meta content="Remove image background - 100% automatically and free on JumpStory" property="og:title"/>
+  <meta content="Remove image backgrounds absolutely free using JumpStory. Everything is done automatically using AI, and it doesn't cost anything." property="og:description"/>
+  <meta content="https://jumpstory.com/images/remove-background/" property="og:url"/>
+  <meta content="JumpStory" property="og:site_name"/>
+  <meta content="https://www.facebook.com/jumpstorydk/" property="article:publisher"/>
+  <meta content="2020-11-04T09:11:06+00:00" property="article:modified_time"/>
+  <meta content="https://jumpstory.com/wp-content/uploads/2020/10/Remove-Background-Image.png" property="og:image"/>
+  <meta content="1920" property="og:image:width"/>
+  <meta content="1280" property="og:image:height"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Written by" name="twitter:label1"/>
+  <meta content="Christoffer Larsen" name="twitter:data1"/>
+  <meta content="Est. reading time" name="twitter:label2"/>
+  <meta content="1 minute" name="twitter:data2"/>
+  <!-- / Yoast SEO Premium plugin. -->
+  <link href="//code.responsivevoice.org" rel="dns-prefetch"/>
+  <link href="//scripts.iconnode.com" rel="dns-prefetch"/>
+  <link href="//dr2oyl37gq1l2.cloudfront.net" rel="dns-prefetch"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://jumpstory.com/feed/" rel="alternate" title="JumpStory &raquo; Feed" type="application/rss+xml"/>
+  <link href="https://jumpstory.com/comments/feed/" rel="alternate" title="JumpStory &raquo; Comments Feed" type="application/rss+xml"/>
+  <style id="generate-style-inline-css">
+   .generate-page-header, .page-header-image, .page-header-image-single {display:none}
+body{background-color:#ffffff;color:#605c58;}a{color:#4cc9d7;}a:visited{color:#4cc9d7;}a:hover, a:focus, a:active{color:#4cc9d7;}body .grid-container{max-width:1320px;}.wp-block-group__inner-container{max-width:1320px;margin-left:auto;margin-right:auto;}.generate-back-to-top{font-size:20px;border-radius:3px;position:fixed;bottom:30px;right:30px;line-height:40px;width:40px;text-align:center;z-index:10;transition:opacity 300ms ease-in-out;}body, button, input, select, textarea{font-size:18px;}body{line-height:1.3;}p{margin-bottom:1em;}.entry-content > [class*="wp-block-"]:not(:last-child){margin-bottom:1em;}.main-title{font-size:45px;}.main-navigation .main-nav ul ul li a{font-size:14px;}.sidebar .widget, .footer-widgets .widget{font-size:17px;}h1{font-weight:900;font-size:55px;}h2{font-weight:600;font-size:28px;}h3{font-size:25px;}h4{font-size:inherit;}h5{font-size:inherit;}@media (max-width:768px){.main-title{font-size:30px;}h1{font-size:30px;}h2{font-size:25px;}}.top-bar{background-color:#636363;color:#ffffff;}.top-bar a{color:#ffffff;}.top-bar a:hover{color:#303030;}.site-header{background-color:#ffffff;color:#3a3a3a;}.site-header a{color:#3a3a3a;}.main-title a,.main-title a:hover{color:#222222;}.site-description{color:#757575;}.main-navigation,.main-navigation ul ul{background-color:#222222;}.main-navigation .main-nav ul li a,.menu-toggle, .main-navigation .menu-bar-items{color:#ffffff;}.main-navigation .main-nav ul li:hover > a,.main-navigation .main-nav ul li:focus > a, .main-navigation .main-nav ul li.sfHover > a, .main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{color:#ffffff;background-color:#3f3f3f;}button.menu-toggle:hover,button.menu-toggle:focus,.main-navigation .mobile-bar-items a,.main-navigation .mobile-bar-items a:hover,.main-navigation .mobile-bar-items a:focus{color:#ffffff;}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#3f3f3f;}.main-navigation .main-nav ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul li[class*="current-menu-"].sfHover > a{color:#ffffff;background-color:#3f3f3f;}.navigation-search input[type="search"],.navigation-search input[type="search"]:active, .navigation-search input[type="search"]:focus, .main-navigation .main-nav ul li.search-item.active > a, .main-navigation .menu-bar-items .search-item.active > a{color:#ffffff;background-color:#3f3f3f;}.main-navigation ul ul{background-color:#3f3f3f;}.main-navigation .main-nav ul ul li a{color:#ffffff;}.main-navigation .main-nav ul ul li:hover > a,.main-navigation .main-nav ul ul li:focus > a,.main-navigation .main-nav ul ul li.sfHover > a{color:#ffffff;background-color:#4f4f4f;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#4f4f4f;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a:hover,.main-navigation .main-nav ul ul li[class*="current-menu-"].sfHover > a{color:#ffffff;background-color:#4f4f4f;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{background-color:#ffffff;}.entry-title a{color:#44403c;}.entry-title a:hover{color:#44403c;}.entry-meta{color:#595959;}.entry-meta a{color:#595959;}.entry-meta a:hover{color:#1e73be;}.sidebar .widget{background-color:#ffffff;}.sidebar .widget .widget-title{color:#000000;}.footer-widgets{background-color:#ffffff;}.footer-widgets .widget-title{color:#000000;}.site-info{color:#ffffff;background-color:#222222;}.site-info a{color:#ffffff;}.site-info a:hover{color:#606060;}.footer-bar .widget_nav_menu .current-menu-item a{color:#606060;}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="tel"],input[type="number"],textarea,select{color:#666666;background-color:#fafafa;border-color:#cccccc;}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="number"]:focus,textarea:focus,select:focus{color:#666666;background-color:#ffffff;border-color:#bfbfbf;}button,html input[type="button"],input[type="reset"],input[type="submit"],a.button,a.wp-block-button__link:not(.has-background){color:#ffffff;background-color:#666666;}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,a.button:focus,a.wp-block-button__link:not(.has-background):active,a.wp-block-button__link:not(.has-background):focus,a.wp-block-button__link:not(.has-background):hover{color:#ffffff;background-color:#3f3f3f;}a.generate-back-to-top{background-color:rgba( 0,0,0,0.4 );color:#ffffff;}a.generate-back-to-top:hover,a.generate-back-to-top:focus{background-color:rgba( 0,0,0,0.6 );color:#ffffff;}@media (max-width: 768px){.main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{background:none;color:#ffffff;}}.inside-top-bar{padding:10px;}.inside-header{padding:40px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-40px;width:calc(100% + 80px);max-width:calc(100% + 80px);}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:20px;}.rtl .main-navigation .main-nav ul li.menu-item-has-children > a{padding-right:20px;}.site-info{padding:20px;}@media (max-width:768px){.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header, .wp-block-group__inner-container{padding:30px;}.site-info{padding-right:10px;padding-left:10px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-30px;width:calc(100% + 60px);max-width:calc(100% + 60px);}}.one-container .sidebar .widget{padding:0px;}/* End cached CSS */@media (max-width: 768px){.main-navigation .menu-toggle,.main-navigation .mobile-bar-items,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav{display:none;}[class*="nav-float-"] .site-header .inside-header > *{float:none;clear:both;}}
+  </style>
+  <style id="elementor-frontend-inline-css">
+   .elementor-12560 .elementor-element.elementor-element-6358154b:not(.elementor-motion-effects-element-type-background) > .elementor-column-wrap, .elementor-12560 .elementor-element.elementor-element-6358154b > .elementor-column-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://jumpstory.com/wp-content/uploads/2020/10/Remove-Background-Image.png");}
+  </style>
+  <style id="generate-offside-inline-css">
+   .slideout-navigation.main-navigation .main-nav ul li a{font-weight:normal;text-transform:none;}.slideout-navigation, .slideout-navigation a{color:#ffffff;}.slideout-navigation button.slideout-exit{color:#ffffff;padding-left:20px;padding-right:20px;}.slideout-navigation .dropdown-menu-toggle:before{content:"\f107";}.slideout-navigation .sfHover > a .dropdown-menu-toggle:before{content:"\f106";}
+  </style>
+  <script id="jquery-core-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp">
+  </script>
+  <script id="cookie-notice-front-js-extra">
+   var cnArgs = {"ajaxUrl":"https:\/\/jumpstory.com\/wp-admin\/admin-ajax.php","nonce":"64f7a26c23","hideEffect":"fade","position":"bottom","onScroll":"0","onScrollOffset":"100","onClick":"0","cookieName":"cookie_notice_accepted","cookieTime":"2592000","cookieTimeRejected":"2592000","cookiePath":"\/","cookieDomain":"","redirection":"0","cache":"1","refuse":"0","revokeCookies":"0","revokeCookiesOpt":"automatic","secure":"1","coronabarActive":"0"};
+  </script>
+  <script defer="" id="cookie-notice-front-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/cookie-notice/js/front.min.js?ver=1.3.2">
+  </script>
+  <script data-minify="1" defer="" id="responsive-voice-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/cache/min/1/1.6.5/responsivevoice-a5e35997985f8abec73dcc77b25bf729.js">
+  </script>
+  <script defer="" id="font-awesome-4-shim-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=4.3.7">
+  </script>
+  <link href="https://jumpstory.com/wp-json/" rel="https://api.w.org/"/>
+  <link href="https://jumpstory.com/wp-json/wp/v2/pages/12560" rel="alternate" type="application/json"/>
+  <link href="https://jumpstory.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjumpstory.com%2Fimages%2Fremove-background%2F" rel="alternate" type="application/json+oembed"/>
+  <link href="https://jumpstory.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjumpstory.com%2Fimages%2Fremove-background%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+  <script type="text/javascript">
+   (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+  </script>
+  <!-- This site is optimized with the Schema plugin v1.7.8.3 - https://schema.press -->
+  <script type="application/ld+json">
+   [{"@context":"http:\/\/schema.org\/","@type":"WPHeader","url":"https:\/\/jumpstory.com\/images\/remove-background\/","headline":"Background Removal","description":"Remove Background Instantly remove the background on your images Why waste a lot of time removing the background..."},{"@context":"http:\/\/schema.org\/","@type":"WPFooter","url":"https:\/\/jumpstory.com\/images\/remove-background\/","headline":"Background Removal","description":"Remove Background Instantly remove the background on your images Why waste a lot of time removing the background...","copyrightYear":"2020"}]
+  </script>
+  <!-- This site is optimized with the Schema plugin v1.7.8.3 - https://schema.press -->
+  <script type="application/ld+json">
+   {"@context":"http:\/\/schema.org\/","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/jumpstory.com\/images\/remove-background\/"},"url":"https:\/\/jumpstory.com\/images\/remove-background\/","headline":"Background...","datePublished":"2020-04-30T22:29:40+02:00","dateModified":"2020-11-04T10:11:06+01:00","publisher":{"@type":"Organization","@id":"https:\/\/jumpstory.com\/#organization","name":"JumpStory","logo":{"@type":"ImageObject","url":"https:\/\/jumpstory.com\/wp-content\/uploads\/2019\/02\/jumpstory_logo.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/jumpstory.com\/wp-content\/uploads\/2020\/10\/Remove-Background-Image.png","width":1920,"height":1280},"description":"Remove Background Instantly remove the background on your images Why waste a lot of time removing the background on a photo, when you can do it for free in a matter of seconds using JumpStory? Get Started for Free Magically remove image backgrounds Thanks to the unique AI technology","author":{"@type":"Person","name":"Christoffer Larsen","url":"https:\/\/jumpstory.com\/blog\/author\/cljumpstory-com\/","image":{"@type":"ImageObject","url":"https:\/\/jumpstory.com\/wp-content\/uploads\/2020\/11\/JumpStory-Square-700x700-1.png","height":96,"width":96}}}
+  </script>
+  <!--BEGIN: TRACKING CODE MANAGER BY INTELLYWP.COM IN HEAD//-->
+  <!-- Global site tag (gtag.js) - Google Ads: 797679736 -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-797679736">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-797679736');
+  </script>
+  <meta content="mv047tjr1ir5qqnesuliigi7lqbn13" name="facebook-domain-verification"/>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVR9K8W');
+  </script>
+  <!--END: https://wordpress.org/plugins/tracking-code-manager IN HEAD//-->
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://jumpstory.com/wp-content/uploads/2020/11/cropped-JumpStory-Circle-700x700-1-32x32.png" rel="icon" sizes="32x32"/>
+  <link href="https://jumpstory.com/wp-content/uploads/2020/11/cropped-JumpStory-Circle-700x700-1-192x192.png" rel="icon" sizes="192x192"/>
+  <link href="https://jumpstory.com/wp-content/uploads/2020/11/cropped-JumpStory-Circle-700x700-1-180x180.png" rel="apple-touch-icon"/>
+  <meta content="https://jumpstory.com/wp-content/uploads/2020/11/cropped-JumpStory-Circle-700x700-1-270x270.png" name="msapplication-TileImage"/>
+  <style id="wp-custom-css">
+   /*@media (min-width: 1025px){
+	.footer-widget-4 {
+    	float: none;
+	}
+	.footer-widget-1, .footer-widget-2, .footer-widget-3, .footer-widget-4, .footer-widget-5 {
+		width: 17.5%;
+		margin-right: 20px;
+		float: left;
+	}
+}
+@media (min-width: 1400px){
+	.footer-widget-1 {
+    	margin-right: 50px;
+	}
+}
+@media (max-width: 1024px) and (min-width: 768px){
+	#footer-widgets .footer-widget-4 {
+    	clear: unset!important;
+	}
+	#footer-widgets .footer-widget-1, 
+	#footer-widgets .footer-widget-2, 
+	#footer-widgets .footer-widget-3, 
+	#footer-widgets .footer-widget-4,
+	#footer-widgets .footer-widget-5{
+		float: left;
+		width: calc(33% - 5%);
+		clear: none;
+		margin-right: 5%;
+	}
+}*/
+
+
+@media (min-width: 1025px){
+   
+	.footer-widget-1, 
+	.footer-widget-2, 
+	.footer-widget-3, 
+	.footer-widget-4 {
+		width: 23%;
+		margin-right: 20px;
+		float: left;
+	}
+}
+@media (min-width: 1400px){
+	.footer-widget-1 {
+    	margin-right: 50px;
+	}
+}
+@media (max-width: 1024px) and (min-width: 768px){
+	
+	#footer-widgets .footer-widget-1, 
+	#footer-widgets .footer-widget-2, 
+	#footer-widgets .footer-widget-3, 
+	#footer-widgets .footer-widget-4{
+		float: left;
+		width: calc(25% - 5%);
+		clear: none;
+		margin-right: 5%;
+	}
+}
+
+#footer-widgets .footer-widget-4{
+	margin-right: 0;
+}
+  </style>
+  <script async="" charset="UTF-8" data-minify="1" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/cache/min/1/js/push/4dccf02b637c9cfd5ddf763a5232501a_1-f7270552337b6c648333acd9564e0e97.js">
+  </script>
+  <script>
+   /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+  </script>
+ </head>
+ <body class="page-template page-template-elementor_header_footer page page-id-12560 page-child parent-pageid-15658 wp-custom-logo wp-embed-responsive cookies-not-set slideout-enabled slideout-mobile sticky-menu-fade no-sidebar nav-float-right separate-containers fluid-header active-footer-widgets-4 header-aligned-left dropdown-hover featured-image-active elementor-default elementor-template-full-width elementor-kit-17548 elementor-page elementor-page-12560 full-width-content" data-rsssl="1" itemscope="" itemtype="https://schema.org/WebPage">
+  <a class="screen-reader-text skip-link" href="#content" title="Skip to content">
+   Skip to content
+  </a>
+  <div class="elementor elementor-15669 elementor-location-header" data-elementor-id="15669" data-elementor-settings="[]" data-elementor-type="header">
+   <div class="elementor-section-wrap">
+    <header class="elementor-section elementor-top-section elementor-element elementor-element-41dcf028 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="41dcf028" data-settings='{"background_background":"classic","sticky":"top","sticky_on":["desktop","tablet","mobile"],"sticky_offset":0,"sticky_effects_offset":0}'>
+     <div class="elementor-container elementor-column-gap-extended">
+      <div class="elementor-row">
+       <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-35e45829" data-element_type="column" data-id="35e45829">
+        <div class="elementor-column-wrap elementor-element-populated">
+         <div class="elementor-widget-wrap">
+          <div class="elementor-element elementor-element-528572a4 elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-element_type="widget" data-id="528572a4" data-widget_type="theme-site-logo.default">
+           <div class="elementor-widget-container">
+            <div class="elementor-image">
+             <a href="https://jumpstory.com">
+              <img alt="" class="attachment-full size-full" loading="lazy" src="https://jumpstory.com/wp-content/uploads/2019/04/jumpstory_logo_positiv.svg"/>
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5ef8c83c" data-element_type="column" data-id="5ef8c83c">
+        <div class="elementor-column-wrap elementor-element-populated">
+         <div class="elementor-widget-wrap">
+          <div class="elementor-element elementor-element-38f39cc elementor-nav-menu__align-center elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-nav-menu--indicator-classic elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-element_type="widget" data-id="38f39cc" data-settings='{"full_width":"stretch","layout":"horizontal","toggle":"burger"}' data-widget_type="nav-menu.default">
+           <div class="elementor-widget-container">
+            <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-grow" role="navigation">
+             <ul class="elementor-nav-menu" id="menu-1-38f39cc">
+              <li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-15938">
+               <a class="elementor-item" href="https://jumpstory.com/images/">
+                Features
+               </a>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16083">
+               <a class="elementor-item" href="https://jumpstory.com/prices/">
+                Pricing
+               </a>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14799">
+               <a class="elementor-item" href="https://jumpstory.com/customer-reviews/">
+                Reviews
+               </a>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11704">
+               <a class="elementor-item" href="https://jumpstory.com/images/search/">
+                Search
+               </a>
+              </li>
+              <li class="mobile_getstarted menu-item menu-item-type-custom menu-item-object-custom menu-item-10085">
+               <a class="elementor-item" href="https://universe.jumpstory.com/get-started/">
+                Get started
+               </a>
+              </li>
+              <li class="mobile_getstarted menu-item menu-item-type-custom menu-item-object-custom menu-item-11707">
+               <a class="elementor-item" href="https://universe.jumpstory.com/login/">
+                Login
+               </a>
+              </li>
+             </ul>
+            </nav>
+            <div aria-expanded="false" aria-label="Menu Toggle" class="elementor-menu-toggle" role="button" tabindex="0">
+             <i aria-hidden="true" class="eicon-menu-bar">
+             </i>
+             <span class="elementor-screen-only">
+              Menu
+             </span>
+            </div>
+            <nav aria-hidden="true" class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation">
+             <ul class="elementor-nav-menu" id="menu-2-38f39cc">
+              <li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-15938">
+               <a class="elementor-item" href="https://jumpstory.com/images/">
+                Features
+               </a>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16083">
+               <a class="elementor-item" href="https://jumpstory.com/prices/">
+                Pricing
+               </a>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14799">
+               <a class="elementor-item" href="https://jumpstory.com/customer-reviews/">
+                Reviews
+               </a>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11704">
+               <a class="elementor-item" href="https://jumpstory.com/images/search/">
+                Search
+               </a>
+              </li>
+              <li class="mobile_getstarted menu-item menu-item-type-custom menu-item-object-custom menu-item-10085">
+               <a class="elementor-item" href="https://universe.jumpstory.com/get-started/">
+                Get started
+               </a>
+              </li>
+              <li class="mobile_getstarted menu-item menu-item-type-custom menu-item-object-custom menu-item-11707">
+               <a class="elementor-item" href="https://universe.jumpstory.com/login/">
+                Login
+               </a>
+              </li>
+             </ul>
+            </nav>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-60004558" data-element_type="column" data-id="60004558">
+        <div class="elementor-column-wrap elementor-element-populated">
+         <div class="elementor-widget-wrap">
+          <div class="elementor-element elementor-element-ab2a561 elementor-widget__width-auto elementor-widget elementor-widget-button" data-element_type="widget" data-id="ab2a561" data-widget_type="button.default">
+           <div class="elementor-widget-container">
+            <div class="elementor-button-wrapper">
+             <a class="elementor-button-link elementor-button elementor-size-sm" href="https://universe.jumpstory.com/" role="button">
+              <span class="elementor-button-content-wrapper">
+               <span class="elementor-button-text">
+                Login
+               </span>
+              </span>
+             </a>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-element elementor-element-d2aa734 elementor-widget__width-auto elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-button" data-element_type="widget" data-id="d2aa734" data-widget_type="button.default">
+           <div class="elementor-widget-container">
+            <div class="elementor-button-wrapper">
+             <a class="elementor-button-link elementor-button elementor-size-lg" href="https://universe.jumpstory.com/get-started/" role="button">
+              <span class="elementor-button-content-wrapper">
+               <span class="elementor-button-text">
+                Get Free Trial
+               </span>
+              </span>
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+   </div>
+  </div>
+  <div class="featured-image page-header-image grid-container grid-parent">
+   <img alt="Background Removal Tool" class="attachment-full size-full wp-post-image" height="1280" itemprop="image" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" src="https://jumpstory.com/wp-content/uploads/2020/10/Remove-Background-Image.png" srcset="https://jumpstory.com/wp-content/uploads/2020/10/Remove-Background-Image.png 1920w, https://jumpstory.com/wp-content/uploads/2020/10/Remove-Background-Image-300x200.png 300w, https://jumpstory.com/wp-content/uploads/2020/10/Remove-Background-Image-1024x683.png 1024w, https://jumpstory.com/wp-content/uploads/2020/10/Remove-Background-Image-768x512.png 768w, https://jumpstory.com/wp-content/uploads/2020/10/Remove-Background-Image-1536x1024.png 1536w" width="1920"/>
+  </div>
+  <div class="site grid-container container hfeed grid-parent" id="page">
+   <div class="site-content" id="content">
+    <div class="elementor elementor-12560" data-elementor-id="12560" data-elementor-settings="[]" data-elementor-type="wp-post">
+     <div class="elementor-inner">
+      <div class="elementor-section-wrap">
+       <section class="elementor-section elementor-top-section elementor-element elementor-element-1ae2884c elementor-section-full_width elementor-section-height-min-height elementor-section-items-stretch elementor-section-height-default" data-element_type="section" data-id="1ae2884c" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-default">
+         <div class="elementor-row">
+          <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6358154b" data-element_type="column" data-id="6358154b" data-settings='{"background_background":"classic"}'>
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-4380a3d1 elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="4380a3d1" data-widget_type="spacer.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-spacer">
+                <div class="elementor-spacer-inner">
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5280c01c" data-element_type="column" data-id="5280c01c">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-1da3a2f0 elementor-widget__width-auto elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="1da3a2f0" data-widget_type="divider.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-divider">
+                <span class="elementor-divider-separator">
+                </span>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-e99bc65 elementor-widget__width-auto elementor-widget elementor-widget-heading" data-element_type="widget" data-id="e99bc65" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+               <p class="elementor-heading-title elementor-size-default">
+                Remove Background
+               </p>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-4791da9a elementor-widget elementor-widget-heading" data-element_type="widget" data-id="4791da9a" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+               <h2 class="elementor-heading-title elementor-size-default">
+                Instantly remove the background on your images
+               </h2>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-2bf13fd0 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="2bf13fd0" data-widget_type="text-editor.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-text-editor elementor-clearfix">
+                <p>
+                 Why waste a lot of time removing the background on a photo, when you can do it for free in a matter of seconds using JumpStory?
+                </p>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-35f3c975 arrow elementor-widget elementor-widget-button" data-element_type="widget" data-id="35f3c975" data-widget_type="button.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-button-wrapper">
+                <a class="elementor-button-link elementor-button elementor-size-lg" href="https://universe.jumpstory.com/get-started/" role="button">
+                 <span class="elementor-button-content-wrapper">
+                  <span class="elementor-button-icon elementor-align-icon-right">
+                   <i aria-hidden="true" class="fas fa-arrow-right">
+                   </i>
+                  </span>
+                  <span class="elementor-button-text">
+                   Get Started for Free
+                  </span>
+                 </span>
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-section elementor-top-section elementor-element elementor-element-2b5b3ada elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="2b5b3ada">
+        <div class="elementor-container elementor-column-gap-default">
+         <div class="elementor-row">
+          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-67109976" data-element_type="column" data-id="67109976">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <section class="elementor-section elementor-inner-section elementor-element elementor-element-37029c82 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default" data-element_type="section" data-id="37029c82">
+              <div class="elementor-container elementor-column-gap-default">
+               <div class="elementor-row">
+                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2e9cefbc" data-element_type="column" data-id="2e9cefbc">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-a1f621a elementor-widget elementor-widget-heading" data-element_type="widget" data-id="a1f621a" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                     <h2 class="elementor-heading-title elementor-size-default">
+                      Magically remove image backgrounds
+                     </h2>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-174d22a4 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="174d22a4" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-text-editor elementor-clearfix">
+                      <p>
+                       Thanks to the unique AI technology the image background is gone faster, than you can say the words &ldquo;remove the background&rdquo;.
+                      </p>
+                      <p>
+                       Choose among millions of photos in the JumpStory library or upload your own photo to the archive and start removing backgrounds.
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-13e7788c elementor-widget elementor-widget-button" data-element_type="widget" data-id="13e7788c" data-widget_type="button.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-button-wrapper">
+                      <a class="elementor-button-link elementor-button elementor-size-md" href="https://universe.jumpstory.com/get-started/" role="button">
+                       <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-text">
+                         Start a Free 14-Day Trial
+                        </span>
+                       </span>
+                      </a>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7067634d" data-element_type="column" data-id="7067634d" data-settings='{"background_background":"classic"}'>
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-66731ab elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="66731ab" data-widget_type="spacer.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-spacer">
+                      <div class="elementor-spacer-inner">
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </section>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-section elementor-top-section elementor-element elementor-element-4fa05270 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="4fa05270">
+        <div class="elementor-container elementor-column-gap-default">
+         <div class="elementor-row">
+          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-183172f4" data-element_type="column" data-id="183172f4">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <section class="elementor-section elementor-inner-section elementor-element elementor-element-649c097c elementor-reverse-mobile elementor-section-height-min-height elementor-section-boxed elementor-section-height-default" data-element_type="section" data-id="649c097c">
+              <div class="elementor-container elementor-column-gap-default">
+               <div class="elementor-row">
+                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4be89ca2" data-element_type="column" data-id="4be89ca2" data-settings='{"background_background":"classic"}'>
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-background-overlay">
+                  </div>
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-c7be63a elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="c7be63a" data-widget_type="spacer.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-spacer">
+                      <div class="elementor-spacer-inner">
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-792d41f1" data-element_type="column" data-id="792d41f1">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-13279c73 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="13279c73" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                     <h2 class="elementor-heading-title elementor-size-default">
+                      Edit, cut, crop and replace.
+                     </h2>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-6a96f4c8 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="6a96f4c8" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-text-editor elementor-clearfix">
+                      <p>
+                       Use our simple image editor to add a different background color, apply filters and easily adjust color, size and shape.
+                      </p>
+                      <p>
+                       Editing a photo is easy with one-click filters, text editor, and other features. Made a mistake? Check and manage versions easily or revert to earlier image versions.
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-1bca5085 elementor-widget elementor-widget-button" data-element_type="widget" data-id="1bca5085" data-widget_type="button.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-button-wrapper">
+                      <a class="elementor-button-link elementor-button elementor-size-md" href="https://universe.jumpstory.com/get-started/" role="button">
+                       <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-text">
+                         Try For Free Today
+                        </span>
+                       </span>
+                      </a>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </section>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-section elementor-top-section elementor-element elementor-element-273d32bc elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="273d32bc" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-default">
+         <div class="elementor-row">
+          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-41289a2a" data-element_type="column" data-id="41289a2a">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-f78c3c8 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="f78c3c8" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+               <h2 class="elementor-heading-title elementor-size-default">
+                Stunning and Professional Quality
+               </h2>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-cd2a48e elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="cd2a48e" data-widget_type="text-editor.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-text-editor elementor-clearfix">
+                <p>
+                 Use the background removal tool to quickly create transparent images for your website, social media, presentations and banners.
+                </p>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-section elementor-top-section elementor-element elementor-element-c4398b7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="c4398b7" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-default">
+         <div class="elementor-row">
+          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-817996c" data-element_type="column" data-id="817996c">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-56fb622 uael-ba-label-hover uael-ba-halign-flex-start elementor-widget elementor-widget-uael-ba-slider" data-element_type="widget" data-id="56fb622" data-widget_type="uael-ba-slider.default">
+              <div class="elementor-widget-container">
+               <div class="uael-before-after-slider">
+                <div class="uael-ba-container" data-move-on-hover="no" data-offset="0.5" data-orientation="horizontal">
+                 <img alt="Before" class="uael-before-img" src="https://jumpstory.com/wp-content/uploads/2020/10/Background-Remove-Product-Before-1024x683.png" style="position: absolute;"/>
+                 <img alt="After" class="uael-after-img" src="https://jumpstory.com/wp-content/uploads/2020/10/Background-Remove-Product-After-1024x683.png"/>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-section elementor-top-section elementor-element elementor-element-544a7c0c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="544a7c0c" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-default">
+         <div class="elementor-row">
+          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4f79c5db" data-element_type="column" data-id="4f79c5db">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-38103e2f elementor-widget elementor-widget-heading" data-element_type="widget" data-id="38103e2f" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+               <h4 class="elementor-heading-title elementor-size-default">
+                Authentic stock photos &amp; image tools
+               </h4>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-604afabf elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="604afabf" data-widget_type="text-editor.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-text-editor elementor-clearfix">
+                <p>
+                 With a JumpStory account you get access to a range of image features​
+                </p>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-section elementor-top-section elementor-element elementor-element-72236978 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="72236978" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-wide">
+         <div class="elementor-row">
+          <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-c780011" data-element_type="column" data-id="c780011">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-1950a822 elementor-cta--skin-classic elementor-animated-content elementor-widget elementor-widget-call-to-action" data-element_type="widget" data-id="1950a822" data-widget_type="call-to-action.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-cta">
+                <div class="elementor-cta__bg-wrapper">
+                 <div class="elementor-cta__bg elementor-bg" style="background-image: url(https://jumpstory.com/wp-content/uploads/2020/07/Mask-Group-q.jpg);">
+                 </div>
+                 <div class="elementor-cta__bg-overlay">
+                 </div>
+                </div>
+                <div class="elementor-cta__content">
+                 <h6 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+                  Images
+                 </h6>
+                 <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                  +20M professional &amp; high-performing photos​.
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-509e0af1" data-element_type="column" data-id="509e0af1">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-443e7ef0 elementor-cta--skin-classic elementor-animated-content elementor-widget elementor-widget-call-to-action" data-element_type="widget" data-id="443e7ef0" data-widget_type="call-to-action.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-cta">
+                <div class="elementor-cta__bg-wrapper">
+                 <div class="elementor-cta__bg elementor-bg" style="background-image: url(https://jumpstory.com/wp-content/uploads/2020/07/Mask-Group.jpg);">
+                 </div>
+                 <div class="elementor-cta__bg-overlay">
+                 </div>
+                </div>
+                <div class="elementor-cta__content">
+                 <h6 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+                  Videos
+                 </h6>
+                 <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                  Access to 1,000,000 high-resolution videos.
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-283f1d1a" data-element_type="column" data-id="283f1d1a">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-3afefb89 elementor-cta--skin-classic elementor-animated-content elementor-widget elementor-widget-call-to-action" data-element_type="widget" data-id="3afefb89" data-widget_type="call-to-action.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-cta">
+                <div class="elementor-cta__bg-wrapper">
+                 <div class="elementor-cta__bg elementor-bg" style="background-image: url(https://jumpstory.com/wp-content/uploads/2020/09/jumpstory-download20200923-135005-768x555.jpg);">
+                 </div>
+                 <div class="elementor-cta__bg-overlay">
+                 </div>
+                </div>
+                <div class="elementor-cta__content">
+                 <h6 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+                  Illustrations
+                 </h6>
+                 <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                  1,000,000 illustrations &amp; backgrounds.
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-6865afe5" data-element_type="column" data-id="6865afe5">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-3b33345 elementor-cta--layout-image-above elementor-cta--skin-classic elementor-animated-content elementor-widget elementor-widget-call-to-action" data-element_type="widget" data-id="3b33345" data-widget_type="call-to-action.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-cta">
+                <div class="elementor-cta__bg-wrapper">
+                 <div class="elementor-cta__bg elementor-bg" style="background-image: url(https://jumpstory.com/wp-content/uploads/2020/07/Mask-Group4.jpg);">
+                 </div>
+                 <div class="elementor-cta__bg-overlay">
+                 </div>
+                </div>
+                <div class="elementor-cta__content">
+                 <h6 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+                  Vectors
+                 </h6>
+                 <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                  Choose from over a 500,000 vectors in the library.
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-section elementor-top-section elementor-element elementor-element-21751136 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="21751136" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-wide">
+         <div class="elementor-row">
+          <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-4e2abb53" data-element_type="column" data-id="4e2abb53">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-22be7b4 elementor-cta--skin-classic elementor-animated-content elementor-widget elementor-widget-call-to-action" data-element_type="widget" data-id="22be7b4" data-widget_type="call-to-action.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-cta">
+                <div class="elementor-cta__bg-wrapper">
+                 <div class="elementor-cta__bg elementor-bg" style="background-image: url(https://jumpstory.com/wp-content/uploads/2020/07/Mask-Group3.jpg);">
+                 </div>
+                 <div class="elementor-cta__bg-overlay">
+                 </div>
+                </div>
+                <div class="elementor-cta__content">
+                 <h6 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+                  Icons
+                 </h6>
+                 <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                  Select and download from more than 50,000 icons
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-2920a06a" data-element_type="column" data-id="2920a06a">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-5a075c28 elementor-cta--skin-classic elementor-animated-content elementor-widget elementor-widget-call-to-action" data-element_type="widget" data-id="5a075c28" data-widget_type="call-to-action.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-cta">
+                <div class="elementor-cta__bg-wrapper">
+                 <div class="elementor-cta__bg elementor-bg" style="background-image: url(https://jumpstory.com/wp-content/uploads/2020/09/copyright.jpg);">
+                 </div>
+                 <div class="elementor-cta__bg-overlay">
+                 </div>
+                </div>
+                <div class="elementor-cta__content">
+                 <h6 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+                  Simple terms
+                 </h6>
+                 <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                  All images are CC0 or similar copyright.
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-4bb97305" data-element_type="column" data-id="4bb97305">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-24ff3e6e elementor-cta--skin-classic elementor-animated-content elementor-widget elementor-widget-call-to-action" data-element_type="widget" data-id="24ff3e6e" data-widget_type="call-to-action.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-cta">
+                <div class="elementor-cta__bg-wrapper">
+                 <div class="elementor-cta__bg elementor-bg" style="background-image: url(https://jumpstory.com/wp-content/uploads/2020/09/image-downloads-1.jpg);">
+                 </div>
+                 <div class="elementor-cta__bg-overlay">
+                 </div>
+                </div>
+                <div class="elementor-cta__content">
+                 <h6 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+                  Unlimited downloads
+                 </h6>
+                 <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                  Download as much as you want
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-7f7f0c15" data-element_type="column" data-id="7f7f0c15">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-1efd5065 elementor-cta--skin-classic elementor-animated-content elementor-widget elementor-widget-call-to-action" data-element_type="widget" data-id="1efd5065" data-widget_type="call-to-action.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-cta">
+                <div class="elementor-cta__bg-wrapper">
+                 <div class="elementor-cta__bg elementor-bg" style="background-image: url(https://jumpstory.com/wp-content/uploads/2020/09/image-archive.jpg);">
+                 </div>
+                 <div class="elementor-cta__bg-overlay">
+                 </div>
+                </div>
+                <div class="elementor-cta__content">
+                 <h6 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+                  Image archive
+                 </h6>
+                 <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                  Store images you like
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-section elementor-top-section elementor-element elementor-element-7cb42d43 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="7cb42d43" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-wide">
+         <div class="elementor-row">
+          <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-44f52b" data-element_type="column" data-id="44f52b">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-3f1fc2d4 elementor-cta--layout-image-above elementor-cta--skin-classic elementor-animated-content elementor-widget elementor-widget-call-to-action" data-element_type="widget" data-id="3f1fc2d4" data-widget_type="call-to-action.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-cta">
+                <div class="elementor-cta__bg-wrapper">
+                 <div class="elementor-cta__bg elementor-bg" style="background-image: url(https://jumpstory.com/wp-content/uploads/2020/09/daily-images.jpg);">
+                 </div>
+                 <div class="elementor-cta__bg-overlay">
+                 </div>
+                </div>
+                <div class="elementor-cta__content">
+                 <h6 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+                  Daily images
+                 </h6>
+                 <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                  New images are added daily
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-4edeb8a7" data-element_type="column" data-id="4edeb8a7">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-67a8e866 elementor-cta--layout-image-above elementor-cta--skin-classic elementor-animated-content elementor-widget elementor-widget-call-to-action" data-element_type="widget" data-id="67a8e866" data-widget_type="call-to-action.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-cta">
+                <div class="elementor-cta__bg-wrapper">
+                 <div class="elementor-cta__bg elementor-bg" style="background-image: url(https://jumpstory.com/wp-content/uploads/2020/09/Remove-Background-768x512.png);">
+                 </div>
+                 <div class="elementor-cta__bg-overlay">
+                 </div>
+                </div>
+                <div class="elementor-cta__content">
+                 <h6 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+                  Background removal
+                 </h6>
+                 <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                  Remove backgrounds automatically with AI
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-775f63da" data-element_type="column" data-id="775f63da">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-66fefd1c elementor-cta--skin-classic elementor-animated-content elementor-widget elementor-widget-call-to-action" data-element_type="widget" data-id="66fefd1c" data-widget_type="call-to-action.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-cta">
+                <div class="elementor-cta__bg-wrapper">
+                 <div class="elementor-cta__bg elementor-bg" style="background-image: url(https://jumpstory.com/wp-content/uploads/2020/09/image-editing.jpg);">
+                 </div>
+                 <div class="elementor-cta__bg-overlay">
+                 </div>
+                </div>
+                <div class="elementor-cta__content">
+                 <h6 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+                  Image editor
+                 </h6>
+                 <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                  Simple editing tool to crop,  resize, add text, adjust contrast etc.
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-4832b824" data-element_type="column" data-id="4832b824">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-4a0f3c57 elementor-cta--skin-classic elementor-animated-content elementor-widget elementor-widget-call-to-action" data-element_type="widget" data-id="4a0f3c57" data-widget_type="call-to-action.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-cta">
+                <div class="elementor-cta__bg-wrapper">
+                 <div class="elementor-cta__bg elementor-bg" style="background-image: url(https://jumpstory.com/wp-content/uploads/2020/09/jumpstory-download20200923-140200-768x512.jpg);">
+                 </div>
+                 <div class="elementor-cta__bg-overlay">
+                 </div>
+                </div>
+                <div class="elementor-cta__content">
+                 <h6 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+                  Many formats
+                 </h6>
+                 <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                  All common formats and free image converter.
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- #content -->
+  </div>
+  <!-- #page -->
+  <div class="site-footer footer-bar-active footer-bar-align-right">
+   <div class="elementor elementor-16089 elementor-location-footer" data-elementor-id="16089" data-elementor-settings="[]" data-elementor-type="footer">
+    <div class="elementor-section-wrap">
+     <section class="elementor-section elementor-top-section elementor-element elementor-element-53fd478 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="53fd478" data-settings='{"background_background":"classic"}'>
+      <div class="elementor-container elementor-column-gap-default">
+       <div class="elementor-row">
+        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-60667dc" data-element_type="column" data-id="60667dc">
+         <div class="elementor-column-wrap elementor-element-populated">
+          <div class="elementor-widget-wrap">
+           <div class="elementor-element elementor-element-676e23f elementor-position-left elementor-vertical-align-middle elementor-widget elementor-widget-image-box" data-element_type="widget" data-id="676e23f" data-widget_type="image-box.default">
+            <div class="elementor-widget-container">
+             <div class="elementor-image-box-wrapper">
+              <figure class="elementor-image-box-img">
+               <img alt="" class="attachment-full size-full" loading="lazy" src="https://jumpstory.com/wp-content/uploads/2019/04/jumpstory_logo_negativ.svg"/>
+              </figure>
+              <div class="elementor-image-box-content">
+               <h3 class="elementor-image-box-title">
+                Images with Impact
+               </h3>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-02ede76" data-element_type="column" data-id="02ede76">
+         <div class="elementor-column-wrap elementor-element-populated">
+          <div class="elementor-widget-wrap">
+           <div class="elementor-element elementor-element-917cd39 elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-element_type="widget" data-id="917cd39" data-widget_type="social-icons.default">
+            <div class="elementor-widget-container">
+             <div class="elementor-social-icons-wrapper elementor-grid">
+              <div class="elementor-grid-item">
+               <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-0267196" href="https://www.facebook.com/jumpstoryofficial/" target="_blank">
+                <span class="elementor-screen-only">
+                 Facebook-f
+                </span>
+                <i class="fab fa-facebook-f">
+                </i>
+               </a>
+              </div>
+              <div class="elementor-grid-item">
+               <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-dbaeb71" href="https://www.youtube.com/channel/UC0Gi_PsXsLlwI9eu-rBMjFQ" target="_blank">
+                <span class="elementor-screen-only">
+                 Youtube
+                </span>
+                <i class="fab fa-youtube">
+                </i>
+               </a>
+              </div>
+              <div class="elementor-grid-item">
+               <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-dc10550" href="https://www.instagram.com/jumpstoryofficial/" target="_blank">
+                <span class="elementor-screen-only">
+                 Instagram
+                </span>
+                <i class="fab fa-instagram">
+                </i>
+               </a>
+              </div>
+              <div class="elementor-grid-item">
+               <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-0e260c9" href="https://www.linkedin.com/company/jumpstory" target="_blank">
+                <span class="elementor-screen-only">
+                 Linkedin
+                </span>
+                <i class="fab fa-linkedin">
+                </i>
+               </a>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class="elementor-section elementor-top-section elementor-element elementor-element-a0ea225 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="a0ea225" data-settings='{"background_background":"classic"}'>
+      <div class="elementor-container elementor-column-gap-default">
+       <div class="elementor-row">
+        <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-a299d47" data-element_type="column" data-id="a299d47">
+         <div class="elementor-column-wrap elementor-element-populated">
+          <div class="elementor-widget-wrap">
+           <div class="elementor-element elementor-element-6677b8c elementor-widget elementor-widget-heading" data-element_type="widget" data-id="6677b8c" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+             <h4 class="elementor-heading-title elementor-size-default">
+              JumpStory&trade;
+             </h4>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-6ce2395 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="6ce2395" data-widget_type="divider.default">
+            <div class="elementor-widget-container">
+             <div class="elementor-divider">
+              <span class="elementor-divider-separator">
+              </span>
+             </div>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-fffc89e elementor-tablet-align-left elementor-hidden-tablet elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-element_type="widget" data-id="fffc89e" data-widget_type="icon-list.default">
+            <div class="elementor-widget-container">
+             <ul class="elementor-icon-list-items">
+              <li class="elementor-icon-list-item">
+               <span class="elementor-icon-list-icon">
+                <i aria-hidden="true" class="fas fa-map-marker-alt">
+                </i>
+               </span>
+               <span class="elementor-icon-list-text">
+                Axel Gruhns Vej 2
+                <br/>
+                8270 Hojbjerg
+                <br/>
+                Denmark
+               </span>
+              </li>
+             </ul>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-914e500" data-element_type="column" data-id="914e500">
+         <div class="elementor-column-wrap elementor-element-populated">
+          <div class="elementor-widget-wrap">
+           <div class="elementor-element elementor-element-5b49e46 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="5b49e46" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+             <h4 class="elementor-heading-title elementor-size-default">
+              <a href="https://jumpstory.com/images/">
+               Features
+              </a>
+             </h4>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-871a909 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="871a909" data-widget_type="divider.default">
+            <div class="elementor-widget-container">
+             <div class="elementor-divider">
+              <span class="elementor-divider-separator">
+              </span>
+             </div>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-15a1bd9 elementor-nav-menu__align-left elementor-nav-menu--indicator-none elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-element_type="widget" data-id="15a1bd9" data-settings='{"layout":"vertical"}' data-widget_type="nav-menu.default">
+            <div class="elementor-widget-container">
+             <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none" role="navigation">
+              <ul class="elementor-nav-menu sm-vertical" id="menu-1-15a1bd9">
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17996">
+                <a class="elementor-item" href="https://jumpstory.com/images/search/">
+                 Image Search
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17991">
+                <a class="elementor-item" href="https://jumpstory.com/images/curated-collections/">
+                 Curated Collections
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17992">
+                <a class="elementor-item" href="https://jumpstory.com/images/image-editor/">
+                 Online Image Editor
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17994">
+                <a class="elementor-item" href="https://jumpstory.com/images/match-text/">
+                 Text Match
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-12560 current_page_item menu-item-17995">
+                <a aria-current="page" class="elementor-item elementor-item-active" href="https://jumpstory.com/images/remove-background/">
+                 Background Removal
+                </a>
+               </li>
+              </ul>
+             </nav>
+             <div aria-expanded="false" aria-label="Menu Toggle" class="elementor-menu-toggle" role="button" tabindex="0">
+              <i aria-hidden="true" class="eicon-menu-bar">
+              </i>
+              <span class="elementor-screen-only">
+               Menu
+              </span>
+             </div>
+             <nav aria-hidden="true" class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation">
+              <ul class="elementor-nav-menu sm-vertical" id="menu-2-15a1bd9">
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17996">
+                <a class="elementor-item" href="https://jumpstory.com/images/search/">
+                 Image Search
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17991">
+                <a class="elementor-item" href="https://jumpstory.com/images/curated-collections/">
+                 Curated Collections
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17992">
+                <a class="elementor-item" href="https://jumpstory.com/images/image-editor/">
+                 Online Image Editor
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17994">
+                <a class="elementor-item" href="https://jumpstory.com/images/match-text/">
+                 Text Match
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-12560 current_page_item menu-item-17995">
+                <a aria-current="page" class="elementor-item elementor-item-active" href="https://jumpstory.com/images/remove-background/">
+                 Background Removal
+                </a>
+               </li>
+              </ul>
+             </nav>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-629a3a8" data-element_type="column" data-id="629a3a8">
+         <div class="elementor-column-wrap elementor-element-populated">
+          <div class="elementor-widget-wrap">
+           <div class="elementor-element elementor-element-f50ad48 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="f50ad48" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+             <h4 class="elementor-heading-title elementor-size-default">
+              About
+             </h4>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-d21ca88 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="d21ca88" data-widget_type="divider.default">
+            <div class="elementor-widget-container">
+             <div class="elementor-divider">
+              <span class="elementor-divider-separator">
+              </span>
+             </div>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-c39767c elementor-nav-menu__align-left elementor-nav-menu--indicator-none elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-element_type="widget" data-id="c39767c" data-settings='{"layout":"vertical"}' data-widget_type="nav-menu.default">
+            <div class="elementor-widget-container">
+             <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none" role="navigation">
+              <ul class="elementor-nav-menu sm-vertical" id="menu-1-c39767c">
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16106">
+                <a class="elementor-item" href="https://jumpstory.com/about-us/">
+                 About us
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16107">
+                <a class="elementor-item" href="https://jumpstory.com/careers/">
+                 Careers (We&rsquo;re hiring)
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16108">
+                <a class="elementor-item" href="https://jumpstory.com/investors/">
+                 Investors
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16109">
+                <a class="elementor-item" href="https://jumpstory.com/press/">
+                 Press
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16110">
+                <a class="elementor-item" href="https://jumpstory.com/team/">
+                 Team
+                </a>
+               </li>
+              </ul>
+             </nav>
+             <div aria-expanded="false" aria-label="Menu Toggle" class="elementor-menu-toggle" role="button" tabindex="0">
+              <i aria-hidden="true" class="eicon-menu-bar">
+              </i>
+              <span class="elementor-screen-only">
+               Menu
+              </span>
+             </div>
+             <nav aria-hidden="true" class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation">
+              <ul class="elementor-nav-menu sm-vertical" id="menu-2-c39767c">
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16106">
+                <a class="elementor-item" href="https://jumpstory.com/about-us/">
+                 About us
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16107">
+                <a class="elementor-item" href="https://jumpstory.com/careers/">
+                 Careers (We&rsquo;re hiring)
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16108">
+                <a class="elementor-item" href="https://jumpstory.com/investors/">
+                 Investors
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16109">
+                <a class="elementor-item" href="https://jumpstory.com/press/">
+                 Press
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16110">
+                <a class="elementor-item" href="https://jumpstory.com/team/">
+                 Team
+                </a>
+               </li>
+              </ul>
+             </nav>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-06ac212" data-element_type="column" data-id="06ac212">
+         <div class="elementor-column-wrap elementor-element-populated">
+          <div class="elementor-widget-wrap">
+           <div class="elementor-element elementor-element-0334bc2 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="0334bc2" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+             <h4 class="elementor-heading-title elementor-size-default">
+              Blog
+             </h4>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-8ccb951 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="8ccb951" data-widget_type="divider.default">
+            <div class="elementor-widget-container">
+             <div class="elementor-divider">
+              <span class="elementor-divider-separator">
+              </span>
+             </div>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-8697441 elementor-nav-menu__align-left elementor-nav-menu--indicator-none elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-element_type="widget" data-id="8697441" data-settings='{"layout":"vertical"}' data-widget_type="nav-menu.default">
+            <div class="elementor-widget-container">
+             <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none" role="navigation">
+              <ul class="elementor-nav-menu sm-vertical" id="menu-1-8697441">
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17452">
+                <a class="elementor-item" href="https://jumpstory.com/blog/">
+                 Blog
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9998">
+                <a class="elementor-item" href="https://jumpstory.com/content-marketing/">
+                 Content Marketing
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9997">
+                <a class="elementor-item" href="https://jumpstory.com/design-and-photos/">
+                 Design and Photos
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10001">
+                <a class="elementor-item" href="https://jumpstory.com/marketing-automation/">
+                 Marketing automation
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11329">
+                <a class="elementor-item" href="https://jumpstory.com/social-media/">
+                 Social Media
+                </a>
+               </li>
+              </ul>
+             </nav>
+             <div aria-expanded="false" aria-label="Menu Toggle" class="elementor-menu-toggle" role="button" tabindex="0">
+              <i aria-hidden="true" class="eicon-menu-bar">
+              </i>
+              <span class="elementor-screen-only">
+               Menu
+              </span>
+             </div>
+             <nav aria-hidden="true" class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation">
+              <ul class="elementor-nav-menu sm-vertical" id="menu-2-8697441">
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17452">
+                <a class="elementor-item" href="https://jumpstory.com/blog/">
+                 Blog
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9998">
+                <a class="elementor-item" href="https://jumpstory.com/content-marketing/">
+                 Content Marketing
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9997">
+                <a class="elementor-item" href="https://jumpstory.com/design-and-photos/">
+                 Design and Photos
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10001">
+                <a class="elementor-item" href="https://jumpstory.com/marketing-automation/">
+                 Marketing automation
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11329">
+                <a class="elementor-item" href="https://jumpstory.com/social-media/">
+                 Social Media
+                </a>
+               </li>
+              </ul>
+             </nav>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-aee31f4" data-element_type="column" data-id="aee31f4">
+         <div class="elementor-column-wrap elementor-element-populated">
+          <div class="elementor-widget-wrap">
+           <div class="elementor-element elementor-element-e2cc1f9 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="e2cc1f9" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+             <h4 class="elementor-heading-title elementor-size-default">
+              Company
+             </h4>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-9d92b2d elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-element_type="widget" data-id="9d92b2d" data-widget_type="divider.default">
+            <div class="elementor-widget-container">
+             <div class="elementor-divider">
+              <span class="elementor-divider-separator">
+              </span>
+             </div>
+            </div>
+           </div>
+           <div class="elementor-element elementor-element-df924d8 elementor-nav-menu__align-left elementor-nav-menu--indicator-none elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-element_type="widget" data-id="df924d8" data-settings='{"layout":"vertical"}' data-widget_type="nav-menu.default">
+            <div class="elementor-widget-container">
+             <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none" role="navigation">
+              <ul class="elementor-nav-menu sm-vertical" id="menu-1-df924d8">
+               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16116">
+                <a class="elementor-item" href="https://partners.jumpstory.com">
+                 API
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16118">
+                <a class="elementor-item" href="https://jumpstory.com/jumpstory-alternatives/">
+                 Compare
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16119">
+                <a class="elementor-item" href="https://jumpstory.com/faq/">
+                 FAQ
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16120">
+                <a class="elementor-item" href="https://jumpstory.com/publicroadmap/">
+                 Roadmap
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16121">
+                <a class="elementor-item" href="https://jumpstory.com/customer-support/">
+                 Support
+                </a>
+               </li>
+              </ul>
+             </nav>
+             <div aria-expanded="false" aria-label="Menu Toggle" class="elementor-menu-toggle" role="button" tabindex="0">
+              <i aria-hidden="true" class="eicon-menu-bar">
+              </i>
+              <span class="elementor-screen-only">
+               Menu
+              </span>
+             </div>
+             <nav aria-hidden="true" class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation">
+              <ul class="elementor-nav-menu sm-vertical" id="menu-2-df924d8">
+               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16116">
+                <a class="elementor-item" href="https://partners.jumpstory.com">
+                 API
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16118">
+                <a class="elementor-item" href="https://jumpstory.com/jumpstory-alternatives/">
+                 Compare
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16119">
+                <a class="elementor-item" href="https://jumpstory.com/faq/">
+                 FAQ
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16120">
+                <a class="elementor-item" href="https://jumpstory.com/publicroadmap/">
+                 Roadmap
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16121">
+                <a class="elementor-item" href="https://jumpstory.com/customer-support/">
+                 Support
+                </a>
+               </li>
+              </ul>
+             </nav>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <footer class="elementor-section elementor-top-section elementor-element elementor-element-aaf0309 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="aaf0309" data-settings='{"background_background":"classic"}'>
+      <div class="elementor-container elementor-column-gap-default">
+       <div class="elementor-row">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8fcd201" data-element_type="column" data-id="8fcd201">
+         <div class="elementor-column-wrap">
+          <div class="elementor-widget-wrap">
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </footer>
+     <footer class="elementor-section elementor-top-section elementor-element elementor-element-87f9815 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-element_type="section" data-id="87f9815" data-settings='{"background_background":"classic"}'>
+      <div class="elementor-container elementor-column-gap-default">
+       <div class="elementor-row">
+        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-35faf96" data-element_type="column" data-id="35faf96">
+         <div class="elementor-column-wrap elementor-element-populated">
+          <div class="elementor-widget-wrap">
+           <div class="elementor-element elementor-element-c34550e elementor-widget elementor-widget-heading" data-element_type="widget" data-id="c34550e" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+             <p class="elementor-heading-title elementor-size-default">
+              &copy; JumpStory 2020
+             </p>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-81ffbee" data-element_type="column" data-id="81ffbee">
+         <div class="elementor-column-wrap elementor-element-populated">
+          <div class="elementor-widget-wrap">
+           <div class="elementor-element elementor-element-4ccedf9 elementor-nav-menu__align-right elementor-nav-menu--indicator-none elementor-nav-menu--dropdown-none footerextra elementor-widget elementor-widget-nav-menu" data-element_type="widget" data-id="4ccedf9" data-settings='{"layout":"horizontal"}' data-widget_type="nav-menu.default">
+            <div class="elementor-widget-container">
+             <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-none" role="navigation">
+              <ul class="elementor-nav-menu" id="menu-1-4ccedf9">
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6010">
+                <a class="elementor-item" href="https://jumpstory.com/business-terms-and-conditions/">
+                 Terms &amp; conditions
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-6011">
+                <a class="elementor-item" href="https://jumpstory.com/cookie-and-privacy-policy/">
+                 Cookie &amp; privacy policy
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14351">
+                <a class="elementor-item" href="https://jumpstory.com/secret-sauce/">
+                 Patent pending
+                </a>
+               </li>
+              </ul>
+             </nav>
+             <div aria-expanded="false" aria-label="Menu Toggle" class="elementor-menu-toggle" role="button" tabindex="0">
+              <i aria-hidden="true" class="eicon-menu-bar">
+              </i>
+              <span class="elementor-screen-only">
+               Menu
+              </span>
+             </div>
+             <nav aria-hidden="true" class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation">
+              <ul class="elementor-nav-menu" id="menu-2-4ccedf9">
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6010">
+                <a class="elementor-item" href="https://jumpstory.com/business-terms-and-conditions/">
+                 Terms &amp; conditions
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-6011">
+                <a class="elementor-item" href="https://jumpstory.com/cookie-and-privacy-policy/">
+                 Cookie &amp; privacy policy
+                </a>
+               </li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14351">
+                <a class="elementor-item" href="https://jumpstory.com/secret-sauce/">
+                 Patent pending
+                </a>
+               </li>
+              </ul>
+             </nav>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </footer>
+    </div>
+   </div>
+  </div>
+  <!-- .site-footer -->
+  <a aria-label="Scroll back to top" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300" href="#" rel="nofollow" style="opacity:0;visibility:hidden;" title="Scroll back to top">
+  </a>
+  <nav class="main-navigation slideout-navigation" id="generate-slideout-menu" itemscope="" itemtype="https://schema.org/SiteNavigationElement" style="display: none;">
+   <div class="inside-navigation grid-container grid-parent">
+    <div class="main-nav">
+     <ul class=" slideout-menu" id="menu-main-menu">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-15938">
+       <a href="https://jumpstory.com/images/">
+        Features
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16083">
+       <a href="https://jumpstory.com/prices/">
+        Pricing
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14799">
+       <a href="https://jumpstory.com/customer-reviews/">
+        Reviews
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11704">
+       <a href="https://jumpstory.com/images/search/">
+        Search
+       </a>
+      </li>
+      <li class="mobile_getstarted menu-item menu-item-type-custom menu-item-object-custom menu-item-10085">
+       <a href="https://universe.jumpstory.com/get-started/">
+        Get started
+       </a>
+      </li>
+      <li class="mobile_getstarted menu-item menu-item-type-custom menu-item-object-custom menu-item-11707">
+       <a href="https://universe.jumpstory.com/login/">
+        Login
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <!-- .inside-navigation -->
+  </nav>
+  <!-- #site-navigation -->
+  <div class="slideout-overlay">
+   <button class="slideout-exit ">
+    <span class="screen-reader-text">
+     Close
+    </span>
+   </button>
+  </div>
+  <!--BEGIN: TRACKING CODE MANAGER BY INTELLYWP.COM IN BODY//-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-54TCPT4" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script data-minify="1" defer="" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/cache/min/1/js/177158-c26e72b81ebd28dc34f8f027324cc250.js" type="text/javascript">
+  </script>
+  <noscript>
+   <img alt="" src="https://secure.perk0mean.com/177158.png" style="display:none;"/>
+  </noscript>
+  <!--END: https://wordpress.org/plugins/tracking-code-manager IN BODY//-->
+  <!--BEGIN: TRACKING CODE MANAGER BY INTELLYWP.COM IN FOOTER//-->
+  <script type="text/javascript">
+   var trackcmp_email = '';
+	var trackcmp = document.createElement("script");
+	trackcmp.async = true;
+	trackcmp.type = 'text/javascript';
+	trackcmp.src = '//trackcmp.net/visit?actid=89552214&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+	var trackcmp_s = document.getElementsByTagName("script");
+	if (trackcmp_s.length) {
+		trackcmp_s[0].parentNode.appendChild(trackcmp);
+	} else {
+		var trackcmp_h = document.getElementsByTagName("head");
+		trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+	}
+  </script>
+  <script async="" data-minify="1" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/cache/min/1/pa-5ecb8356bb913100150001ca-68c037a3a76af783501d66c0eeb3fbad.js">
+  </script>
+  <!--END: https://wordpress.org/plugins/tracking-code-manager IN FOOTER//-->
+  <div class="elementor elementor-18772 elementor-location-popup" data-elementor-id="18772" data-elementor-settings='{"entrance_animation":"fadeIn","exit_animation":"fadeIn","entrance_animation_duration":{"unit":"px","size":"1.4","sizes":[]},"triggers":{"exit_intent":"yes"},"timing":{"times":"yes","logged_in_users":"custom","logged_in_roles":["editor","author","contributor","subscriber"],"logged_in":"yes","devices":"yes","times_times":3,"devices_devices":["desktop","tablet","mobile"]}}' data-elementor-type="popup">
+   <div class="elementor-section-wrap">
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-628c007b elementor-section-height-min-height elementor-section-items-stretch ignore-toc elementor-section-boxed elementor-section-height-default" data-element_type="section" data-id="628c007b">
+     <div class="elementor-container elementor-column-gap-default">
+      <div class="elementor-row">
+       <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6694b13" data-element_type="column" data-id="6694b13">
+        <div class="elementor-column-wrap elementor-element-populated">
+         <div class="elementor-widget-wrap">
+          <div class="elementor-element elementor-element-889973f elementor-widget-divider--view-line_text elementor-widget__width-auto elementor-widget-mobile__width-auto elementor-widget elementor-widget-divider" data-element_type="widget" data-id="889973f" data-widget_type="divider.default">
+           <div class="elementor-widget-container">
+            <div class="elementor-divider">
+             <span class="elementor-divider-separator">
+             </span>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-element elementor-element-441bf07 elementor-widget__width-auto elementor-widget-mobile__width-auto elementor-widget elementor-widget-heading" data-element_type="widget" data-id="441bf07" data-widget_type="heading.default">
+           <div class="elementor-widget-container">
+            <p class="elementor-heading-title elementor-size-default">
+             Before you go
+            </p>
+           </div>
+          </div>
+          <div class="elementor-element elementor-element-299f16e elementor-widget elementor-widget-heading" data-element_type="widget" data-id="299f16e" data-widget_type="heading.default">
+           <div class="elementor-widget-container">
+            <h2 class="elementor-heading-title elementor-size-default">
+             Get 14 days of free access to JumpStory.
+            </h2>
+           </div>
+          </div>
+          <div class="elementor-element elementor-element-63a84a8f elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="63a84a8f" data-widget_type="text-editor.default">
+           <div class="elementor-widget-container">
+            <div class="elementor-text-editor elementor-clearfix">
+             Simply click below and complete the registration to get free access.
+            </div>
+           </div>
+          </div>
+          <div class="elementor-element elementor-element-5073d630 elementor-widget elementor-widget-button" data-element_type="widget" data-id="5073d630" data-widget_type="button.default">
+           <div class="elementor-widget-container">
+            <div class="elementor-button-wrapper">
+             <a class="elementor-button-link elementor-button elementor-size-lg" href="https://universe.jumpstory.com/get-started/" role="button">
+              <span class="elementor-button-content-wrapper">
+               <span class="elementor-button-text">
+                Get 14-day Free Access
+               </span>
+              </span>
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-161fd7b3" data-element_type="column" data-id="161fd7b3" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-column-wrap elementor-element-populated">
+         <div class="elementor-widget-wrap">
+          <div class="elementor-element elementor-element-6916301 elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="6916301" data-widget_type="spacer.default">
+           <div class="elementor-widget-container">
+            <div class="elementor-spacer">
+             <div class="elementor-spacer-inner">
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+   </div>
+  </div>
+  <script id="generate-offside-js-extra">
+   var offSide = {"side":"left"};
+  </script>
+  <script defer="" id="generate-offside-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/gp-premium/menu-plus/functions/js/offside.min.js?ver=1.12.2">
+  </script>
+  <script defer="" id="imagesloaded-pkgd-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/elementor-jumpstory/assets/js/imagesloaded.pkgd.min.js">
+  </script>
+  <script data-minify="1" defer="" id="fleximages-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/cache/min/1/wp-content/plugins/elementor-jumpstory/assets/js/flexImages-ff9ad880ad80e358f851957cbb302793.js">
+  </script>
+  <script id="jumpstory-ajax-search-js-extra">
+   var jump_ajax_script = {"ajaxurl":"https:\/\/jumpstory.com\/wp-admin\/admin-ajax.php","wait":"\u00d8jeblik, dette tager 5-10 sek.","add_to_archive":"Tilf\u00f8j til Arkiv <i class=\"fa fa-folder\"><\/i>"};
+  </script>
+  <script data-minify="1" defer="" id="jumpstory-ajax-search-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/cache/min/1/wp-content/plugins/elementor-jumpstory/assets/js/jump-search-0838bda5b811b684a86b09dd1fb3b9e5.js">
+  </script>
+  <script id="flying-pages-js-before">
+   window.FPConfig= {
+	delay: 0,
+	ignoreKeywords: ["\/wp-admin","\/wp-login.php","\/cart","\/checkout","add-to-cart","logout","#","?",".png",".jpeg",".jpg",".gif",".svg",".webp"],
+	maxRPS: 3,
+    hoverDelay: 50
+};
+  </script>
+  <script defer="" id="flying-pages-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/flying-pages/flying-pages.min.js?ver=2.4.2">
+  </script>
+  <script id="generate-smooth-scroll-js-extra">
+   var smooth = {"elements":[".smooth-scroll","li.smooth-scroll a"],"duration":"800"};
+  </script>
+  <script defer="" id="generate-smooth-scroll-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/gp-premium/general/js/smooth-scroll.min.js?ver=1.12.2">
+  </script>
+  <script data-minify="1" defer="" id="whatconverts-tracking-script-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/cache/min/1/78854-4c18236b06822f479d7c291078bb8fcf.js">
+  </script>
+  <!--[if lte IE 11]>
+<script src='https://jumpstory.com/wp-content/themes/generatepress/assets/js/classList.min.js?ver=3.0.2' id='generate-classlist-js'></script>
+<![endif]-->
+  <script id="generate-main-js-extra">
+   var generatepressMenu = {"toggleOpenedSubMenus":"1","openSubMenuLabel":"Open Sub-Menu","closeSubMenuLabel":"Close Sub-Menu"};
+  </script>
+  <script defer="" id="generate-main-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/themes/generatepress/assets/js/main.min.js?ver=3.0.2">
+  </script>
+  <script defer="" id="generate-back-to-top-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/themes/generatepress/assets/js/back-to-top.min.js?ver=3.0.2">
+  </script>
+  <script data-minify="1" defer="" id="jumpstory_manifest-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/cache/min/1/wp-content/themes/jumpstoryv2/dist/manifest-a25fd7b0bd1972c72befe5bc9892ceb0.js">
+  </script>
+  <script data-minify="1" defer="" id="jumpstory_vendors-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/cache/min/1/wp-content/themes/jumpstoryv2/dist/vendor-adde1cd406feb95f47620c7e3bcdd691.js">
+  </script>
+  <script id="jumpstory_js-js-extra">
+   var globals = {"api":{"nonce":"43cabe2769"}};
+  </script>
+  <script data-minify="1" defer="" id="jumpstory_js-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/cache/min/1/wp-content/themes/jumpstoryv2/dist/index-e1e064f69d7a3e097834f0918a89eb74.js">
+  </script>
+  <script defer="" id="wp-embed-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-includes/js/wp-embed.min.js?ver=5.5.3">
+  </script>
+  <script defer="" id="smartmenus-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1">
+  </script>
+  <script id="uael-frontend-script-js-extra">
+   var uael_script = {"ajax_url":"https:\/\/jumpstory.com\/wp-admin\/admin-ajax.php"};
+var uael_post_loader_script = {"post_loader":"https:\/\/jumpstory.com\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/post-loader.gif"};
+var uael_login_form_script = {"ajax_url":"https:\/\/jumpstory.com\/wp-admin\/admin-ajax.php","invalid_mail":"Enter valid Email!","pass_unmatch":"The specified password do not match!","required":"This Field is required!","incorrect_password":"Error: The Password you have entered is incorrect.","invalid_username":"Unknown username. Check again or try your email address.","invalid_email":"Unknown email address. Check again or try your username.","logged_in_message":"Thanks for logging in, ","wp_version":"1"};
+  </script>
+  <script defer="" id="uael-frontend-script-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/ultimate-elementor/assets/min-js/uael-frontend.min.js?ver=1.27.2">
+  </script>
+  <script defer="" id="uael-twenty-twenty-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/ultimate-elementor/assets/min-js/jquery_twentytwenty.min.js?ver=1.27.2">
+  </script>
+  <script defer="" id="uael-move-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/ultimate-elementor/assets/min-js/jquery_event_move.min.js?ver=1.27.2">
+  </script>
+  <script defer="" id="imagesloaded-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-includes/js/imagesloaded.min.js?ver=4.1.4">
+  </script>
+  <script defer="" id="elementor-frontend-modules-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.0.14">
+  </script>
+  <script defer="" id="elementor-sticky-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.0.7">
+  </script>
+  <script id="elementor-pro-frontend-js-before">
+   var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/jumpstory.com\/wp-admin\/admin-ajax.php","nonce":"a535a4f319","i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/jumpstory.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+  </script>
+  <script defer="" id="elementor-pro-frontend-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.0.7">
+  </script>
+  <script defer="" id="jquery-ui-position-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4">
+  </script>
+  <script defer="" id="elementor-dialog-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1">
+  </script>
+  <script defer="" id="elementor-waypoints-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2">
+  </script>
+  <script defer="" id="swiper-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6">
+  </script>
+  <script defer="" id="share-link-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.0.14">
+  </script>
+  <script id="elementor-frontend-js-extra">
+   var uael_particles_script = {"uael_particles_url":"https:\/\/jumpstory.com\/wp-content\/plugins\/ultimate-elementor\/assets\/min-js\/uael-particles.min.js","particles_url":"https:\/\/jumpstory.com\/wp-content\/plugins\/ultimate-elementor\/assets\/lib\/particles\/particles.min.js"};
+  </script>
+  <script id="elementor-frontend-js-before">
+   var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.0.14","is_static":false,"legacyMode":{"elementWrappers":true},"urls":{"assets":"https:\/\/jumpstory.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":12560,"title":"Remove%20image%20background%20-%20100%25%20automatically%20and%20free%20on%20JumpStory","excerpt":"","featuredImage":"https:\/\/jumpstory.com\/wp-content\/uploads\/2020\/10\/Remove-Background-Image.png"}};
+  </script>
+  <script defer="" id="elementor-frontend-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.0.14">
+  </script>
+  <script id="elementor-frontend-js-after">
+   window.scope_array = [];
+								window.backend = 0;
+								jQuery.cachedScript = function( url, options ) {
+									// Allow user to set any option except for dataType, cache, and url.
+									options = jQuery.extend( options || {}, {
+										dataType: "script",
+										cache: true,
+										url: url
+									});
+									// Return the jqXHR object so we can chain callbacks.
+									return jQuery.ajax( options );
+								};
+							    jQuery( window ).on( "elementor/frontend/init", function() {
+									elementorFrontend.hooks.addAction( "frontend/element_ready/global", function( $scope, $ ){
+										if ( "undefined" == typeof $scope ) {
+												return;
+										}
+										if ( $scope.hasClass( "uael-particle-yes" ) ) {
+											window.scope_array.push( $scope );
+											$scope.find(".uael-particle-wrapper").addClass("js-is-enabled");
+										}else{
+											return;
+										}
+										if(elementorFrontend.isEditMode() && $scope.find(".uael-particle-wrapper").hasClass("js-is-enabled") && window.backend == 0 ){		
+											var uael_url = uael_particles_script.uael_particles_url;
+											
+											jQuery.cachedScript( uael_url );
+											window.backend = 1;
+										}else if(elementorFrontend.isEditMode()){
+											var uael_url = uael_particles_script.uael_particles_url;
+											jQuery.cachedScript( uael_url ).done(function(){
+												var flag = true;
+											});
+										}
+									});
+								});
+								jQuery(document).ready(function(){
+									if ( jQuery.find( ".uael-particle-yes" ).length < 1 ) {
+										return;
+									}
+									var uael_url = uael_particles_script.uael_particles_url;
+									jQuery.cachedScript = function( url, options ) {
+										// Allow user to set any option except for dataType, cache, and url.
+										options = jQuery.extend( options || {}, {
+											dataType: "script",
+											cache: true,
+											url: url
+										});
+										// Return the jqXHR object so we can chain callbacks.
+										return jQuery.ajax( options );
+									};
+									jQuery.cachedScript( uael_url );
+								});
+  </script>
+  <script id="jet-elements-js-extra">
+   var jetElements = {"ajaxUrl":"https:\/\/jumpstory.com\/wp-admin\/admin-ajax.php","isMobile":"false","templateApiUrl":"https:\/\/jumpstory.com\/wp-json\/jet-elements-api\/v1\/elementor-template","devMode":"false","messages":{"invalidMail":"Please specify a valid e-mail"}};
+  </script>
+  <script defer="" id="jet-elements-js" src="https://dr2oyl37gq1l2.cloudfront.net/wp-content/plugins/jet-elements/assets/js/jet-elements.min.js?ver=2.5.2">
+  </script>
+  <!-- Cookie Notice plugin v1.3.2 by Digital Factory https://dfactory.eu/ -->
+  <div aria-label="Cookie Notice" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" id="cookie-notice" role="banner" style="background-color: rgba(0,0,0,1);">
+   <div class="cookie-notice-container" style="color: #fff;">
+    <span class="cn-text-container" id="cn-notice-text">
+     We use cookies, just to track visits to our website, we store no personal details.
+    </span>
+    <span class="cn-buttons-container" id="cn-notice-buttons">
+     <a aria-label="Accept" class="cn-set-cookie cn-button bootstrap button" data-cookie-set="accept" href="#" id="cn-accept-cookie">
+      Accept
+     </a>
+     <a aria-label="Read our policy" class="cn-more-info cn-button bootstrap button" href="https://jumpstory.com/cookie-and-privacy-policy/" id="cn-more-info" target="_blank">
+      Read our policy
+     </a>
+    </span>
+    <a aria-label="Accept" class="cn-close-icon" data-cookie-set="accept" href="javascript:void(0);" id="cn-close-notice">
+    </a>
+   </div>
+  </div>
+  <!-- / Cookie Notice plugin -->
+  <div class="waiting">
+   <i class="fa fa-spinner fa-pulse fa-4x">
+   </i>
+  </div>
+  <div id="search-no-result" style="display:none;">
+  </div>
+  <div id="search-content" style="display:none;">
+   <div class="search-wrapper">
+    <div class="toolbar">
+     <div class="container full">
+      <div class="inner">
+       <div class="back a-left">
+        <a class="button button_theme w-icon reloadbtn" href="#" style="display:none;">
+         <i class="fa fa-angle-left">
+         </i>
+         {{btnlabel}}
+        </a>
+       </div>
+       <div class="search-label-center title a-center">
+        <h2>
+         {{title}}
+        </h2>
+       </div>
+       <div class="search-label-right a-right">
+        &nbsp;
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="grid" id="response">
+    </div>
+    <div class="searchbar">
+     <div class="container full">
+      <div class="back a-center">
+       <a class="button button_theme" href="#" id="loadmore">
+        Get more
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="search-popup" style="display:none;">
+   <div class="search-popup__backdrop">
+    <div class="search-popup__popup">
+     <div class="search-popup__image">
+      <img alt="Locked" src="https://jumpstory.com/wp-content/themes/jumpstoryv2/assets/locked.jpeg"/>
+     </div>
+     <div class="search-popup__text">
+      <div>
+       <div class="search-popup__lock">
+        <svg height="15px" version="1.1" viewBox="0 0 11 15" width="11px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <g fill="none" fill-rule="evenodd" id="Symbols" opacity="0.5" stroke="none" stroke-width="1">
+          <g fill="#FFA900" fill-rule="nonzero" id="Navigation" transform="translate(-1044.000000, -26.000000)">
+           <g id="Buttons">
+            <g transform="translate(1027.000000, 18.000000)">
+             <g id="btn_login">
+              <g id="Lock-(Icon)" transform="translate(17.000000, 8.000000)">
+               <path d="M2.96825397,3.2712766 C2.96825397,1.99541489 4.10397778,0.957446809 5.5,0.957446809 C6.89602222,0.957446809 8.03174603,1.99541489 8.03174603,3.2712766 L8.03174603,5.10638298 L9.07936508,5.10638298 L9.07936508,3.2712766 C9.07936508,1.46747872 7.47367937,0 5.5,0 C3.52632063,0 1.92063492,1.46747872 1.92063492,3.2712766 L1.92063492,5.10638298 L2.96825397,5.10638298 L2.96825397,3.2712766 Z" id="Shape">
+               </path>
+               <path d="M0,6.06382979 L0,15 L11,15 L11,6.06382979 L0,6.06382979 Z M6.02380952,10.7890851 L6.02380952,12.4983511 L4.97619048,12.4983511 L4.97619048,10.7890851 C4.56328889,10.6097872 4.27777778,10.2252766 4.27777778,9.77971277 C4.27777778,9.16279787 4.82498413,8.66269149 5.5,8.66269149 C6.17501587,8.66269149 6.72222222,9.16279787 6.72222222,9.77971277 C6.72222222,10.2252766 6.43671111,10.6098191 6.02380952,10.7890851 Z" id="Shape">
+               </path>
+              </g>
+             </g>
+            </g>
+           </g>
+          </g>
+         </g>
+        </svg>
+       </div>
+      </div>
+      <div>
+       <h2>
+        You can only download images,
+        <br/>
+        if you are a JumpStory subscriber
+       </h2>
+      </div>
+      <div>
+       <div class="search-popup__line">
+       </div>
+      </div>
+      <div>
+       <p>
+        If you are not yet a subscriber, register now and try out JumpStory for free for 30 days. After 30 days, your subscription will continue automatically and costs USD 25/month. You can terminate your subscription at any time.
+       </p>
+      </div>
+      <div class="search-popup__buttons">
+       <a class="btn btn-white" href="https://universe.jumpstory.com/free-trial/">
+        Register here
+       </a>
+       <a class="btn btn-white" href="https://universe.jumpstory.com/login/">
+        Login
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-cf0be6a22b8797f043b","applicationID":"27753707","transactionName":"MhBSZQoZDRYHAhZeWwtaZUMRVwoLAgQaGUQNBQ==","queueTime":0,"applicationTime":1,"atts":"HldRE0IDHhg=","errorBeacon":"bam.eu01.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1607005151 -->

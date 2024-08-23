@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="https://images.washingtonpost.com/?url=https://img.washingtonpost.com/pb/resources/img/twp-social-share.png&amp;w=1484&amp;op=resize&amp;opt=1&amp;filter=antialias" name="og:image"/>
+  <title>
+   The Washington Post: My Newsletters
+  </title>
+  <link href="https://ssl1.washingtonpost.com/favicon.ico" rel="shortcut icon"/>
+  <meta content="" name="description"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <link href="styles/vendor.0aba7ab1.css" rel="stylesheet"/>
+  <link href="styles/main.38b39045.css" rel="stylesheet"/>
+  <script type="text/javascript">
+   var url = "https://subscribe.digitalink.com/person/authenticate";
+       if (window.location.hostname === "subscribe.washingtonpost.com") url = "https://subscribe.washingtonpost.com/person/authenticate";
+
+       recaptcha_mgmt_id = undefined;
+       recaptcha_token = '';
+       var isRecaptcha = false;
+  </script>
+  <script async="" defer="" src="https://www.google.com/recaptcha/api.js?render=explicit">
+  </script>
+ </head>
+ <body class="{{bodylayout}}" ng-app="newslettersApp">
+  <!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+  <div class="container-fluid maincontent">
+   <div id="wapoHeader">
+   </div>
+   <div class="main-view" id="main-view" ui-view="">
+   </div>
+   <div class="visible-xs visible-sm" id="screen-size-flag">
+   </div>
+  </div>
+  <!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
+  <script src="scripts/vendor.d8e04527.js">
+  </script>
+  <!--needed for the wp standard header-->
+  <!--<script src="//js.washingtonpost.com/1h/twp-global.js"></script>-->
+  <script src="https://subs-stage.washingtonpost.com/login-component/login.min.js">
+  </script>
+  <!-- TWP Analytics -->
+  <script src="https://js.washingtonpost.com/wp-stat/analytics/main.js">
+  </script>
+  <script src="https://subscribe.washingtonpost.com/static/GAScript.js">
+  </script>
+  <script type="text/javascript">
+   var wp_content_type = 'article';
+    var wp_page_num = 0;
+  </script>
+  <script src="scripts/scripts.c34a646b.js">
+  </script>
+  <script src="scripts/module.bd12bd96.js">
+  </script>
+  <script>
+   var urlstr = "https://js.washingtonpost.com/pb/externalHeader/?ssl=true&outputType=ssi&_compact=false";
+    if (window.location.host.indexOf('localhost') > -1) {
+        urlstr = "https://www.washingtonpost.com/pb/genericHeader/?outputType=ssi";
+    }
+    $('#wapoHeader').hide();
+
+    function checkWapoHeader() {
+        if($("#wapoHeader").height() < 200) {
+            $('.ng-toast.ng-toast--top').css('top','50px');
+            $('#wapoHeader').show()
+        }
+        window.setTimeout(checkWapoHeader,500);
+    }
+
+    $.ajax({
+        type: "GET",
+        url: urlstr,
+        success: function (data) {
+            $('#wapoHeader').html(data)
+            window.setTimeout(checkWapoHeader,2000);
+        }
+    });
+  </script>
+  <toast>
+  </toast>
+ </body>
+</html>

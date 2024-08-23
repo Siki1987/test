@@ -1,0 +1,3023 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" prefix="og: https://ogp.me/ns#">
+ <head>
+  <link href="//cdn.optimizely.com/js/752092193.js" rel="prefetch"/>
+  <link href="//logx.optimizely.com" rel="preconnect"/>
+  <script src="https://cdn.optimizely.com/js/752092193.js">
+  </script>
+  <script data-cookieconsent="ignore">
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KW34LR');
+  </script>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={licenseKey:"aeebed2765",applicationID:"850643981"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);
+  </script>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Smartsheet" property="og:site_name"/>
+  <link href="https://www.smartsheet.com/factory-manufacturing-automation" rel="canonical"/>
+  <meta content="Today&rsquo;s factory automation embraces the technological pillars of Industry 4.0. Top experts discuss automation trends, including job creation." name="twitter:description"/>
+  <meta content="Essential Guide to Modern Factory Automation | Smartsheet" name="twitter:title"/>
+  <meta content="article" property="og:type"/>
+  <meta content="Today&rsquo;s factory automation embraces the technological pillars of Industry 4.0. Top experts discuss automation trends, including job creation." name="description"/>
+  <meta content="https://www.smartsheet.com/factory-manufacturing-automation" property="og:url"/>
+  <meta ga-dim="IC_EN_2019_04"/>
+  <meta content="Essential Guide to Modern Factory Automation | Smartsheet" property="og:title"/>
+  <meta content="Today&rsquo;s factory automation embraces the technological pillars of Industry 4.0. Top experts discuss automation trends, including job creation." property="og:description"/>
+  <meta content="https://www.smartsheet.com/sites/default/files/ic-og-FactoryandManufacturingAutomation-Twitter.jpg" name="twitter:image"/>
+  <meta content="https://www.smartsheet.com/sites/default/files/ic-og-FactoryandManufacturingAutomation-FacebookLinkedIn.jpg" property="og:image"/>
+  <meta content="https://www.smartsheet.com/sites/default/files/ic-og-FactoryandManufacturingAutomation-FacebookLinkedIn.jpg" property="og:image:url"/>
+  <meta content="https://www.smartsheet.com/sites/default/files/ic-og-FactoryandManufacturingAutomation-FacebookLinkedIn.jpg" property="og:image:secure_url"/>
+  <link href="/sites/default/files/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="/sites/default/files/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="/sites/default/files/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="/sites/default/files/favicons/site.webmanifest" rel="manifest"/>
+  <link color="#5bbad5" href="/sites/default/files/favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+  <meta content="#da532c" name="msapplication-TileColor"/>
+  <meta content="#ffffff" name="theme-color"/>
+  <meta content="Drupal responsive_favicons + realfavicongenerator.net" name="favicon-generator"/>
+  <meta content="Drupal 8 (https://www.drupal.org)" name="Generator"/>
+  <meta content="width" name="MobileOptimized"/>
+  <meta content="true" name="HandheldFriendly"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="https://www.smartsheet.com/factory-manufacturing-automation" hreflang="en" rel="alternate"/>
+  <link href="https://www.smartsheet.com/factory-manufacturing-automation" rel="revision"/>
+  <title>
+   Essential Guide to Modern Factory Automation | Smartsheet
+  </title>
+  <link href="/sites/default/files/css/css_bTIr1k2jqP8FuMSJLbsGK5DxqCrqngJTqniFnS-d-BY.css" media="all" rel="stylesheet"/>
+  <link href="/sites/default/files/css/css_zi6MmEMB3-r60wF5HjFS2yUCDZ8dFJDJbhDZi2pmQ54.css" media="all" rel="stylesheet"/>
+  <!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+  <script src="/sites/default/files/js/js_gwAST4AWZPdXSGedYvRRJ1GEzxLqd8LzqYr36VKVjvU.js">
+  </script>
+  <script type="application/ld+json">
+   {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bellevue",
+          "addressRegion": "WA",
+          "postalCode": "98004",
+          "streetAddress": "10500 NE 8th St, Suite 1300"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "telephone": "+1-844-324-2360"
+          }
+        ],
+        "legalName": "Smartsheet Inc",
+        "logo": "https://www.smartsheet.com/sites/default/files/styles/thumbnail/public/2019-07/smartsheet-logo-vertical-square.png",
+        "name": "Smartsheet",
+        "sameAs": [
+          "https://twitter.com/smartsheet",
+          "https://www.facebook.com/smartsheet",
+          "https://www.linkedin.com/company/smartsheet-com",
+          "https://plus.google.com/+smartsheet",
+          "https://www.youtube.com/user/SmartSheet"
+        ],
+        "url": "https://www.smartsheet.com"
+      }
+  </script>
+ </head>
+ <body>
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-KW34LR" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <a class="visually-hidden focusable" href="#main-content">
+   Skip to main content
+  </a>
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+   <div class="layout-container">
+    <div class="header-wrapper js-header-wrapper">
+     <header class="header">
+      <a href="/">
+       <img alt="Smartsheet Logo" class="page-headline__logo" src="/themes/custom/valinor/images/smartsheet-logo-horizontal.svg"/>
+      </a>
+      <div class="header__icons">
+       <div class="buttons">
+        <a class="secondary button" href="https://www.smartsheet.com/try-it">
+         Try Smartsheet for Free
+        </a>
+        <div class="header__login">
+         <a class="primary button" href="https://app.smartsheet.com/b/home">
+          Log In
+         </a>
+        </div>
+       </div>
+       <div class="header__icon--language header__language-selector" id="block-lang-dropdown-language">
+        <div class="content">
+         <form accept-charset="UTF-8" action="/factory-manufacturing-automation" class="lang-dropdown-form lang_dropdown_form clearfix language_content" data-drupal-selector="lang-dropdown-form" id="lang_dropdown_form_lang-dropdown-form" method="post">
+          <div class="js-form-item form-item js-form-type-select form-item-lang-dropdown-select js-form-item-lang-dropdown-select form-no-label">
+           <label class="visually-hidden" for="edit-lang-dropdown-select">
+            Select your language
+           </label>
+           <select class="lang-dropdown-select-element form-select" data-drupal-selector="edit-lang-dropdown-select" data-lang-dropdown-id="lang-dropdown-form" id="edit-lang-dropdown-select" name="lang_dropdown_select" style="width:50px">
+            <option selected="selected" value="en">
+             English
+            </option>
+            <option value="de">
+             Deutsch
+            </option>
+            <option value="es">
+             Espa&ntilde;ol
+            </option>
+            <option value="fr">
+             Fran&ccedil;ais
+            </option>
+            <option value="it">
+             Italiano
+            </option>
+            <option value="pt">
+             Portugu&ecirc;s
+            </option>
+            <option value="ru">
+             Pусский
+            </option>
+            <option value="ja">
+             日本語
+            </option>
+           </select>
+          </div>
+          <input data-drupal-selector="edit-en" name="en" type="hidden" value="https://www.smartsheet.com/factory-manufacturing-automation"/>
+          <input data-drupal-selector="edit-de" name="de" type="hidden" value="https://de.smartsheet.com/factory-manufacturing-automation"/>
+          <input data-drupal-selector="edit-es" name="es" type="hidden" value="https://es.smartsheet.com/factory-manufacturing-automation"/>
+          <input data-drupal-selector="edit-fr" name="fr" type="hidden" value="https://fr.smartsheet.com/factory-manufacturing-automation"/>
+          <input data-drupal-selector="edit-it" name="it" type="hidden" value="https://it.smartsheet.com/factory-manufacturing-automation"/>
+          <input data-drupal-selector="edit-pt" name="pt" type="hidden" value="https://pt.smartsheet.com/factory-manufacturing-automation"/>
+          <input data-drupal-selector="edit-ru" name="ru" type="hidden" value="https://ru.smartsheet.com/factory-manufacturing-automation"/>
+          <input data-drupal-selector="edit-ja" name="ja" type="hidden" value="https://jp.smartsheet.com/factory-manufacturing-automation"/>
+          <noscript>
+           <div>
+            <input class="button js-form-submit form-submit" data-drupal-selector="edit-submit" id="edit-submit" name="op" type="submit" value="Go"/>
+           </div>
+          </noscript>
+          <input autocomplete="off" data-drupal-selector="form-mqywx8weg6tjonddakoxzanj3gogresbhzhyxwdfvdg" name="form_build_id" type="hidden" value="form-MQYwx8wEG6tjONdDAkOXZaNj3gogresbHzHYXWdFVdg"/>
+          <input data-drupal-selector="edit-lang-dropdown-form" name="form_id" type="hidden" value="lang_dropdown_form"/>
+         </form>
+        </div>
+       </div>
+       <i class="header__icon--search js-header-icon-search fas fa-search">
+        <span class="element-invisible">
+         Search
+        </span>
+       </i>
+       <i class="header__icon--mobile js-header-icon-mobile fas fa-bars">
+        <span class="element-invisible">
+         Mobile main navigation
+        </span>
+       </i>
+      </div>
+      <div class="header__main">
+       <nav aria-labelledby="" class="classic-navigation nav greedy-nav" id="block-mainnavigation-3" role="navigation">
+        <ol class="nav__list visible-links">
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <span>
+            <span>
+             Products
+            </span>
+           </span>
+           <i class="nav__item__arrow js-nav-item-arrow fas fa-caret-down">
+           </i>
+          </div>
+          <div class="nav__drawer js-nav-drawer">
+           <div class="nav__drawer__section">
+            <a href="https://www.smartsheet.com/platform">
+             <span class="nav__drawer__heading">
+              Smartsheet Platform
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Learn how the flexible, extensible Smartsheet platform can help your organization achieve more.
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="https://www.smartsheet.com/why-smartsheet">
+             <span class="nav__drawer__heading">
+              Why Smartsheet
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              See why Smartsheet is the platform you need to drive achievement, no matter the scale of your ambition.
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="https://www.smartsheet.com/platform/10000ft">
+             <span class="nav__drawer__heading">
+              10,000ft by Smartsheet
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Learn about our premium resource and portfolio management platform, 10,000ft by Smartsheet.
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="https://brandfolder.com/">
+             <span class="nav__drawer__heading">
+              Brandfolder
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Free your team from content sprawl with Brandfolder, an intuitive digital asset management platform.
+             </li>
+            </ol>
+           </div>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <span>
+            <span>
+             Solutions
+            </span>
+           </span>
+           <i class="nav__item__arrow js-nav-item-arrow fas fa-caret-down">
+           </i>
+          </div>
+          <div class="nav__drawer js-nav-drawer">
+           <div class="nav__drawer__section">
+            <span class="nav__drawer__heading">
+             Solution Center
+            </span>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/marketplace">
+               Solution Center Overview
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/marketplace/template-gallery">
+               Template Gallery
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/marketplace/connectors-Integrations">
+               Integrations &amp; Connectors
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/marketplace/add-ons">
+               Smartsheet Premium Add-Ons
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/marketplace/accelerators">
+               Smartsheet Accelerators
+              </a>
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <span class="nav__drawer__heading">
+             By Size
+            </span>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item border">
+              <a href="/enterprise">
+               Enterprise
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="/solutions/small-business">
+               Small/Medium Business
+              </a>
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <span class="nav__drawer__heading">
+             By Industry
+            </span>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/construction">
+               Construction &amp; Engineering
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/government-federal">
+               Federal Government
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/finance">
+               Finance
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/healthcare">
+               Healthcare
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/retail">
+               Retail
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/technology">
+               Technology
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions?descriptor=Solution%20-%20Industry">
+               See All
+              </a>
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <span class="nav__drawer__heading">
+             By Department
+            </span>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/project-management">
+               Project Management
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/it-operations">
+               IT &amp; Ops
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/marketing">
+               Marketing
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/sales">
+               Sales
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/software-development">
+               Software Development
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/human-resources">
+               Human Resources
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions?descriptor=Solution%20-%20Role">
+               See All
+              </a>
+             </li>
+            </ol>
+           </div>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <a data-drupal-link-system-path="node/90249" href="https://www.smartsheet.com/pricing">
+            Pricing
+           </a>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <a data-drupal-link-system-path="node/40021" href="https://www.smartsheet.com/customers">
+            Customers
+           </a>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <span>
+            <span>
+             Support
+            </span>
+           </span>
+           <i class="nav__item__arrow js-nav-item-arrow fas fa-caret-down">
+           </i>
+          </div>
+          <div class="nav__drawer js-nav-drawer">
+           <div class="nav__drawer__section">
+            <span class="nav__drawer__heading">
+             Help
+            </span>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/help-center?url=help">
+               Help Articles
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://status.smartsheet.com/?_ga=2.6256755.1970195040.1562797322-836914257.1562017423">
+               Status
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://help.smartsheet.com/training">
+               Training &amp; Certification
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/help-center">
+               Learning Center
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://community.smartsheet.com/">
+               Community
+              </a>
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="https://www.smartsheet.com/services/solution-services">
+             <span class="nav__drawer__heading">
+              Solution Services
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Get up and running fast with streamlined implementation and solution building to address your immediate business needs.
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="/consulting">
+             <span class="nav__drawer__heading">
+              Consulting
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Our world-class consulting team is here to help your organization realize the lasting advantage of Smartsheet.
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <span class="nav__drawer__heading">
+             Channel Partners
+            </span>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/channel-partners">
+               Program Overview
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://channel.smartsheet.com/English/register_email.aspx?_ga=2.3210416.1673252146.1583876784-996882649.1583876784">
+               Become a Partner
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://channel.smartsheet.com/directory/">
+               Find a Partner
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://channel.smartsheet.com/English/?_ga=2.26795069.1673252146.1583876784-996882649.1583876784">
+               Partner Log In
+              </a>
+             </li>
+            </ol>
+           </div>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <span>
+            <span>
+             Resources
+            </span>
+           </span>
+           <i class="nav__item__arrow js-nav-item-arrow fas fa-caret-down">
+           </i>
+          </div>
+          <div class="nav__drawer js-nav-drawer">
+           <div class="nav__drawer__section">
+            <span class="nav__drawer__heading">
+             Content Center
+            </span>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/content-center">
+               Content Center Home
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/content-center/best-practices">
+               &ensp;Best Practices
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/content-center/executive-center">
+               &ensp;Executive Center
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/content-center/product-news">
+               &ensp;Product News
+              </a>
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="https://www.smartsheet.com/marketplace">
+             <span class="nav__drawer__heading">
+              Solution Center
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Jump-start new projects and processes with our pre-built sets of templates, add-ons, and services.
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="https://www.smartsheet.com/engage">
+             <span class="nav__drawer__heading">
+              ENGAGE Customer Conference
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Join us for a re-imagined, innovative virtual experience to get inspired, get connected, and see what's possible.
+             </li>
+            </ol>
+           </div>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <a data-drupal-link-query='{"fts":"contact-header-nav"}' href="/contact?fts=contact-header-nav">
+            Contact
+           </a>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <a data-drupal-link-query='{"fts":"nav-demo"}' data-drupal-link-system-path="node/65921" href="https://www.smartsheet.com/contact/watch-demo?fts=nav-demo" title="Demo introduction to Smartsheet platform">
+            Watch a Demo
+           </a>
+          </div>
+         </li>
+        </ol>
+       </nav>
+       <div class="mobile-nav">
+        <span class="mobile-nav__more">
+         <span>
+          More
+         </span>
+         <i class="header__icon--greedy fas fa-caret-down">
+          <span class="element-invisible">
+           View other menu links
+          </span>
+         </i>
+        </span>
+        <div>
+         <ol>
+         </ol>
+        </div>
+       </div>
+       <nav aria-labelledby="" class="enterprise-navigation nav greedy-nav" id="block-enterprise" role="navigation">
+        <ol class="nav__list visible-links">
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <a href="/enterprise">
+            Enterprise
+           </a>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <span>
+            <span>
+             Solutions
+            </span>
+           </span>
+           <i class="nav__item__arrow js-nav-item-arrow fas fa-caret-down">
+           </i>
+          </div>
+          <div class="nav__drawer js-nav-drawer">
+           <div class="nav__drawer__section">
+            <span class="nav__drawer__heading">
+             By Department
+            </span>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item border">
+              <a href="/marketing">
+               Marketing
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/solutions/portfolio-management">
+               Project &amp; Portfolio Management
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="/IT-pmo">
+               IT
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/search?query=solutions">
+               See All
+              </a>
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <span class="nav__drawer__heading">
+             Solution Center
+            </span>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/marketplace">
+               Solution Center Overview
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/marketplace/template-gallery">
+               Template Gallery
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/marketplace/connectors-Integrations">
+               Integrations &amp; Connectors
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/marketplace/add-ons">
+               Smartsheet Premium Add-Ons
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/marketplace/accelerators">
+               Smartsheet Accelerators
+              </a>
+             </li>
+            </ol>
+           </div>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <a data-drupal-link-system-path="node/40021" href="https://www.smartsheet.com/customers">
+            Customers
+           </a>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <span>
+            <span>
+             Products
+            </span>
+           </span>
+           <i class="nav__item__arrow js-nav-item-arrow fas fa-caret-down">
+           </i>
+          </div>
+          <div class="nav__drawer js-nav-drawer">
+           <div class="nav__drawer__section">
+            <a href="https://www.smartsheet.com/platform">
+             <span class="nav__drawer__heading">
+              Smartsheet Platform
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Learn how the flexible, extensible Smartsheet platform can help your organization achieve more.
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="https://www.smartsheet.com/why-smartsheet">
+             <span class="nav__drawer__heading">
+              Why Smartsheet
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              See why Smartsheet is the platform you need to drive achievement, no matter the scale of your ambition.
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="https://www.smartsheet.com/platform/10000ft">
+             <span class="nav__drawer__heading">
+              10,000ft by Smartsheet
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Learn about our premium resource and portfolio management platform, 10,000ft by Smartsheet.
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="https://brandfolder.com/">
+             <span class="nav__drawer__heading">
+              Brandfolder
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Free your team from content sprawl with Brandfolder, an intuitive digital asset management platform. Soon to be by Smartsheet.
+             </li>
+            </ol>
+           </div>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <span>
+            <span>
+             Resources
+            </span>
+           </span>
+           <i class="nav__item__arrow js-nav-item-arrow fas fa-caret-down">
+           </i>
+          </div>
+          <div class="nav__drawer js-nav-drawer">
+           <div class="nav__drawer__section">
+            <span class="nav__drawer__heading">
+             Content Center
+            </span>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/content-center">
+               Content Center Home
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/content-center/best-practices">
+               &ensp;Best Practices
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/content-center/executive-center">
+               &ensp;Executive Center
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/content-center/product-news">
+               &ensp;Product News
+              </a>
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="https://www.smartsheet.com/marketplace">
+             <span class="nav__drawer__heading">
+              Solution Center
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Jump-start new projects and processes with our pre-built sets of templates, add-ons, and services.
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="https://www.smartsheet.com/engage">
+             <span class="nav__drawer__heading">
+              ENGAGE Customer Conference
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Join us for a re-imagined, innovative virtual experience to get inspired, get connected, and see what's possible.
+             </li>
+            </ol>
+           </div>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <span>
+            <span>
+             Support
+            </span>
+           </span>
+           <i class="nav__item__arrow js-nav-item-arrow fas fa-caret-down">
+           </i>
+          </div>
+          <div class="nav__drawer js-nav-drawer">
+           <div class="nav__drawer__section">
+            <span class="nav__drawer__heading">
+             Help
+            </span>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/help-center?url=help">
+               Help Articles
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://status.smartsheet.com/?_ga=2.6256755.1970195040.1562797322-836914257.1562017423">
+               Status
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://help.smartsheet.com/training">
+               Training &amp; Certification
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/help-center">
+               Learning Center
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://community.smartsheet.com/">
+               Community
+              </a>
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="https://www.smartsheet.com/services/solution-services">
+             <span class="nav__drawer__heading">
+              Solution Services
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Get up and running fast with streamlined implementation and solution building to address your immediate business needs.
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <a href="/consulting">
+             <span class="nav__drawer__heading">
+              Consulting
+             </span>
+            </a>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item">
+              Our world-class consulting team is here to help your organization realize the lasting advantage of Smartsheet.
+             </li>
+            </ol>
+           </div>
+           <div class="nav__drawer__section">
+            <span class="nav__drawer__heading">
+             Channel Partners
+            </span>
+            <ol class="nav__drawer__submenu">
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://www.smartsheet.com/channel-partners">
+               Program Overview
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://channel.smartsheet.com/English/register_email.aspx?_ga=2.3210416.1673252146.1583876784-996882649.1583876784">
+               Become a Partner
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://channel.smartsheet.com/directory/">
+               Find a Partner
+              </a>
+             </li>
+             <li class="nav__drawer__submenu__item border">
+              <a href="https://channel.smartsheet.com/English/?_ga=2.26795069.1673252146.1583876784-996882649.1583876784">
+               Partner Log In
+              </a>
+             </li>
+            </ol>
+           </div>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <a data-drupal-link-system-path="node/90249" href="https://www.smartsheet.com/pricing">
+            Pricing
+           </a>
+          </div>
+         </li>
+         <li class="nav__item js-nav-item">
+          <div class="nav__item__label">
+           <a data-drupal-link-query='{"fts":"nav-demo"}' data-drupal-link-system-path="node/65921" href="https://www.smartsheet.com/contact/watch-demo?fts=nav-demo">
+            Watch a demo
+           </a>
+          </div>
+         </li>
+        </ol>
+       </nav>
+       <div class="mobile-nav">
+        <span class="mobile-nav__more">
+         <span>
+          More
+         </span>
+         <i class="header__icon--greedy fas fa-caret-down">
+          <span class="element-invisible">
+           View other menu links
+          </span>
+         </i>
+        </span>
+        <div>
+         <ol>
+         </ol>
+        </div>
+       </div>
+      </div>
+      <form action="/search" class="header__search-box js-header-search-box" method="get">
+       <div class="header__search-box__search-fields">
+        <span class="input-wrapper">
+         <input name="query" placeholder="What can we help you find?" type="text"/>
+        </span>
+        <i class="fas fa-search">
+         <span class="element-invisible">
+          Search
+         </span>
+        </i>
+       </div>
+       <div class="header__search-box__close-button js-header-search-box-close-button">
+        <i class="fas fa-times">
+         <span class="element-invisible">
+          Close search
+         </span>
+        </i>
+       </div>
+      </form>
+     </header>
+    </div>
+    <main role="main">
+     <a id="main-content" tabindex="-1">
+     </a>
+     <div class="layout-content">
+      <div>
+       <div id="block-mainpagecontent">
+        <article role="article">
+         <div class="multipart-article-page light">
+          <div class="page-headline-wrapper primary ">
+           <div class="page-headline js-page-headline has-text ">
+            <h3>
+             Multipart article
+            </h3>
+            <h1>
+             The Benefits of Factory and Manufacturing Automation for Today&rsquo;s Workers
+            </h1>
+            <div class="page-headline__cta">
+             <a class="site-link secondary button" href="/try-it?trp=10592&amp;lpv=stkcta&amp;lx=2sgpTbF12suoPxu20v5CoABAgeTPLDIL8TQRu558b7w">
+              Try Smartsheet for Free
+             </a>
+            </div>
+           </div>
+          </div>
+          <div class="multipart-article-page light multipart-article js-multipart-article">
+           <div class="multipart-article__intro">
+            <div class="container">
+             <p dir="ltr" id="docs-internal-guid-45aafaba-7fff-a701-7cc6-158346bfddd4">
+              Learn how factory automation can create the products customers want, as well as generate better wages and more choices for employees. Discover best practices, and get expert insight on manufacturing automation.
+             </p>
+             <p>
+              Included on this page, you'll find
+              <a href="#what-are-good-automated-manufacturing-practices-gamp" target="_blank">
+               automated manufacturing practices
+              </a>
+              ,
+              <a href="#what-percentage-of-manufacturing-jobs-are-lost-to-automation" target="_blank">
+               manufacturing jobs lost to automation
+              </a>
+              , and
+              <a href="#what-are-the-trends-in-manufacturing-automation" target="_blank">
+               expert discussion on better wages and job creation
+              </a>
+              .
+             </p>
+            </div>
+           </div>
+           <div class="navigation--secondary__container">
+            <nav class="navigation--secondary js-navigation-secondary navigation--secondary-scroll js-navigation-secondary-scroll navigation--secondary-sticky">
+             <div class="navigation--secondary__title js-navigation-secondary-title">
+              In This Article
+             </div>
+             <ul class="navigation--secondary__top-section-list js-navigation-secondary-top-section-list ">
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-is-meant-by-automation">
+                <span>
+                 What Is Meant by Automation?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-is-automation-in-industry">
+                <span>
+                 What Is Automation in Industry?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-is-integrated-factory-automation">
+                <span>
+                 What Is Integrated Factory Automation?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-is-industry-40">
+                <span>
+                 What Is Industry 4.0?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#how-automation-works">
+                <span>
+                 How Automation Works
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#the-early-history-of-automation-in-industry">
+                <span>
+                 The Early History of Automation in Industry
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-is-automation-in-manufacturing">
+                <span>
+                 What Is Automation in Manufacturing?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-are-the-trends-in-manufacturing-automation">
+                <span>
+                 What Are the Trends in Manufacturing Automation?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-is-meant-by-factory-automation">
+                <span>
+                 What Is Meant by Factory Automation?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#factory-automation-platforms-as-a-service-fa-paas">
+                <span>
+                 Factory Automation Platforms as a Service (FA PaaS)
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-is-an-automated-manufacturing-system-ams">
+                <span>
+                 What Is an Automated Manufacturing System (AMS)?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#methodologies-for-evaluating-the-performance-of-automated-manufacturing-systems">
+                <span>
+                 Methodologies for Evaluating the Performance of Automated Manufacturing Systems
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-is-robotics-in-manufacturing-automation">
+                <span>
+                 What Is Robotics in Manufacturing Automation?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-are-the-benefits-of-manufacturing-automation">
+                <span>
+                 What Are the Benefits of Manufacturing Automation?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-are-the-drawbacks-of-manufacturing-automation">
+                <span>
+                 What Are the Drawbacks of Manufacturing Automation?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-is-fully-automated-manufacturing">
+                <span>
+                 What Is Fully Automated Manufacturing?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-are-the-effects-of-manufacturing-automation">
+                <span>
+                 What Are the Effects of Manufacturing Automation?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-percentage-of-manufacturing-jobs-are-lost-to-automation">
+                <span>
+                 What Percentage of Manufacturing Jobs Are Lost to Automation?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#why-factory-and-manufacturing-automation-will-win">
+                <span>
+                 Why Factory and Manufacturing Automation Will Win
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#how-to-embark-on-the-manufacturing-automation-path-or-pick-an-automation-vendor">
+                <span>
+                 How to Embark on the Manufacturing Automation Path or Pick an Automation Vendor
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#what-are-good-automated-manufacturing-practices-gamp">
+                <span>
+                 What Are Good Automated Manufacturing Practices (GAMP)?
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#videos-of-robots-in-automated-manufacturing-and-production-environments">
+                <span>
+                 Videos of Robots in Automated Manufacturing and Production Environments
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#factors-to-consider-for-manufacturing-automation">
+                <span>
+                 Factors to Consider for Manufacturing Automation
+                </span>
+               </a>
+              </li>
+              <li class="navigation--secondary__top-section-list__section js-navigation-secondary-top-list-section navigation--secondary__section">
+               <a class="navigation--secondary__link js-navigation-secondary-link " href="#improve-manufacturing-automation-with-smartsheet-for-manufacturing">
+                <span>
+                 Improve Manufacturing Automation with Smartsheet for Manufacturing
+                </span>
+               </a>
+              </li>
+             </ul>
+            </nav>
+           </div>
+           <div class="multipart-article__text__section__divider mobile">
+            <hr/>
+           </div>
+           <div class="multipart-article__text js-multipart-article-text">
+            <div class="multipart-article__text__section" id="p-id-478446">
+             <h3 class="multipart-article__text__heading" id="what-is-meant-by-automation">
+              What Is Meant by Automation?
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-e63b600d-7fff-0a82-c95e-edbb287c4a42">
+               With
+               <em>
+                automation
+               </em>
+               or
+               <em>
+                automatic control
+               </em>
+               , organizations can perform processes with little to no human assistance. Automation controls equipment and completes processes for a large range of objects and manufacturing environments around the globe. Automation can increase efficiency, quality, and effectiveness. In addition, it is often all but invisible to the average user.
+              </p>
+              <p>
+               In its simplest form, automation involves a controller that compares a measured state to a list of ideal values, adjusting the measured state to maintain the desired values or conditions. People tend to think of automation as the combination of computers with electrical, hydraulic, mechanical, and pneumatic devices. Originally, automation involved controls that were mechanical; now, automation frequently includes electronic and computer controls, based on high-level programming languages, such as Basic.
+              </p>
+              <p>
+               In its general application, automation has both detracted from and contributed to the well-being of individuals and the environment. An integral milestone in automation&rsquo;s development, the Industrial Revolution was responsible for the mining of resources to generate fuel for electricity, transportation, and manufacturing. Over the last 150 years, these activities have had a considerable negative impact on the natural world and human health. Conversely, today&rsquo;s fourth wave of automation could reduce accidents (smart cars), save energy (green energy), and lower heating and power consumption (smart homes) through optimum use.
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div>
+             <div id="block-icblockplaceholder-2">
+             </div>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478451">
+             <h3 class="multipart-article__text__heading" id="what-is-automation-in-industry">
+              What Is Automation in Industry?
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-c0927172-7fff-5f70-02ef-88f0f8575564">
+               <em>
+                Automation
+               </em>
+               in
+               <em>
+                industry
+               </em>
+               leverages control systems (such as computers) and data to manage equipment and processes in manufacturing and other activities. In production environments, automation has gained increasing acceptance as a means to boost output and efficiency, while also keeping complex parts within tolerance &mdash; in other words, maintaining as little variation as possible from the ideal dimensions.
+              </p>
+              <p dir="ltr">
+               Automated production lines, particularly fixed production lines, consist of workstations and a transfer system that move an evolving part to completion through a series of tools. Parts may also be transferred to different lines for continued work and finishing. A
+               <em>
+                programmable logic controller
+               </em>
+               (PLC) manages work and transfers by controlling equipment, timing, and sequencing.
+              </p>
+              <p>
+               Businesses may use automation for machining, creating, and shaping parts, as well as for assembling products. The
+               <em>
+                factory automation infrastructure
+               </em>
+               describes the total collection of buildings, tools, utilities, processes, and products required to create a given item or related range of items. Following are the two types of industries &mdash; factory and microelectronics &mdash; that utilize automation and robotics applications.
+              </p>
+              <p>
+               <img alt="Automation Applications" data-delta="1" data-fid="126691" data-media-element="1" src="https://www.smartsheet.com/sites/default/files/IC-Automation-Applications.svg" typeof="foaf:Image"/>
+              </p>
+              <h3>
+               Factory Automation and Robotics Applications
+              </h3>
+              <p>
+               Here is a list of some of the uses for factory automation and robotics:
+              </p>
+              <ul dir="ltr" style="margin-left: 40px;">
+               <li>
+                Automotive
+               </li>
+               <li>
+                Avionics
+               </li>
+               <li>
+                Building products
+               </li>
+               <li>
+                Communication equipment
+               </li>
+               <li>
+                Consumer goods
+               </li>
+               <li>
+                Chemicals
+               </li>
+               <li>
+                Energy
+               </li>
+               <li>
+                Food and beverage
+               </li>
+               <li>
+                Packaging
+               </li>
+               <li>
+                Pharmaceutical and medical (precision amounts of chemicals for tablets, blood- pressure and heart-rate monitors, and hearing aids)
+               </li>
+               <li>
+                Robotics
+               </li>
+               <li>
+                Semiconductors and electronics
+               </li>
+              </ul>
+              <h3 dir="ltr">
+               Microelectronics Automation and Robotics Applications
+              </h3>
+              <p>
+               Here is a list of some of the uses for microelectronics automation and robotics:
+              </p>
+              <ul dir="ltr" style="margin-left: 40px;">
+               <li>
+                Microwave modules
+               </li>
+               <li>
+                Optoelectronics
+               </li>
+               <li>
+                RFID
+               </li>
+               <li>
+                Satellite components
+               </li>
+               <li>
+                Scientific instrumentation
+               </li>
+               <li>
+                Sensors and controllers
+               </li>
+               <li>
+                Wireless telecommunication components
+               </li>
+              </ul>
+              <h3>
+               Four Types of Factory Automation Systems
+              </h3>
+              <p>
+               There are four varieties of automation systems in use today, each serving a specific purpose:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Computer-Integrated Manufacturing (CIM):
+                 </strong>
+                 Integrated manufacturing automation is the complete automation of factory-related business and production processes through computerization. CIM systems can include the following elements:
+                </p>
+                <ul>
+                 <li dir="ltr">
+                  <p dir="ltr">
+                   Automated cranes and transfer systems
+                  </p>
+                 </li>
+                 <li dir="ltr">
+                  <p dir="ltr">
+                   Computer numerical control machine tools
+                  </p>
+                 </li>
+                 <li dir="ltr">
+                  <p dir="ltr">
+                   Computer-aided design (CAD) and computer-aided manufacturing (CAM)
+                  </p>
+                 </li>
+                 <li dir="ltr">
+                  <p dir="ltr">
+                   Computer-aided planning
+                  </p>
+                 </li>
+                 <li dir="ltr">
+                  <p dir="ltr">
+                   Computer-aided production and scheduling
+                  </p>
+                 </li>
+                 <li dir="ltr">
+                  <p dir="ltr">
+                   Flexible machine systems
+                  </p>
+                 </li>
+                 <li dir="ltr">
+                  <p dir="ltr">
+                   Robotics
+                  </p>
+                 </li>
+                </ul>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Flexible Manufacturing Systems (FMS):
+                 </strong>
+                 Flexible automation systems extend the capabilities of programmable systems to enable changeovers with limited or no loss of production time. Flexible systems can handle a variety of products in medium-sized lots.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Programmable:
+                 </strong>
+                 Programmable automation systems allow adaptation and reordering of processes to accommodate variation and customization of output. They often include numerical control machine tools that a computer program runs to produce batches of different objects. Batches can include a few or many thousands of objects. For greater efficiency, programmable automation systems slate batches of similar products for sequential production. Programmable automation lines include nonproductive periods, during which the system changes over hardware and reprograms controls between batches.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Rigid, Hard, or Fixed:
+                 </strong>
+                 In fixed automation systems, the equipment dictates the sequence of processes. These processes either cannot be changed or can only be changed with great effort. The output is generally limited to one product manufactured in high volumes, such as automobiles.
+                </p>
+               </li>
+              </ul>
+              <h3>
+               Tools in Factory Automation
+              </h3>
+              <p>
+               Industrial automation has undergone many manifestations throughout the decades. It continues to include numerous methodologies and tools, such as the following:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Numerical Control:
+                 </strong>
+                 This refers to the automated expression of work formerly performed by skilled machinists. Originally, punch card instructions ran numerically controlled machine processes. Today, programmed directions translate into electrical signals that guide such settings as tool selection, tool movement, and spindle speeds. To work or inspect a part, create drafting plans, or insert components (necessary for electronics manufacturing), numerical control uses a
+                 <em>
+                  part program
+                 </em>
+                 of x, y, and z coordinates to instruct a milling, cutting, or vision machine. A part program consists of coded sequential machine instructions for the composition or command of a part. Often, a computer runs and stores a part program. But you can also stream a program to a part via telecommunication, a process known as
+                 <em>
+                  direct numerical control
+                 </em>
+                 . Numerical control combines uniformity and consistent quality with a high rate of output.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Computer Numerical Control (CNC):
+                 </strong>
+                 Using a computer processor in concert with numerical control allows you to store, edit, and review coded part programs, should errors arise. You can create part programs by starting at the command line or by &ldquo;teaching&rdquo; a machine to perform steps that the system then records in code. These steps are known as
+                 <strong>
+                  part program commands
+                 </strong>
+                 .
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Automated Tools:
+                 </strong>
+                 Automated tools rely on a rotating table and access that allow a part and tools to move within at least three axes: the vertical and horizontal in two planes and the vertical in a third plane. Modern machines can have as many as nine axes. Increments from one ten-thousandth of an inch (.0001) to as small as one-thousandth of a millimeter (.001mm) specify the work details; x, y, and z coordinates specify the position of work details.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Computer-Aided Design (CAD)/Computer-Aided Manufacturing (CAM):
+                 </strong>
+                 <em>
+                  Computer-aided design
+                 </em>
+                 uses a computer to design and revise objects. When you have a final design, you enter it as a program and send it to a
+                 <em>
+                  computer-aided manufacturing
+                 </em>
+                 system. CAM systems are platforms that include all aspects of process planning, production planning, scheduling, machining, and quality control.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Programmable Logic Controllers (PLCs):
+                 </strong>
+                 Computer numerical control is possible because of PLCs, which are hardened microprocessors that integrate and harmonize signals from sensors with instruction actuators. Human-machine interfaces serve as a &nbsp;front for PLCs, providing a user-accessible means to program and monitor processes and tasks.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Islands of Automation:
+                 </strong>
+                 Before the advent of advanced communication protocols, such as Modbus and Ethernet, systems and work cells could not easily communicate. Today, the term
+                 <em>
+                  island of automation
+                 </em>
+                 refers to a caged automated system in an otherwise manual factory. Isolated work cells rely on the efficient scheduling of tasks and on human and mechanical steps. Islands of automation eliminate the need for inline buffers and allow for easier product changeover. They are ideal for creating a limited range of different, related products in smaller lots.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Inline Assembly Systems:
+                 </strong>
+                 Inline assembly systems work to produce large lots of one type of product that has little variation, thus minimizing product and line changeover. With inline assembly, production is only as fast as the slowest task. Therefore, production planners may implement a buffer of source materials to ensure constant throughput. Inline assembly also requires less human labor and offers more accurate planning. However, the specialized engineering required to design and integrate one of these purpose-built lines may be costly.
+                </p>
+               </li>
+              </ul>
+              <h3>
+               Equipment in Factory Automation
+              </h3>
+              <p>
+               Here is a list of some of the equipment used in manufacturing and automated production:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Cameras and image-capture equipment with accessories
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Image sensors and storage devices
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Lenses
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Lighting and illumination systems
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Optical subsystems
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Optics
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Software
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 System boards
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Test and measurement equipment
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Vision systems
+                </p>
+               </li>
+              </ul>
+              <h3>
+               Tasks and Processes in Factory Automation
+              </h3>
+              <p dir="ltr">
+               Here is a list of some of the tasks and processes found in classic and technically advanced factories:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Arc welding
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Assembly
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 CNC milling
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 CNC motion control
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 CNC turning
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Dispensing, painting, and sealing
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Laser cutting
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Machining
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Machine tending
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Material removal
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Part transfer
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Palletizing
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Picking and packing
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Spot welding
+                </p>
+               </li>
+              </ul>
+              <p dir="ltr">
+               <img alt="Automated ProcessesTasks" data-delta="2" data-fid="126686" data-media-element="1" src="https://www.smartsheet.com/sites/default/files/IC-Automated-Processes-Tasks.svg" typeof="foaf:Image"/>
+              </p>
+              <h3>
+               Tasks and Processes in Microelectronics Automation
+              </h3>
+              <p>
+               Here is a list of some of the tasks and processes found in microelectronics automation:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Chip-on-board mounting
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Chip-on-flex mounting and connecting
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Gold-to-gold flip-chip interconnecting
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Hybrid integrated circuit construction
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Multichip module assembly
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Wafer-level packaging
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Wafer bumping
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Wire bonding
+                </p>
+               </li>
+              </ul>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478456">
+             <h3 class="multipart-article__text__heading" id="what-is-integrated-factory-automation">
+              What Is Integrated Factory Automation?
+             </h3>
+             <div class="field-text-body">
+              <p>
+               As discussed above,
+               <em>
+                integrated factory automation
+               </em>
+               is the complete automation of factory-related business and production processes through computerization.
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478461">
+             <h3 class="multipart-article__text__heading" id="what-is-industry-40">
+              What Is Industry 4.0?
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-12ea27c4-7fff-a81d-dcc1-6ed35abfa507">
+               <em>
+                Industry 4.0
+               </em>
+               , also called
+               <em>
+                smart manufacturing
+               </em>
+               , describes the fourth industrial revolution, or the use of data with automation in manufacturing technologies. The interconnected nature of Industry 4.0 is meant to add flexibility as the markets of the future demand more customization, rather than mass production. Industry 4.0 usually applies to large enterprises, but may also work for smaller organizations.
+              </p>
+              <p dir="ltr">
+               <img alt="Industrial Revolutions" data-delta="3" data-fid="126676" data-media-element="1" src="https://www.smartsheet.com/sites/default/files/IC-Industrial-Revolutions.svg" typeof="foaf:Image"/>
+              </p>
+              <p>
+               As businesses adopt Industry 4.0 approaches, experts expect productivity to increase, thereby propelling economic growth. The
+               <em>
+                nine pillars of technological advancement
+               </em>
+               (see below) that comprise the foundation of Industry 4.0. are already used in manufacturing, but
+               <a href="https://www.bcg.com/en-us/publications/2015/engineered_products_project_business_industry_4_future_productivity_growth_manufacturing_industries.aspx" target="_blank">
+                with the increasing domination of &ldquo;Industry 4.0, they will transform production
+               </a>
+               : Isolated, optimized cells will come together as a fully integrated, automated, and optimized production flow, leading to greater efficiencies and changing traditional production relationships among suppliers, producers, and customers &mdash; as well as between human machine,&rdquo; according to the Boston Consulting Group.
+              </p>
+              <p>
+               In Industry 4.0, formerly siloed advances will interconnect to offer unprecedented speed and communication along the value chain. Following is a list of the nine pillars of technological advancement, including a description of how each will function in the context of Industry 4.0:
+              </p>
+              <ol>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Additive Manufacturing:
+                 </strong>
+                 <em>
+                  Additive manufacturing
+                 </em>
+                 refers to the 3D technology that creates objects &mdash; and potentially organic parts &mdash; by appending successive layers of material. This technology offers a strong application for prototype work, small custom batches, and lightweight, locally produced parts. Additive manufacturing differs from traditional subtractive technologies, such as milling, which can lead to waste.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Augmented Reality:
+                 </strong>
+                 Augmented reality offers benefits for training, troubleshooting, and repairs during service calls.
+                </p>
+               </li>
+              </ol>
+              <p dir="ltr">
+               <img alt="Industrial Revolutions" data-delta="4" data-fid="126676" data-media-element="1" src="https://www.smartsheet.com/sites/default/files/IC-Industrial-Revolutions.svg" typeof="foaf:Image"/>
+              </p>
+              <ol start="3" style="list-style-type: decimal;">
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Autonomous Robots:
+                 </strong>
+                 Autonomous capabilities increase the utility of robots, allowing them to adjust actions based on a particular activity or on the product&rsquo;s level of completeness. In addition to collaborating safely with humans, robots can also work together. In manufacturing, for example, an application may include the portable assembly line. Using autonomous vehicles, you could ferry work in progress between stations, rather than employ a fixed conveyor belt assembly line. Portable workstations provide the convertibility that accelerates turnaround in manufacturing. Increased cognitive automation can also aid robots in decision making. Moreover, sophisticated cognitive automation can improve manufacturing&rsquo;s clerical activities. Armed with lines and machines that connect to your company&rsquo;s ERP, you can generate products based on orders rather than projections, reducing costly lead time.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Big Data and Analytics:
+                 </strong>
+                 Huge volumes of data and advanced data analytics capabilities mean greater quality and service. Companies can collect data at each stage of the chain to ultimately improve process and save resources. Smart technologies enable predictive maintenance. Industry 4.0 combines predictive maintenance with enhanced communication capabilities to increase efficiency and energy savings in smart service lines and factories.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  The Cloud:
+                 </strong>
+                 Interconnectedness in manufacturing requires collaboration and contact beyond facility and company boundaries. Fast cloud computing permits data collection, analysis, storage, and even monitoring.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  <a href="https://www.smartsheet.com/cyber-security-tips-and-policies" target="_blank">
+                   Cybersecurity
+                  </a>
+                  :
+                 </strong>
+                 The move away from closed systems and toward interconnectedness demands higher levels of user-access security and cybersecurity for networks that relay precision data and control machines.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Horizontal and Vertical System Integration:
+                 </strong>
+                 System integration signifies the complete coordination of all departments and entities along the supply chain, beginning with machine-to-machine (M2M) communication on the factory floor. For example, producers receive information from their supply chain and sales organizations, and engineering departments maintain a connection to production. Cloud computing enables much of these capabilities.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Internet of Things (IoT):
+                 </strong>
+                 When they all contain IoT sensors, devices along the production line, in the field, and in control centers can interact with one another to provide granular data and faster responses. With IoT technology, these devices can also include the wired and wireless capability to communicate with the cloud and to offer predictive maintenance.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Simulation:
+                 </strong>
+                 3D simulations of products, materials, and production processes can leverage real-time data to present virtual models of entire production systems. With enhanced simulation, you can test and optimize tool settings before lines change over.
+                </p>
+               </li>
+              </ol>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478466">
+             <h3 class="multipart-article__text__heading" id="how-automation-works">
+              How Automation Works
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-2e45b001-7fff-e143-e626-ba12f635a293">
+               Robots aside, people often liken automation systems to the human body. A human has five senses that collect signals; a human&rsquo;s nerves relay those signals to the brain. Then the brain determines a corresponding reaction to the signals, such as moving a hand.
+              </p>
+              <p>
+               A machine detects its surroundings through sensors that identify a physical presence and convert that recognition into an electrical signal. Sensors can see, detect pressure, smell molecules, or hear through ultrasonic pressure or RFID sensors and input devices. A network of cables or wireless waves relays signals from sensors to the input controller, CNC controller, or PLC.
+              </p>
+              <p>
+               The controller makes decisions and responds with output signals to
+               <em>
+                actuators
+               </em>
+               (devices that make a part move) and
+               <em>
+                indicators
+               </em>
+               , which display information. For example, an actuator may signal a kiln door to unlock, and the lights on the kiln may change from red to green to indicate that the kiln is unlocked and safe for a human to open.
+              </p>
+              <p>
+               The simplest modern automation concept dates back to the 18th century and involves a closed
+               <em>
+                loop control
+               </em>
+               , wherein a sensor detects a value, compares it to the desired value, and changes the sensor state to compensate for the errored value.
+               <em>
+                Open loop controllers
+               </em>
+               , such as a bathroom fan on a timer that cannot detect moisture levels, act without external input.
+               <em>
+                Discrete controllers
+               </em>
+               respond to whether a switch is on or off, whereas
+               <em>
+                sequential controllers
+               </em>
+               compare states and trigger functions at the appropriate time.
+              </p>
+              <p dir="ltr">
+               The 1920s saw the rudimentary development of the
+               <em>
+                proportional integral derivative (PID) controller
+               </em>
+               , originally used in mechanical and analog control systems. By the 1960s, the PLC evolved as a specialized microprocessor to replace hardware devices, such as timers. Eventually, computers in production environments either assumed the PLC role or took over the centralized control and monitoring of PLCs.
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478471">
+             <h3 class="multipart-article__text__heading" id="the-early-history-of-automation-in-industry">
+              The Early History of Automation in Industry
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-f6121d99-7fff-8716-6827-24ed477e6418">
+               The history of automated devices extends as far back as the ancient Greeks&rsquo; and Persians&rsquo; invention of timekeeping mechanisms. Some experts trace the assembly line as far back as 1104 AD, to the Venetian Arsenal, when an estimated 16,000 workers labored to build one ship per day for the Republic of Venice. Various regulators for speed, pressure, and temperature developed from the 17th to 18th centuries, culminating in the European Industrial Revolution, with the invention of the steam engine and its governor technology.
+              </p>
+              <p>
+               By the 20th century, manual processes had given way to hydraulic and pneumatic machine processes. In the beginning, scientific management optimized Henry Ford&rsquo;s assembly line, decreasing the time required to produce a car from 12 hours to 1.5 hours.
+              </p>
+              <p>
+               Fully automated processes brought improved efficiency, increased production of high-quality output, and reduced labor and production costs. World War II saw an aggressive expansion of automated manufacturing, as planes, ships, and other equipment were mass produced. The post-war industrial sector in Japan took advantage of innovations to produce high-quality Honda, Toyota, and Nissan vehicles.
+              </p>
+              <p>
+               Autonomous, guided vehicles found their place in the factories of the 1950s. These vehicles followed tracks or wires on the factory floors, as they lacked the advanced vision and GPS of today.
+              </p>
+              <p>
+               By the 1960s, the U.S. automotive industry expanded the use of basic robots for painting and pick-and-place tasks. By the 1970s, robots performed spot welding. The space age also meant increased advancement of computer and internet technology, or
+               <em>
+                Industry 3.0.
+               </em>
+               As a result, automated manufacturing added computing control via the programmable logic controller.
+              </p>
+              <p>
+               In the early 1980s, General Motors developed the
+               <em>
+                Manufacturing Automation Protocol
+               </em>
+               (MAP), a computer networking standard that provided consistency among different companies&rsquo; devices to ensure that they could communicate with one another. Although used by Boeing, General Motors, and others, MAP was later superseded by newer Ethernet protocols.
+              </p>
+              <p>
+               Automation has long provoked fears of loss of employment. However, during the late 20th century, automation also offered a superlative approach to ensuring employee safety: Robots began to take over dangerous jobs, such as applying lead-based automotive paints or pouring hot metals. And historical data suggests that new positions frequently replace the jobs that are made redundant by automation. Furthermore, increased factory automation has provided opportunities for growing salaries and skills.
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478476">
+             <h3 class="multipart-article__text__heading" id="what-is-automation-in-manufacturing">
+              What Is Automation in Manufacturing?
+             </h3>
+             <div class="field-text-body">
+              <p>
+               <em>
+                Automation in manufacturing
+               </em>
+               is used to perform repetitive and mundane processes and tasks with little or no human intervention. Today, it includes software and hardware to control processes through computer programming. AI, big data, robotics, and the internet of things now improve and amplify the possibilities for manufacturing automation.
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478481">
+             <h3 class="multipart-article__text__heading" id="what-are-the-trends-in-manufacturing-automation">
+              What Are the Trends in Manufacturing Automation?
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-99b18707-7fff-873f-193b-027d51d240b2">
+               The cultural memes for automation, embodied by movies like
+               <em>
+                Metropolis
+               </em>
+               and
+               <em>
+                Modern Times
+               </em>
+               , depict megalithic, heartless, and hurtful manufacturing enterprises, with humans playing the roles of cogs. However, it&rsquo;s possible that in the future, automation will provide individuals with more safety, more freedom, and more choices. In the &ldquo;gig economy,&rdquo; automation and digitization may offer opportunities for increased professional autonomy, where individuals leverage their freedom to choose where they live and how they work.
+              </p>
+              <p>
+               Further evidence that automation creates choices may be that manufacturing in the future will focus less on mass production and more on customization. These unique products may originate in
+               <em>
+                microfactories
+               </em>
+               , smaller establishments that can not only provide local employment opportunities and recycling benefits, but also produce small consumer goods on demand, potentially requiring fewer shipping resources.
+              </p>
+              <p>
+               In business, global enterprises won&rsquo;t be the only beneficiaries of automation. Chuck Werner is Lean Program Manager and Six Sigma Master Black Belt with the
+               <a href="https://www.the-center.org/" target="_blank">
+                Michigan Manufacturing Technology Center
+               </a>
+               .
+              </p>
+              <p>
+              </p>
+              <div class="media-element file-testimonial embedded-entity" data-embed-button="media" data-entity-embed-display="view_mode:media.full" data-entity-type="media" data-entity-uuid="07a3ac7e-3f69-481b-8542-ce95e083658f" data-langcode="en">
+               <img alt="Chuck Werner" loading="lazy" sizes="(min-width: 39.5em) 75vw, 50vw" src="/sites/default/files/IC-Chuck-Werner.jpg" srcset="/sites/default/files/styles/900px/public/IC-Chuck-Werner.jpg?itok=_P0AcIwe 200w" title="Chuck Werner" width="200"/>
+               <div>
+                <p>
+                 He explains, &ldquo;Integrators for all the Industry 4.0 technologies are focusing on making inroads to supply smaller manufacturers as a way to increase sales and market penetration. Currently, the largest barrier is helping the customer to really understand their own needs and still work within their budget.&rdquo;
+                </p>
+               </div>
+              </div>
+              <p>
+               Werner says that lowering prices for such items as sensors, PLCs, computers, and data storage will make investments in automation equipment more affordable. For example, at $25,000, Baxter the robot is already considered reasonably priced.
+              </p>
+              <p>
+               As companies gain access to more technology, Werner also foresees a growing trend in data gathering in order to enhance manufacturing processes. Robotics and manufacturing analyst and consultant
+               <a href="https://twitter.com/ed_ob" target="_blank">
+                Ed O&rsquo;Brien
+               </a>
+               concurs.
+              </p>
+              <p>
+              </p>
+              <div class="media-element file-testimonial embedded-entity" data-embed-button="media" data-entity-embed-display="view_mode:media.full" data-entity-type="media" data-entity-uuid="10dab536-7215-42fb-9253-a51f54c3d241" data-langcode="en">
+               <img alt="Ed OBrien" loading="lazy" sizes="(min-width: 39.5em) 75vw, 50vw" src="/sites/default/files/IC-Ed-OBrien-c_0.jpg" srcset="/sites/default/files/styles/900px/public/IC-Ed-OBrien-c_0.jpg?itok=xQOt8D8R 200w" width="200"/>
+               <div>
+                <p>
+                 &ldquo;Edge computing, identifying sensor data at a point on a line or from robots, is going to be huge. Instead of going to a central processing system to identify historical data, people want real-time data,&rdquo; he explains.
+                </p>
+               </div>
+              </div>
+              <p>
+               Edge data will have a further cultural effect. According to Werner, &ldquo;All technology brings disruption. Perhaps the biggest disruption we will see is the change in the leadership model resulting from the use of technology to do the following: collect and interpret data, provide critical information to the right person at the right place and time, and enable someone to make a decision without having to constantly seek approval or direction from those up the ladder.&rdquo; In this scenario, he says,
+               <a href="https://www.smartsheet.com/guide-integrated-product-development-and-teams" target="_blank">
+                self-directed teams may finally become a reality
+               </a>
+               .
+              </p>
+              <p>
+               The expansion of robotics as a service (RaaS) also looms on the horizon. The price of equipment, including the costs for training and maintenance, may be prohibitive, but a lease or other temporary arrangement can reduce overhead. As O&rsquo;Brien explains, RaaS means that the manufacturer provides extensive preventive and corrective maintenance alongside internal teams. Some companies already involved in RaaS include Savioke, Robosoft Services Robots, Acorn Product Development, and ASEA Brown Boveri (ABB).
+              </p>
+              <p>
+               With the evolution of RaaS and the growth of data in automation and robotics, O&rsquo;Brien also sees a trend in predictive analytics: &ldquo;Manufacturers can reduce downtime and increase time to market because they have greater product knowledge. They can probably detect trends and see, for example, that a breakdown is coming in the second shift. In high-speed, high-efficiency lines, being able to foresee an issue before something fails is huge.&rdquo;
+              </p>
+              <p>
+               Other trends in factory automation include the following:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Autonomous Mobile Robots or Portable Conveyor Belts:
+                 </strong>
+                 These self-propelled devices are becoming popular in factories and warehouses.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Cobots:
+                 </strong>
+                 These are collaborative robots that work alongside people, rather than displacing them.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  <a href="https://www.mouser.com/applications/energy_harvesting/" target="_blank">
+                   Energy Harvesting
+                  </a>
+                  :
+                 </strong>
+                 This refers to the act of powering sensors or leveraging the wasted energy from radio frequencies or heat in order to convert to an electrical current, thus recharging or even eliminating the need for batteries as we know them.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Lights-Out Manufacturing:
+                 </strong>
+                 This trend is also known as
+                 <em>
+                  fully automated manufacturing
+                 </em>
+                 .
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Low-Power Wi-Fi:
+                 </strong>
+                 Wireless communication, such as the low-power 802.15 protocol, runs the industrial internet of things (IIoT). Combined with M2M communication, low-power Wi-Fi accelerates and simplifies the reconfiguration of lines for different products.
+                </p>
+               </li>
+              </ul>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478486">
+             <h3 class="multipart-article__text__heading" id="what-is-meant-by-factory-automation">
+              What Is Meant by Factory Automation?
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-00c704d4-7fff-b166-9db3-019e2811365e">
+               The term
+               <em>
+                factory automation
+               </em>
+               describes the methodologies or systems that employ extensive electronic and mech automation in order to control tasks and processes that have limited human input.
+              </p>
+              <p>
+               Factories must work within the constraints of competition, regulation, security, quality, and cost effectiveness. Factory automation can ease the challenges of these constraints by providing numerous tasks (that involve all types of output) with practical and efficient solutions.
+              </p>
+              <p>
+               Data from rigorously controlled tooling and finishing machines offer a means to monitor work, significantly reducing variation and errors. There are three types of factory automation: fixed, programmable, and flexible. The type you choose depends on the category and volume of items you&rsquo;re producing. Whether you&rsquo;re producing a moderate or large number of units per month, you also always have the option to switch products.
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478491">
+             <h3 class="multipart-article__text__heading" id="factory-automation-platforms-as-a-service-fa-paas">
+              Factory Automation Platforms as a Service (FA PaaS)
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-9f7387b3-7fff-27e9-7797-119bdcb9fb7a">
+               Responding to the need for faster development and market introduction, technical engineers created
+               <em>
+                factory automation platforms
+               </em>
+               as a service (FA PaaS). FA PaaS and the related RaaS leverage IoT, big data, and the cloud to provide a secure, real-time link between a head office, a production site, and a supply chain.
+              </p>
+              <h3>
+               The Output of Factory Automation and Robotics
+              </h3>
+              <p>
+               The following are the major industries that produce factory-automation and robotics-related output:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Automotive
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Communication equipment
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Consumer goods
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Energy
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Food and beverage
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Packaging
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Pharmaceutical and medical
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Robotics
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Semiconductors and electronics
+                </p>
+               </li>
+              </ul>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478496">
+             <h3 class="multipart-article__text__heading" id="what-is-an-automated-manufacturing-system-ams">
+              What Is an Automated Manufacturing System (AMS)?
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-04a6d9dc-7fff-c117-ff77-107ebacd192d">
+               An
+               <em>
+                automated manufacturing system
+               </em>
+               (AMS) combines computer programming and hardware equipment to complete manufacturing processes with minimal human intervention. U.S. automotive pioneer Henry Ford introduced the first automated assembly lines in the early 20th century.
+              </p>
+              <p>
+               Learn more about automated manufacturing systems from Mikell P. Groover&rsquo;s book, &nbsp;
+               <em>
+                <a href="https://dl.acm.org/citation.cfm?id=1537195" target="_blank">
+                 Automation, Production Systems, and Computer-Integrated Manufacturing
+                </a>
+               </em>
+               , and from &ldquo;
+               <a href="https://www.sciencedirect.com/science/article/pii/0278612591900498?via%3Dihub" target="_blank">
+                The Evolution of Control Architectures for Automated Manufacturing Systems
+               </a>
+               ,&rdquo; an article in the
+               <em>
+                Journal of Manufacturing Systems
+               </em>
+               .
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478501">
+             <h3 class="multipart-article__text__heading" id="methodologies-for-evaluating-the-performance-of-automated-manufacturing-systems">
+              Methodologies for Evaluating the Performance of Automated Manufacturing Systems
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-7d11918f-7fff-3efe-6f7d-46585de00de8">
+               <em>
+                <a href="http://www.doc.ic.ac.uk/~nd/surprise_97/journal/vol1/njc1/" target="_blank">
+                 Performance modeling
+                </a>
+               </em>
+               is a quantitative modeling method that describes how manufacturing systems work. Performance modeling predicts how a design might function in real life. Quantitative models discuss throughput and lead time. They differ from qualitative models, which concern stability and and controllability.
+              </p>
+              <p>
+               Modeling helps with the design and operation of AMS systems. AMS performance is measured by lead time, work in progress, throughput, machine utilization, capacity, flexibility, performance, and quality. To learn more about this topic, see
+               <em>
+                <a href="https://drona.csa.iisc.ac.in/~nv/2Perfmodcontents.PDF" target="_blank">
+                 Performance Modeling of Automated Manufacturing Systems
+                </a>
+               </em>
+               , by N. Viswanadham and Y. Narahari.
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478506">
+             <h3 class="multipart-article__text__heading" id="what-is-robotics-in-manufacturing-automation">
+              What Is Robotics in Manufacturing Automation?
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-e7b05763-7fff-00ca-9545-be47b4596f58">
+               In manufacturing, robots are now regularly used to perform jobs that are hazardous to humans or beyond human endurance. These jobs include working multiple, consecutive shifts or performing at a higher quality and efficiency level than humans can. Robots can do the following: weld, including arc welding; spray paint; complete assembly work, such as pick-and-place for printed circuit boards; and package, palletize, and inspect products. Meanwhile, software-based robotic automation assists with clerical and business-side tasks.
+              </p>
+              <h3>
+               Robotic Basics in Manufacturing Automation
+              </h3>
+              <p>
+               In manufacturing applications, robots usually consist of at least one robotic arm (similar to a human arm) that may be part of a larger mechanism. As with a human arm, the joints allow the arm to either rotate or move side to side or up and down. The assembly that comprises this arm is called a
+               <em>
+                kinematic chain
+               </em>
+               . The terminus of a kinematic chain is similar to the human hand and is called a
+               <em>
+                grip
+               </em>
+               . The grip is designed to conform to the particular job of a robot. For example, a robot meant to grip a china cup and lift it from a kiln might be covered in rubber.
+              </p>
+              <p>
+               Robots are frequently confined to factory cages in order to protect human workers from flying debris and fast-moving robotic appendages and tools. Often, they also work in high-volume, high-speed environments.
+              </p>
+              <p>
+               New model robots, or cobots, are often uncaged to work with people in human-robot teams. Designed with human safety in mind, they have padded bodies and multiple sensors to detect the proximity of humans and objects. Some robots even stop if touched by a human. About the same size as a human, these versatile machines are employed as traditional robots to increase efficiency and quality, as well as reduce hazards to humans. For example, Amazon warehouse cobots now lift and shift heavy items, reducing wear and tear to human backs and limbs.
+              </p>
+              <p>
+               Examples of real cobots include ReThink Robotic&rsquo;s Baxter and ABB&rsquo;s YuMi. Both can learn simple tasks in about 10 minutes by mimicking human movement or having their limbs moved in a desired sequence. Because working with robots doesn&rsquo;t require computer programming skills, virtually anyone can teach them. And equipped with vision and other 3D sensors, cobots can independently make adjustments, such as correcting the orientation of a crooked part prior to assembly.
+              </p>
+              <p>
+               Currently, robots control their movement to within 0.10 millimeter, achieving a repeatable accuracy of 0.02 millimeter. Higher-precision robots will someday have the capability to mimic the exacting skills of craftspeople in fields like fine jewelry design. True cognitive machines can make decisions on the fly, allowing them to move from product to product and, thus, add agility to production lines. Thanks to easy-to-use screen interfaces, you can program cobots without knowing complex languages.
+              </p>
+              <p>
+               Manufacturers have begun using cobots as replacements or upgrades for older systems. They&rsquo;re efficient, economical, and collapsible, allowing factories to free up space. Models such as the Epson Flexion N-Series can contract to work in small spaces. Cobots, backed by machine-learning and AI technologies,
+               <a href="https://innovaresearch.newswire.com/news/innova-research-identifies-the-top-8-robotics-trends-for-2017-18335292" target="_blank">
+                accounted for 4 percent of robots shipped in 2015
+               </a>
+               .
+              </p>
+              <p>
+               Generally, robots handle, transfer, and process materials and parts or assemble and inspect products. You can reprogram robots between batches, or if they are sophisticated enough, you can employ them to detect required customizations for batches of similar, mixed parts. A robot&rsquo;s inspection and vision capabilities ensure (among other things) that parts meet quality standards.
+              </p>
+              <h3>
+               IoT and Robots in Manufacturing Automation
+              </h3>
+              <p>
+               The IIoT takes data from connected, always-on devices and allows manufacturers to gain insights in real time. When at work, robots can provide regular feedback on variations and quality. Data can focus on sales orders, parts received, or trouble along the production line. IoT sensors also enable customized movement for robots, such as changing the speed depending on the location. Automation company ABB now produces robots that can store data and communicate it to other devices.
+              </p>
+              <h3>
+               Manufacturing Automation, Robotics, and the Future
+              </h3>
+              <p>
+               Robotics provide the foundation for fully automated manufacturing. In Oshino, Japan, a staff of only four workers per shift supervises industrial robots. According to a recent McKinsey &amp; Co. article, &ldquo;In a Philips plant producing electric razors in the Netherlands, robots outnumber the nine production workers by more than 14 to 1. Camera maker Canon began phasing out human labor at several of its factories in 2013.&rdquo;
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478511">
+             <h3 class="multipart-article__text__heading" id="what-are-the-benefits-of-manufacturing-automation">
+              What Are the Benefits of Manufacturing Automation?
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-0583f99b-7fff-df48-43ab-ee40f8a30d3f">
+               Today, most benefits of automation are economic and social. With declining birthrates and aging populations in countries such as Japan, automation is the only way to maintain current levels of productivity.
+              </p>
+              <p>
+               Manufacturing&rsquo;s contribution to the U.S. economy can&rsquo;t be ignored: $2.3 trillion for the first quarter of 2018 alone, according to the National Association of Manufacturers. In the United States, where small businesses (fewer than 500 people) conduct the vast majority of manufacturing (offshore and with rising domestic wages), automation is essential to maintaining competitiveness and productivity.
+              </p>
+              <p>
+               Automation can increase production by an estimated 30 to 40 percent, according to the Boston Consulting Group. Automation provides a number of central benefits, including the following:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Greater system availability and reliability
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Increased access to dangerous or inaccessible areas, such as underwater or in space
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Increased freedom of human workers from dirty, dull, or dangerous jobs
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Increased human job satisfaction when repetitive tasks are shifted to automated systems
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Increased opportunities for employees to train up to higher-level, better-paying jobs in planning, deployment, and monitoring
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Increased product safety via AI that catches problems before products roll out to customers and, thus, avoids potential recalls and catastrophic events
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Increased productivity, output, or speed
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Improved quality of products through the elimination of errors and the reduction of variability
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Reduced variation in output and, therefore, increased consistency and uniformity
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 Reduced labor and other costs
+                </p>
+               </li>
+              </ul>
+              <p>
+               Werner and the Michigan Manufacturing Technology Center approach Industry 4.0 technologies from the perspective of small- to medium-sized clients, who make up 90 percent of manufacturers in the United States.
+              </p>
+              <p>
+               &ldquo;Perhaps the best statement to summarize the benefits of most technologies is &lsquo;Fail fast, fail cheap,&rsquo;&rdquo; Werner says. &ldquo;With regard to digital twins, 3D design and simulation, and 3D modeling, we can say that products and processes can be tested and verified without great expense. Because of the IIoT, system integration, analytics, and business information, team members with the right information to make informed decisions can immediately detect and properly react to (or avoid entirely) a failure in the business process,&rdquo; he adds.
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478516">
+             <h3 class="multipart-article__text__heading" id="what-are-the-drawbacks-of-manufacturing-automation">
+              What Are the Drawbacks of Manufacturing Automation?
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-eb34374e-7fff-1276-3b7f-1c4ca42db161">
+               Since the Luddites, job loss has been the most pervasive fear surrounding the introduction of work automation. This fear has persisted despite the fact that work automation has been shown to create jobs. But automation presents other concerns:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Complexity Beyond the Scope of Robotics:
+                 </strong>
+                 Detailing a product may be too complicated for current robotic capabilities. Examples include fine jewelry production and wood turning.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Excessive Research Costs:
+                 </strong>
+                 Investigating and planning a conversion may cost more than the savings derived from automation.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  High Startup Costs:
+                 </strong>
+                 The automation of a new product or plant typically requires a large initial investment when compared with the unit cost of a product. This investment may include the employee hours it takes to set up a new system and the manufacturing time you lose when setting up the system. The cost of automation may still be prohibitive even if spread among many products and over time.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Many Hands Make Fast Work:
+                 </strong>
+                 It may be faster to produce the product by hand rather than by creating an automated production line.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Many Hands Make Inexpensive Work:
+                 </strong>
+                 This refers to the business cases in which labor is so inexpensive that automation is not economically justified.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Massive Stoppages:
+                 </strong>
+                 When an automated line goes down, everything before and after it stops, producing a cascading effect.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Popularity That Doesn&rsquo;t Justify the Expense:
+                 </strong>
+                 The popularity or currency of a product or technique may be so short that manufacturing automation is not justified.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Security Vulnerabilities:
+                 </strong>
+                 Smart devices in manufacturing that connect to enterprises and the internet are increasingly susceptible to cyberattacks.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Too Many Customizations:
+                 </strong>
+                 Retooling systems to account for thousands of potential choices is far too complex and expensive. Robots are excellent at handling repetitive tasks; humans excel at making choices while building things.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Uncertain Costs:
+                 </strong>
+                 You may only be able to determine the scope and difficulty of a conversion process after that process is complete.
+                </p>
+               </li>
+              </ul>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478521">
+             <h3 class="multipart-article__text__heading" id="what-is-fully-automated-manufacturing">
+              What Is Fully Automated Manufacturing?
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-eded7d85-7fff-8ae2-1b11-71ca381ab241">
+               Also known as
+               <em>
+                lights-out manufacturing, fully automated manufacturing
+               </em>
+               is an approach wherein factories are fully automated and no human presence is required. As big data and IoT allow sophisticated, off-site real-time monitoring of production lines, lights-out manufacturing may take the lead.
+              </p>
+              <p>
+               Popularized in the 1980s at General Motors as &ldquo;hands off&rdquo; manufacturing, the approach relies on dependable equipment and planned preventive maintenance to ensure the line stays in order. Examples of fully automated factories include a FANUC robot-making factory, which supervisors visit monthly, and a Phillips electric razor factory, where humans perform quality control. Currently, most factories run in limited lights-out mode, with partially &ldquo;attended&rdquo; machines. Science fiction author Philip K. Dick&rsquo;s short story &ldquo;Autofac&rdquo; is considered an early and ironic description of the concept.
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478526">
+             <h3 class="multipart-article__text__heading" id="what-are-the-effects-of-manufacturing-automation">
+              What Are the Effects of Manufacturing Automation?
+             </h3>
+             <div class="field-text-body">
+              <p>
+               Many articles point to the positive effects of automation in manufacturing. In U.S. factories, automation is responsible for a decrease in costs. Although automation requires less labor, it makes manufacturers more competitive. A higher output compensates for job displacement and has the potential to raise wages.
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478531">
+             <h3 class="multipart-article__text__heading" id="what-percentage-of-manufacturing-jobs-are-lost-to-automation">
+              What Percentage of Manufacturing Jobs Are Lost to Automation?
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-02c02ac1-7fff-ea2c-e44d-3def7ac7372a">
+               A report by Boston Consulting Group says that by 2025 the percentage of tasks performed by robots globally will rise to 25 percent from its current rate of 10 percent. But that doesn&rsquo;t mean a corresponding number of jobs will disappear, as many displaced workers gain higher levels of income after finding higher-skilled jobs.
+              </p>
+              <p>
+               Still, the lights-out production trend in manufacturing will increase. Estimates suggest that
+               <a href="http://fortune.com/2016/11/08/china-automation-jobs/" target="_blank">
+                robots could take over 60 to 80 percent of factory processes
+               </a>
+               . One report suggests that between 2006 and 2013, 88 percent of the jobs lost in the United States were due largely to automation.
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478536">
+             <h3 class="multipart-article__text__heading" id="why-factory-and-manufacturing-automation-will-win">
+              Why Factory and Manufacturing Automation Will Win
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-6f818b41-7fff-de9f-4a35-7dc0e9ac18df">
+               Despite decades of fears about the robot takeover, automation will continue for both logistical and economic reasons:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Automation becomes cheaper.
+                 </strong>
+                 Robot prices are falling. Robot simulation software and robotic test applications are more widely available, which reduces the risk associated with the cost of programming robots. In addition, as more experts teach industrial robotics, there are more employable people (those with the skills to design, install, operate, and maintain robotic production systems). And with full automation, you can reduce or eliminate basic expenses, like heat, light, and air conditioning.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Automation becomes easier to integrate.
+                 </strong>
+                 Advances in computing power, software-development techniques, and networking technologies have made assembling, installing, and maintaining robots faster and less costly than before. With IoT advances, components no longer need to hard connect, and components can tell each other they are online. IoT sensors and actuators can also monitor themselves and report their status to the control system in order to aid process control and collect data for maintenance, continuous improvement, and troubleshooting purposes.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Robots have new smarts.
+                 </strong>
+                 As robots become more capable of making complex decisions, the more they will prevail. Robots&rsquo; growing sensitivity to feedback means they are increasingly capable of detailed work in jewelry and other fields.
+                </p>
+               </li>
+              </ul>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478541">
+             <h3 class="multipart-article__text__heading" id="how-to-embark-on-the-manufacturing-automation-path-or-pick-an-automation-vendor">
+              How to Embark on the Manufacturing Automation Path or Pick an Automation Vendor
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-4a2b91c9-7fff-77ce-c36a-1659997af00e">
+               Automation is not something that you can or should roll out overnight. According to Chuck Werner, &ldquo;It is imperative to understand the needs of your business and customers before running down the path of technology implementation. Is there a problem you are solving? A need you are fulfilling? Or a competitive advantage that the adoption of technology will address? Can you build a business case around automation as you would any other investment? If not, don&rsquo;t do it. If so, build the vision of what you are trying to accomplish; start small and build from your successes.&rdquo;
+              </p>
+              <h3>
+               Picking Manufacturing Automation Products
+              </h3>
+              <p>
+               Similarly, for any automation tool or software, don&rsquo;t buy something just because everyone else has it. When considering equipment, decide what level of automation you need and where best to apply it. &ldquo;The first step is to truly understand the value proposition of the business and to have a clear picture (or map) of what you need from the software. Be mindful of how to scale appropriately,&rdquo; Werner emphasizes.
+              </p>
+              <p>
+               You may own software or hardware that&rsquo;s sitting in a corner collecting dust or that you are using ineffectively. If the product is not outdated, it may be worthwhile to leverage your existing tools. &ldquo;The software should be able to grow with the business and be flexible and agnostic enough to work with a myriad of equipment. It should also be simple enough that the team can make minor changes and improvements without having to continuously rely on outside help. Training is a must,&rdquo; Werner adds.
+              </p>
+              <h3>
+               How to Choose a Manufacturing Automation Vendor
+              </h3>
+              <p>
+               If you need to build or design automation equipment or if you need a shop to produce an item, what do you look for? &ldquo;They should have strong references. They must be able to give examples of the services they can provide by showing what they&rsquo;ve done for other customers,&rdquo; advises O&rsquo;Brien.
+              </p>
+              <p>
+               Any service provider should outline an idea of the service life, such as
+               <em>
+                uptime
+               </em>
+               (the amount of time a machine or computer is in operation),
+               <em>
+                mean time to failure
+               </em>
+               (the predicted interval between inherent failures), and the plan for preventive maintenance. &ldquo;Try to get a sense of the systems that they can share, or determine if they have a way to tap into equipment health, so they can help improve processes and not just show up to fix things. Find out if they look at the whole picture, rather than just one component,&rdquo; O&rsquo;Brien concludes.
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478546">
+             <h3 class="multipart-article__text__heading" id="what-are-good-automated-manufacturing-practices-gamp">
+              What Are Good Automated Manufacturing Practices (GAMP)?
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-ffa27068-7fff-0ff2-5e7e-a725f0442ac3">
+               Good automated manufacturing practices (GAMP) are both a technical subcommittee of the International Society for Pharmaceutical Engineering and a set of guidelines for manufacturers and users of automated systems in the pharmaceutical industry.
+              </p>
+              <h3>
+               Manufacturing Automation Industry Standards
+              </h3>
+              <p>
+               Industry standards make output more consistent. Consistency is one of the typical goals of quality methodologies. Standards organizations in microelectronics include the following:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 The Surface Mount Equipment Manufacturers Association (SMEMA) provides one standard that governs the machinery used in producing surface mount parts, such as circuit boards.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 The JEDEC Solid State Technology Association is a trade and standards body for semiconductor producers.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 The Semiconductor Equipment and Materials International (SEMI) is an international association for providers of goods in semiconductor-related industries. The organization provides a standard for silicon chip wafer diameters and sets agreements with similar electronics standards organizations.
+                </p>
+               </li>
+              </ul>
+              <h3>
+               Factory Automation Industry Associations
+              </h3>
+              <p>
+               The following are the major factory automation industry associations:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <a href="https://www.robotics.org/content-detail.cfm/Industrial-Robotics-Industry-Insights/Robots-and-AI-in-the-OR/content_id/7585" target="_blank">
+                  Robotic Industries Association (RIA)
+                 </a>
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <a href="https://www.ieee-ras.org/about-ras" target="_blank">
+                  Manufacturing Automation Committee of IEEE Robotics and Automation Society
+                 </a>
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <a href="https://www.isa.org/" target="_blank">
+                  International Society of Automation (ISA)
+                 </a>
+                </p>
+               </li>
+              </ul>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478551">
+             <h3 class="multipart-article__text__heading" id="videos-of-robots-in-automated-manufacturing-and-production-environments">
+              Videos of Robots in Automated Manufacturing and Production Environments
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-a8a3fb74-7fff-263c-109d-2773d9a31eb7">
+               Search Google or YouTube to find videos of robots in manufacturing and production environments. Here&rsquo;s a selection of some common processes.
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <a href="https://www.youtube.com/watch?v=_RjnYe3GGmk" target="_blank">
+                  Inline assembly machine for medical devices that removes rejected parts, measures, laser welds, pressure tests, and packs parts
+                 </a>
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <a href="https://www.youtube.com/channel/UC_bM5ksL5kQv81vUqiPV72Q" target="_blank">
+                  Three robots that trade off assembling components in a cell
+                 </a>
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <a href="https://www.youtube.com/watch?v=yW5XGOBOvBw&amp;index=2&amp;list=PL_XAs2NWAs986JVu6MjNzoJ7TsuALhdAn" target="_blank">
+                  A robot that palletizes cases in a food-processing facility
+                 </a>
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <a href="https://www.youtube.com/watch?v=TTwkCAlBvy8&amp;feature=youtu.be" target="_blank">
+                  A PLC that has control of everything from one viewpoint
+                 </a>
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <a href="https://www.a3automate.org/videos/why-i-automate-compass-automation/" target="_blank">
+                  A robot that changes tools and transfers parts
+                 </a>
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <a href="https://www.a3automate.org/videos/why-i-automate-attwood-marine/" target="_blank">
+                  A rented cobot in a high-mix, low-volume shop
+                 </a>
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <a href="https://www.youtube.com/watch?v=8Kn57QYCtds" target="_blank">
+                  Small cobots, connected machines, and IoT that work in minicells and detect human parts
+                 </a>
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <a href="https://www.robotics.org/content-detail.cfm/Industrial-Robotics-Videos/LEONI-applications-dresspack-systems-measurement-and-vision-solutions/content_id/7616" target="_blank">
+                  A large one-armed robot that lifts a car and more
+                 </a>
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <a href="https://www.ieee-ras.org/roboticshistory/" target="_blank">
+                  IEEE&rsquo;s Robotics History Project
+                 </a>
+                </p>
+               </li>
+              </ul>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478556">
+             <h3 class="multipart-article__text__heading" id="factors-to-consider-for-manufacturing-automation">
+              Factors to Consider for Manufacturing Automation
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-7a92cbec-7fff-dbae-c008-4f199f1bb7f2">
+               If you&rsquo;re thinking about automating your business, be sure to account for these factors:
+              </p>
+              <ul>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  The cost of labor and related supply-and-demand dynamics are important.
+                 </strong>
+                 If workers are in abundant supply and significantly less expensive than automation, this fact could constitute a decisive argument for limited or no automation.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Consider the benefits beyond labor substitution.
+                 </strong>
+                 These include higher levels of output, better quality, and fewer errors.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Factor in regulatory and social-acceptance issues.
+                 </strong>
+                 These include such considerations as the degree to which machines are acceptable in a particular setting, especially one in which they will interact with humans.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Consider issues other than technology.
+                 </strong>
+                 For instance, if labor is inexpensive, the cost of conversion may not be justified. However, the increase in quality and productivity that result from automation may also be important. In addition, automation may enhance safety. Moreover, you need to know the cost of your existing automation as well as its degree of sophistication. Where little automation exists, experts advise a true cost breakdown analysis.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Consider what to automate to get the best overall return on your investment.
+                 </strong>
+                 Do you need to automate elements like customer service and website traffic tracking or larger aspects of your business, like manufacturing and production?
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Remember that optimizing automation performance is crucial.
+                 </strong>
+                 You should focus on monitoring automation processes and diagnosing problems.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Turnkey deliveries are becoming more comprehensive and more common.
+                 </strong>
+                 Be sure to factor in this trend when making decisions about automation.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Strategic procurement partnerships are increasing.
+                 </strong>
+                 Be on the lookout for them.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  User interfaces are getting smarter.
+                 </strong>
+                 There is a corresponding improvement in the quality of automation.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Expect more flexibility to be built into automation systems.
+                 </strong>
+                 In the near future, with the help of more robots, this improvement will become a reality and another factor in your decision making.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  About 64 percent of manufacturing-related tasks can be automated with current technology.
+                 </strong>
+                 In other words, almost $3 trillion of labor costs could be eliminated or reworked.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Almost 90 percent of activities can be automated.
+                 </strong>
+                 However, the application of automation is uneven because different tasks and situations allow different degrees of automation.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Remember that low-skill labor requires low product complexity.
+                 </strong>
+                 Medium-skill labor requires moderate product complexity and so forth.
+                </p>
+               </li>
+               <li dir="ltr">
+                <p dir="ltr">
+                 <strong>
+                  Nearly 81 percent of the world&rsquo;s automatable manufacturing hours and 49 percent of automatable labor value reside in developing countries.
+                 </strong>
+                 This means that an upswing in automation in the developing world could have a significant global impact.
+                </p>
+               </li>
+              </ul>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+            <div class="multipart-article__text__section" id="p-id-478561">
+             <h3 class="multipart-article__text__heading" id="improve-manufacturing-automation-with-smartsheet-for-manufacturing">
+              Improve Manufacturing Automation with Smartsheet for Manufacturing
+             </h3>
+             <div class="field-text-body">
+              <p dir="ltr" id="docs-internal-guid-1c173622-7fff-5143-2e6f-27b8a26e1b9b">
+               Manufacturing leaders know that ever-advancing factory automation and robotics technology are central to the future of work. They also know that fully leveraging these powerful new technologies requires tools.
+              </p>
+              <p>
+               One such tool is Smartsheet, a work execution platform that enables enterprises and teams to get from idea to impact fast. Many of the world&rsquo;s most productive manufacturers turn to Smartsheet for project scheduling and execution, production calendar and communications, and compliance visibility and tracking.
+              </p>
+              <p>
+               Use Smartsheet to improve visibility with real-time data on collaborative work being performed, increase accuracy with an always up-to-date picture of projects and other strategic initiatives, and accelerate production. Reduce inventory and eliminate disruption to flow with production calendars and reports, facilitate communications with vendors, and identify opportunities for continuous improvement.
+              </p>
+              <p>
+              </p>
+              <div class="media-element file-default embedded-entity" data-embed-button="media" data-entity-embed-display="view_mode:media.full" data-entity-type="media" data-entity-uuid="affefd40-29b3-4757-a741-65811f8d8a42" data-langcode="en">
+               <img alt="" loading="lazy" sizes="(min-width: 39.5em) 75vw, 50vw" src="/sites/default/files/manufacturing-global-facilities-dashboard.png" srcset="/sites/default/files/styles/500px/public/manufacturing-global-facilities-dashboard.png?itok=zQMmUZBb 500w, /sites/default/files/styles/900px/public/manufacturing-global-facilities-dashboard.png?itok=i66x6z_R 900w, /sites/default/files/styles/1300px/public/manufacturing-global-facilities-dashboard.png?itok=I10PPR-Q 908w" width="908"/>
+              </div>
+              <p>
+               Discover how Smartsheet can help maximize your manufacturing efforts today.
+              </p>
+              <p style="text-align: center;">
+               <a class="the-green-button" href="https://www.smartsheet.com/try-it?trp=10592&amp;lpv=butbot&amp;lx=2sgpTbF12suoPxu20v5CoABAgeTPLDIL8TQRu558b7w" style="display:inline-block;" target="_blank">
+                Try Smartsheet for Manufacturing
+               </a>
+              </p>
+             </div>
+            </div>
+            <div class="multipart-article__text__section__divider">
+             <hr/>
+            </div>
+           </div>
+           <a alt="Back to Top" class="to-top" href="#">
+           </a>
+          </div>
+          <div class="cta-snipe light sticky">
+           <div class="container">
+            <div class="info">
+             <h3>
+              Boost manufacturing efficiency with automation capabilities in Smartsheet.
+             </h3>
+            </div>
+            <a class="site-link secondary button" href="/try-it?trp=10592&amp;lpv=stkcta&amp;lx=2sgpTbF12suoPxu20v5CoABAgeTPLDIL8TQRu558b7w">
+             Try Smartsheet for Free
+            </a>
+           </div>
+          </div>
+         </div>
+        </article>
+       </div>
+      </div>
+     </div>
+    </main>
+    <footer class="footer light" role="contentinfo">
+     <img alt="Smartsheet Logo" class="page-headline__logo" src="/themes/custom/valinor/images/smartsheet-logo-horizontal.svg"/>
+     <ul class="footer-list" data-region="footer">
+      <li class="footer-list__item">
+       <a data-drupal-link-system-path="node/40436" href="https://www.smartsheet.com/about">
+        About Us
+       </a>
+      </li>
+      <li class="footer-list__item">
+       <a data-drupal-link-system-path="node/46906" href="https://www.smartsheet.com/about/leadership">
+        Leadership
+       </a>
+      </li>
+      <li class="footer-list__item">
+       <a href="https://investors.smartsheet.com/home/default.aspx">
+        Investors
+       </a>
+      </li>
+      <li class="footer-list__item">
+       <a data-drupal-link-system-path="node/40306" href="https://www.smartsheet.com/content-center/news">
+        Newsroom
+       </a>
+      </li>
+      <li class="footer-list__item">
+       <a data-drupal-link-system-path="node/40041" href="https://www.smartsheet.com/careers">
+        Careers
+       </a>
+      </li>
+      <li class="footer-list__item">
+       <a data-drupal-link-query='{"fts":"contact-footer"}' href="/contact?fts=contact-footer">
+        Contact Us
+       </a>
+      </li>
+      <li class="footer-list__item">
+       <a data-drupal-link-system-path="node/47346" href="https://www.smartsheet.com/legal">
+        Legal
+       </a>
+      </li>
+      <li class="footer-list__item">
+       <a data-drupal-link-system-path="node/85616" href="https://www.smartsheet.com/legal/privacy">
+        Privacy
+       </a>
+      </li>
+      <li class="footer-list__item">
+       <a href="https://developers.smartsheet.com/">
+        Developers &amp;  API
+       </a>
+      </li>
+      <li class="footer-list__item">
+       <a data-drupal-link-query='{"url":"help"}' data-drupal-link-system-path="help-center" href="https://www.smartsheet.com/help-center?url=help">
+        Help
+       </a>
+      </li>
+     </ul>
+     <div class="footer_app-downloads">
+      <div>
+       <a class="app-download" href="https://itunes.apple.com/app/smartsheet/id568421135">
+        <img height="" src="/sites/default/files/Download_on_the_App_Store_Badge_US-UK_135x40_0_0.svg" width=""/>
+       </a>
+       <a class="app-download" href="https://play.google.com/store/apps/details?id=com.smartsheet.android&amp;hl=en">
+        <img height="" src="/sites/default/files/google-play-badge-English.svg" width=""/>
+       </a>
+      </div>
+     </div>
+     <p class="copyright">
+      &copy;2020. All Rights Reserved Smartsheet Inc.
+     </p>
+     <div class="footer__social-section icons">
+      <div class="social-media-icon-group">
+       <a href="http://www.facebook.com/smartsheet" target="_blank">
+        <span class="social-media-icon fab fa-facebook-f">
+         
+        </span>
+        <span class="element-invisible">
+         Facebook
+        </span>
+       </a>
+       <a href="http://twitter.com/smartsheet" target="_blank">
+        <span class="social-media-icon fab fa-twitter">
+         
+        </span>
+        <span class="element-invisible">
+         Twitter
+        </span>
+       </a>
+       <a href="https://www.linkedin.com/company/smartsheet-com" target="_blank">
+        <span class="social-media-icon fab fa-linkedin">
+         
+        </span>
+        <span class="element-invisible">
+         LinkedIn
+        </span>
+       </a>
+       <a href="http://youtube.com/user/SmartSheet" target="_blank">
+        <span class="social-media-icon fab fa-youtube">
+         
+        </span>
+        <span class="element-invisible">
+         Youtube
+        </span>
+       </a>
+       <a href="https://www.instagram.com/smartsheetplatform/" target="_blank">
+        <span class="social-media-icon fab fa-instagram">
+         
+        </span>
+        <span class="element-invisible">
+         Instagram
+        </span>
+       </a>
+      </div>
+     </div>
+    </footer>
+   </div>
+  </div>
+  <script data-drupal-selector="drupal-settings-json" type="application/json">
+   {"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/55861","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"marketo_ma":{"track":false,"key":"464-ONM-149","initParams":[],"library":"\/\/munchkin.marketo.net\/munchkin.js"},"smartsheet_module":{"grecaptcha":{"sitekey":"6LesO0YUAAAAABOceOHysqGjwmdQTeFhCgepshEu"}},"signup_data":{"pages":["try-it","try-it-c","try-it-d","try-it-e","try-it-f","try-it-g","try-it-h","try-it-gem","try-it-ppc","b\/launch"],"codes":{"trp":"10592","lx":"2sgpTbF12suoPxu20v5CoABAgeTPLDIL8TQRu558b7w","lpv":"topnav","tg":"","sc":""},"cta_from":"","cta_to":""},"lang_dropdown":{"lang-dropdown-form":{"key":"lang-dropdown-form"}},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"5f76a143bb817396d8930038fbeace1c9b1f5011cdd2982fda7033e4ef484218"}}
+  </script>
+  <script src="/sites/default/files/js/js_cw03f3OE89Zqk0b2lzj2SGXySi4DOh4gyWePqQwRNR0.js">
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=smartsheet_captcha_initialize&amp;render=explicit">
+  </script>
+  <script src="/sites/default/files/js/js_1JTz1La6wYusdf3YmTSRXdNAdzbwtgFM0cCDsZeBuHg.js">
+  </script>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"aeebed2765","applicationID":"850643981","transactionName":"ZwFabEtZDBcFU0dQXF5LeVtNUQ0KS0BSXlZvB1lbUV0=","queueTime":0,"applicationTime":22,"atts":"S0ZZGgNDHxk=","errorBeacon":"bam-cell.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>

